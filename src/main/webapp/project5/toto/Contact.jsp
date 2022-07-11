@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"   
     %>
-
+aagggg
+qqgfg
 <!DOCTYPE html>
 <html>
 <head>
@@ -57,11 +58,11 @@
  		<section class="about" id="about">
     		<h2 class="hidden">About</h2>
    			<p class="text_column">공통 정보<br>
-			대학교 : 대학교<br>
-			학과 : 스마트소프트웨어<br>
+			대학교 : <br>
+			학과 : <br>
 			</p>
-    		<p class="text_column">학번 : 21514041, 21614016<br>
-			이름 : 김진한, 백지훈</p>
+    		<p class="text_column">학번 : <br>
+			이름 : </p>
   		</section>
   <!-- More Info Section -->
   <footer>

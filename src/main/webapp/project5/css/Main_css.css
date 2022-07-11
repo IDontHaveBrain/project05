@@ -128,7 +128,7 @@ ul li:hover a {
 	clear: both;
 	display: inline-block;
 	width: 100%;
-	background-color: #FFFFFF;
+	background-color: none;
 	/* [disabled]min-width: 400px;*/
 	padding-bottom: 20px;
 	padding-top:0px;
