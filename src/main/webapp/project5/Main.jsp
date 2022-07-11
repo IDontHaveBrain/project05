@@ -9,42 +9,17 @@
 <title>Tuner</title>
 <%--link href="${path}/a00_com/a01_common.css" rel="stylesheet"> --%>
 
-<link rel="stylesheet" type="text/css" href="../a00_com/Main_css.css">
+<link rel="stylesheet" type="text/css" href="css/Main_css.css">
 <style>
     
 </style>
 <script src="http://use.edgefonts.net/source-sans-pro:n2:default.js" type="text/javascript"></script>
-  
-<script type="text/javascript" src="/js/jquery-1.5.2.min.js"></script>
-
-<script type="text/javascript" src="/js/jquery-ui-1.8.12.custom.min.js"></script>
-<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
-<script src="jQueryAssets/jquery.ui-1.10.4.tabs.min.js"></script>
-<link type="text/css" href="/js/css/ui-lightness/jquery-ui-1.8.12.custom.css" rel="stylesheet" />
-<link href="jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
-<link href="jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
-<link href="jQueryAssets/jquery.ui.tabs.min.css" rel="stylesheet" type="text/css">
-<script type="text/javascript"></script>
 </head>
 <body>
+<jsp:include page="topNav.jsp"></jsp:include>
 	<form>
 <div class="container">
-	  <header> <a href="#home">
-			</a>
-			<div>
-				<img src="../a00_com/img/logo.png"  width="80" height="40"
-				style="float:left; margin-top:10px; margin-left:50px;"/>
-			</div>	
-			<nav>
-				<ul>
-					<li><a href="#home">게임구매</a></li>
-					<li><a href="Info.jsp">경기정보</a></li>
-					<li><a href="Contact.jsp">게시판</a></li>
-				  <li><a href="http://www.localhost">로그인/회원가입</a></li>
-				<li><a href="http://www.localhost/menu/notice.php">마이페이지</a></li>
-				</ul>
-			</nav>
-		</header>
+
 		 <!-- Home Section -->
 		<section class="home" id="home">
 			<script>
