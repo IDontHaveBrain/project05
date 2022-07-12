@@ -10,3 +10,16 @@ grant dba to p05;
  샘플데이터(테이블당 최소 3개 이상씩)
  위에서부터 아래로 순차적으로 실행시 모든 테이블 및 샘플데이터 입력되게 작성
  */
+
+
+-- 홀짝게임결과
+create table OeGameResult (
+    oegno number primary key,
+    random number,
+    choice varchar2(5),
+    win number,
+    prevpoint number,
+    resultpoint number,
+    id varchar2(50)
+);
+select * from OeGameResult;
