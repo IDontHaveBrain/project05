@@ -23,6 +23,7 @@ create table Account (
 insert into Account values (1, 'asdasd123', '123123', 50000, to_date('19980101','YYYYMMDD'));
 insert into Account values ((select NVL(max(idno),0)+1 from Account), 'asdasd111', '123456', 30000, to_date('19970505','YYYYMMDD'));
 select * from Account;
+UPDATE Account SET point = point + 5000 WHERE idno=1;
 
 -- 홀짝게임결과
 create table OeGameResult (
