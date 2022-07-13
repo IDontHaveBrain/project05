@@ -7,6 +7,7 @@ import toto.dao.OeGameDao;
 import toto.vo.OeGameResult;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Service
@@ -37,5 +38,11 @@ public class OeGameService {
         dao.insertOeResult(result);
 
         return result;
+    }
+    public List<OeGameResult> getOeHistory(String curId){
+        List<OeGameResult> list = dao.getOeGameResultList(curId);
+        //System.out.println("내역 수 : "  + list.size());
+        //System.out.println("첫번째 결과 : "+list.get(0).getWin());
+        return list;
     }
 }
