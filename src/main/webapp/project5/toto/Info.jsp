@@ -9,7 +9,7 @@
 <title>toto</title>
 <%--link href="${path}/a00_com/a01_common.css" rel="stylesheet"> --%>
 
-<link rel="stylesheet" type="text/css" href="css/Info.css">
+<link rel="stylesheet" type="text/css" href="../css/Info.css">
 <style>
     
 </style>
