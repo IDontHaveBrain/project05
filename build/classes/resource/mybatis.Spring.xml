@@ -2,10 +2,13 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-	<typeAliases>
+    <typeAliases>
+        <typeAlias type="toto.vo.OeGameResult" alias="oegame"/>
 		<typeAlias alias="mypage" type="toto.vo.MyPage"/>
 	</typeAliases>
     <mappers>
+        <mapper resource="resource/testMapper.xml"/>
+        <mapper resource="resource/mapper/oeGameMapper.xml"/>
         <mapper resource="resource/myPageMapper.xml"/>
     </mappers>
 </configuration>
