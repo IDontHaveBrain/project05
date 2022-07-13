@@ -14,4 +14,7 @@
         values ((select NVL(max(oegno),1)+1 from OeGameResult),
                 #{random}, #{choice}, #{win}, #{prevpoint}, #{resultpoint}, #{id})
     </insert>
+    <select id="getOeGameResultList" parameterType="string" resultType="oegame">
+        select * from oegameresult where id = #{id}
+    </select>
 </mapper>

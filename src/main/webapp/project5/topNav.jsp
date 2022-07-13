@@ -106,7 +106,7 @@
     <nav role="navigation">
         <ul id="main-menu">
             <li><a href="#">게임구매</a>
-                <ul class="sub-menu">
+                <ul id="sub-menu">
                     <li><a href="#" aria-label="subemnu">submenu</a></li>
                     <li><a href="#" aria-label="subemnu">submenu</a></li>
                     <li><a href="#" aria-label="subemnu">submenu</a></li>
@@ -114,7 +114,7 @@
                 </ul></li>
 
             <li><a href="#">경기정보</a>
-                <ul class="sub-menu">
+                <ul id="sub-menu">
                     <li><a href="#" aria-label="subemnu">submenu</a></li>
                     <li><a href="#" aria-label="subemnu">submenu</a></li>
                     <li><a href="#" aria-label="subemnu">submenu</a></li>
@@ -122,7 +122,7 @@
                 </ul></li>
 
             <li><a href="#">게시판</a>
-                <ul class="sub-menu">
+                <ul id="sub-menu">
                     <li><a href="#" aria-label="subemnu">submenu</a></li>
                     <li><a href="#" aria-label="subemnu">submenu</a></li>
                     <li><a href="#" aria-label="subemnu">submenu</a></li>
@@ -130,7 +130,7 @@
                 </ul></li>
 
             <li><a href="#">로그인/회원가입</a>
-                <ul class="sub-menu">
+                <ul id="sub-menu">
                     <li><a href="#" aria-label="subemnu">submenu</a></li>
                     <li><a href="#" aria-label="subemnu">submenu</a></li>
                     <li><a href="#" aria-label="subemnu">submenu</a></li>
@@ -139,7 +139,7 @@
                 </ul></li>
 
             <li><a href="#">마이페이지</a>
-                <ul class="sub-menu">
+                <ul id="sub-menu">
                     <li><a href="#" aria-label="subemnu">submenu</a></li>
                     <li><a href="#" aria-label="subemnu">submenu</a></li>
                     <li><a href="#" aria-label="subemnu">submenu</a></li>
