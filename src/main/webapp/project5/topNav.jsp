@@ -13,22 +13,7 @@
 <head>
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="${path}/project5/css/Main_css.css">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: "Roboto", serif;
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: center;
-            align-items: center;
-            overflow-x: hidden;
-        }
-
-        h1 {
-            margin: 2em 0 1.5em 0;
-        }
-
+    <style>   
         nav {
             width: 100%;
             display: flex;
