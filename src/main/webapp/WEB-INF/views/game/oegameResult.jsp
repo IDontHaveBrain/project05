@@ -12,27 +12,45 @@
 <html>
 <head>
     <title>홀짝게임 결과</title>
-    <jsp:include page="/project5/topNav.jsp"></jsp:include>
+    <link href="${path}/project5/bootstrap-5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="${path}/project5/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-<br>
-<br>
-<br>
-<c:choose>
-    <c:when test="${rst.win >= 1}">
-        <h2>정답!</h2>
-    </c:when>
-    <c:otherwise>
-        <h2>오답!</h2>
-    </c:otherwise>
-</c:choose>
-생성된 랜덤 숫자 : ${rst.random}<br>
-당신의 선택 : ${rst.choice}수<br>
-포인트 변동량<input type="text" id="cpoint" value="${rst.resultpoint-rst.prevpoint}" readonly/><br>
-최종 포인트<input type="text" id="rpoint" value="${rst.resultpoint}" readonly/>
-
-<input type="button" value="다시하기" onclick="location.href='oegame.do';"/>
-<input type="button" value="메인" onclick="location.href='project5/topNav.jsp';"/><br>
+<jsp:include page="/project5/topNav.jsp"></jsp:include>
+<div class="w-25 " style="margin-top: 150px; display: inline-block; text-align: center;">
+    <c:choose>
+        <c:when test="${rst.win >= 1}">
+            <img src="https://bunny.jjalbot.com/2016/10/B1iqI6UA/20160820_57b8357a2b0fd.jpg"
+                 class="rounded mx-auto d-block" width="300" height="200" alt="정답여부 이미지...">
+            <h1>정답!</h1>
+        </c:when>
+        <c:otherwise>
+            <img src="http://t1.daumcdn.net/brunch/service/user/baGa/image/zsMOrtaz0b-lC3GCvq6I8g2eGJo.png"
+                 class="rounded mx-auto d-block" width="300" height="200" alt="정답여부 이미지...">
+            <h1>오답!</h1>
+        </c:otherwise>
+    </c:choose>
+    <fieldset disabled>
+    <div class="input-group mb-auto">
+        <span class="input-group-text w-50" id="f4">생성된 랜덤 숫자</span>
+        <input type="text" class="form-control w-50" value="${rst.random}" aria-describedby="f4">
+    </div>
+    <div class="input-group mb-auto">
+        <span class="input-group-text w-50" id="f3">당신의 선택</span>
+        <input type="text" class="form-control w-50" value="${rst.choice}" aria-describedby="f3">
+    </div>
+    <div class="input-group mb-auto">
+        <span class="input-group-text w-50" id="f1">포인트 변동량</span>
+        <input type="text" class="form-control w-50" value="${rst.resultpoint-rst.prevpoint}" aria-describedby="f1">
+    </div>
+    <div class="input-group mb-auto">
+        <span class="input-group-text w-50" id="f2">최종 포인트</span>
+        <input type="text" class="form-control w-50" value="${rst.resultpoint}" aria-describedby="f2">
+    </div>
+    </fieldset>
+    <input type="button" value="다시하기" onclick="location.href='oegame.do';"/>
+    <input type="button" value="메인" onclick="location.href='project5/topNav.jsp';"/><br>
+</div>
 </body>
 <script>
 </script>

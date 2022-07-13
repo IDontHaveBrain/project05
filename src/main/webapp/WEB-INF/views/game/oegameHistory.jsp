@@ -8,43 +8,45 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<c:set var="path" value="${pageContext.request.contextPath }"/>
+<c:set var="path" value="${pageContext.request.contextPath}"/>
 <html>
 <head>
     <title>홀짝게임 내역</title>
-    <jsp:include page="/project5/topNav.jsp"></jsp:include>
+    <link href="${path}/project5/bootstrap-5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="${path}/project5/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-<br>
-<br>
-<br>
-<table>
-    <tr>
-        <th>번호</th>
-        <th>랜덤값</th>
-        <th>홀짝</th>
-        <th>승리여부</th>
-        <th>이전포인트</th>
-        <th>결과포인트</th>
-    </tr>
-    <c:forEach var="rst" items="${result}" varStatus="sts">
+<jsp:include page="/project5/topNav.jsp"></jsp:include>
+
+<div class="w-75 p-3" style="margin-top: 150px;">
+    <table class="table table-dark table-hover">
         <tr>
-            <td>${sts.index+1}</td>
-            <td>${rst.random}</td>
-            <td>${rst.choice}</td>
-            <c:choose>
-                <c:when test="${rst.win == 1}">
-                    <td>승리</td>
-                </c:when>
-                <c:when test="${rst.win == 0}">
-                    <td>패배</td>
-                </c:when>
-            </c:choose>
-            <td>${rst.prevpoint}</td>
-            <td>${rst.resultpoint}</td>
+            <th>번호</th>
+            <th>랜덤값</th>
+            <th>홀짝</th>
+            <th>승리여부</th>
+            <th>이전포인트</th>
+            <th>결과포인트</th>
         </tr>
-    </c:forEach>
-</table>
+        <c:forEach var="rst" items="${result}" varStatus="sts">
+            <tr>
+                <td>${sts.index+1}</td>
+                <td>${rst.random}</td>
+                <td>${rst.choice}</td>
+                <c:choose>
+                    <c:when test="${rst.win == 1}">
+                        <td>승리</td>
+                    </c:when>
+                    <c:when test="${rst.win == 0}">
+                        <td>패배</td>
+                    </c:when>
+                </c:choose>
+                <td>${rst.prevpoint}</td>
+                <td>${rst.resultpoint}</td>
+            </tr>
+        </c:forEach>
+    </table>
+</div>
 </body>
 <script>
 </script>
