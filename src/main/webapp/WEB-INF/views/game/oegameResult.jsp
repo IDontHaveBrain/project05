@@ -30,6 +30,9 @@
 당신의 선택 : ${rst.choice}수<br>
 포인트 변동량<input type="text" id="cpoint" value="${rst.resultpoint-rst.prevpoint}" readonly/><br>
 최종 포인트<input type="text" id="rpoint" value="${rst.resultpoint}" readonly/>
+
+<input type="button" value="다시하기" onclick="location.href='oegame.do';"/>
+<input type="button" value="메인" onclick="location.href='project5/topNav.jsp';"/><br>
 </body>
 <script>
 </script>

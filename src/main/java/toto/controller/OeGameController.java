@@ -58,4 +58,16 @@ public class OeGameController {
 
         return "WEB-INF\\views\\game\\oegameResult.jsp";
     }
+
+    @RequestMapping("oegameHistory.do")
+    public String oegameHistory(Model d, HttpSession session){
+        String curId = (String)session.getAttribute("id");
+        if(inputCheck.isEmpty(curId)){
+            return "redirect:project5\\Main.jsp";
+        }
+
+        d.addAttribute("result",service.getOeHistory(curId));
+
+        return "WEB-INF\\views\\game\\oegameHistory.jsp";
+    }
 }
