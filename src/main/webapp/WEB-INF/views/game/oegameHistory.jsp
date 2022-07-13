@@ -18,7 +18,7 @@
 <body>
 <jsp:include page="/project5/topNav.jsp"></jsp:include>
 
-<div class="w-75 p-3" style="margin-top: 150px;">
+<div class="container w-75" style="margin-top: 150px;">
     <table class="table table-dark table-hover">
         <tr>
             <th>번호</th>

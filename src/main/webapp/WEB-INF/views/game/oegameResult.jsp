@@ -17,17 +17,17 @@
 </head>
 <body>
 <jsp:include page="/project5/topNav.jsp"></jsp:include>
-<div class="w-25 " style="margin-top: 150px; display: inline-block; text-align: center;">
+<div class="container w-25" style="margin-top: 150px;">
     <c:choose>
         <c:when test="${rst.win >= 1}">
             <img src="https://bunny.jjalbot.com/2016/10/B1iqI6UA/20160820_57b8357a2b0fd.jpg"
                  class="rounded mx-auto d-block" width="300" height="200" alt="정답여부 이미지...">
-            <h1>정답!</h1>
+            <h1 class="text-center">정답!</h1>
         </c:when>
         <c:otherwise>
             <img src="http://t1.daumcdn.net/brunch/service/user/baGa/image/zsMOrtaz0b-lC3GCvq6I8g2eGJo.png"
                  class="rounded mx-auto d-block" width="300" height="200" alt="정답여부 이미지...">
-            <h1>오답!</h1>
+            <h1 class="text-center">오답!</h1>
         </c:otherwise>
     </c:choose>
     <fieldset disabled>
