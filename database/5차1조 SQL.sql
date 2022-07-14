@@ -158,15 +158,24 @@ INSERT INTO Mypoint values(1,'test123',50000);
 SELECT * FROM mypoint;
 
 -- 1:1 문의
+DROP TABLE OneOneinq;
+
 CREATE TABLE OneOneinq(
 	 boardno NUMBER PRIMARY KEY,
 	 name varchar2(20),
 	 email varchar2(50),
 	 phonenumber number,
 	 title varchar2(100),
-	 content varchar2(2000)
+	 content varchar2(2000),
+	 nowtime date
 );
-	 
+CREATE SEQUENCE OneOneinq_seq
+	START WITH 1
+	MINVALUE 1 
+	MAXVALUE 77777
+	INCREMENT BY 1;
+INSERT INTO OneOneinq VALUES (1,'송우신','abc@naver.com',01012345678,'자바좋아용','너무좋은데 푸헤헿',sysdate);	 
+SELECT * FROM OneOneinq;
 
 
 

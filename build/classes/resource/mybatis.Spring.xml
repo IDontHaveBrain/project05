@@ -13,6 +13,6 @@
         <mapper resource="resource/mapper/oeGameMapper.xml"/>
         <mapper resource="resource/mapper/RPSGameMapper.xml"/>
         <mapper resource="resource/myPageMapper.xml"/>
-        <mapper resource="resource\mapper\OneOneinqMapper.xml"/>
+        <mapper resource="resource/mapper/OneOneinqMapper.xml"/>
     </mappers>
 </configuration>
