@@ -4,7 +4,6 @@
 <configuration>
     <typeAliases>
         <typeAlias type="toto.vo.OeGameResult" alias="oegame"/>
-		<typeAlias alias="mypage" type="toto.vo.MyPage"/>
 		<typeAlias alias="oneoneinq" type="toto.vo.OneOneinq"/>
 		<typeAlias alias="rpsgameresult" type="toto.vo.RPSGameResult"/>
 	</typeAliases>
@@ -12,7 +11,6 @@
         <mapper resource="resource/testMapper.xml"/>
         <mapper resource="resource/mapper/oeGameMapper.xml"/>
         <mapper resource="resource/mapper/RPSGameMapper.xml"/>
-        <mapper resource="resource/myPageMapper.xml"/>
         <mapper resource="resource/mapper/OneOneinqMapper.xml"/>
     </mappers>
 </configuration>
