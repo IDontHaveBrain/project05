@@ -14,6 +14,11 @@
     <title>홀짝게임 내역</title>
     <link href="${path}/project5/bootstrap-5.1.3/css/bootstrap.min.css" rel="stylesheet">
     <script src="${path}/project5/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background-color: #646987;
+        }
+    </style>
 </head>
 <body>
 <jsp:include page="/project5/topNav.jsp"></jsp:include>
