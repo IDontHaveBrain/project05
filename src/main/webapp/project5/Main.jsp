@@ -5,10 +5,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Tuner</title>
+<title>Betman</title>
 <%--link href="${path}/a00_com/a01_common.css" rel="stylesheet"> --%>
 
-<link rel="stylesheet" type="text/css" href="css/Main_css.css">
+<link rel="stylesheet" type="text/css" href="css/Main.css">
 </head>
 <body>
 <jsp:include page="topNav.jsp"></jsp:include>
@@ -21,65 +21,31 @@
 				</h1>
 				<p class="tagline">한경기구매! 싱글플레이!</p>
 			</section>
-			<!-- About Section -->
-			<section class="about" id="about">
-				<h2 class="hidden">About</h2>
-
-			</section>
-			<!-- Stats Gallery Section -->
-			<div class="gallery">
-				<div class=thumbnail1>
-					<img src="img/soccer.png" width="200" height="140"
-						onmouseover="this.src='img/soccer2.png'"
-						onmouseout="this.src='img/soccer.png'" />
-				</div>
-				<div class=thumbnail2>
-					<img src="img/baseball.png" width="200" height="140" onmouseover=""
-						onmouseout="" />
-				</div>
-				<div class=thumbnail3>
-					<img src="img/basketball.png" width="200" height="140"
-						onmouseover="" onmouseout="" />
-				</div>
-				<div class=thumbnail4>
-					<img src="img/volleyball.png" width="200" height="140"
-						onmouseover="" onmouseout="" />
-				</div>
-			</div>
+			
 			<!-- Parallax Section -->
 			<section class="banner">
-
-				<h2 class="parallax">BET PRO</h2>
-				<p class="parallax_description"></p>
-				<p class="vid">
-					<video autoplay width="350" align="center">
-						<source src="video/s1.mp4" />
-					</video>
-				</p>
+			<img src="img\calendar.PNG" class="static"
+			width="800" height="380"/>
 			</section>
+			
 			<!-- More Info Section -->
 			<footer>
 				<article class="footer_column">
-					<h3>Guide</h3>
-					<a href="infop/Info.html"><img src="images/가이드.jpg" alt=""
-						width="400" height="200" class="cards"
-						onmouseover="this.src='images/가이드1.jpg'"
-						onmouseout="this.src='images/가이드.jpg'" /></a>
-					<p style="text-align: center">경기일정 보기</p>
+					<h3>적중결과</h3>
+					<a href="infop/Info.html"><img src="img\result.PNG" alt=""
+						width="400" height="200" class="cards"/>
+					</a>
 				</article>
 				<article class="footer_column">
-					<h3>Order</h3>
-					<a href="Order/Order.html"><img src="images/대패.jpg" alt=""
-						width="400" height="200" class="cards"
-						onmouseover="this.src='images/대패1.jpg'"
-						onmouseout="this.src='images/대패.jpg'" /></a>
-					<p style="text-align: center">구매예약 서비스 시간 : 오후 10시 ~ 오전 8시</p>
+					<h3>토토카페</h3>
+					<a href="Order/Order.html"><img src="img\cafe.PNG" alt=""
+						width="400" height="200" class="cards" /></a>
 				</article>
 			</footer>
 			<!-- Footer Section -->
 			<section class="footer_banner" id="contact">
 				<h2 class="hidden">Footer Banner Section</h2>
-				<p class="home_header">Our Info &amp; News</p>
+				<p class="home_header">데이터 &amp; 분석</p>
 				<div OnClick="location.href='Contact/Contact.html'" class="button">CONTACT</div>
 			</section>
 			<!-- Copyrights Section -->
