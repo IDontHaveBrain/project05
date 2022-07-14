@@ -11,7 +11,7 @@
 .tbl_type .frm{padding:0;text-align:center}
 .tbl_type .frm input{margin:0}
 .tbl_type .num,.tbl_type .date,.tbl_type .hit{padding:0;font-family:Tahoma;font-size:11px;line-height:normal}
-.tbl_type .title{text-align:left}
+.tbl_type .title{text-align:center}
 .tbl_type .title .pic,.tbl_type .title .new{margin:0 0 2px;vertical-align:middle}
 .tbl_type tr.reply .title a{padding-left:12px;background:url(img/ic_reply.gif) 0 1px no-repeat}
 .tbl_type tr.reply td a.comment{padding:0;background:none;color:#f00;font-size:12px;font-weight:bold}
