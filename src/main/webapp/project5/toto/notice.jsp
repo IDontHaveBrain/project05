@@ -37,6 +37,7 @@
 </head>
 
 <body>
+<jsp:include page="/project5/topNav.jsp"></jsp:include>
 			<table >
 				<tr>
 					<th scope="row">
