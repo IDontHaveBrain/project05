@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<c:set var="path" value="${pageContext.request.contextPath }"/>
+<c:set var="path" value="${pageContext.request.contextPath}"/>
 <html>
 <head>
     <title>Title</title>
@@ -94,8 +94,8 @@
                 <ul id="sub-menu">
                     <li><a href="#" aria-label="subemnu">submenu</a></li>
                     <li><a href="#" aria-label="subemnu">submenu</a></li>
-                    <li><a href="#" aria-label="subemnu">submenu</a></li>
-                    <li><a href="#" aria-label="subemnu">submenu</a></li>
+                    <li><a href="${path}/oegame.do" aria-label="subemnu">홀짝게임</a></li>
+                    <li><a href="${path}/oegameHistory.do" aria-label="subemnu">홀짝게임 내역</a></li>
                 </ul></li>
 
             <li><a href="#">경기정보</a>
