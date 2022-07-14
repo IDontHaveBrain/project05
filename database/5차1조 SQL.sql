@@ -39,8 +39,22 @@ select * from OeGameResult;
 
 -- 가위바위보 게임 결과
 CREATE TABLE RPSGameResult(
-	
+	gameno number PRIMARY KEY,
+	id varchar2(50) REFERENCES Account(id),
+	com varchar2(5),
+	player varchar2(5),
+	gameresult number,
+	prevpoint number,
+	resultpoint number
 );
+
+CREATE SEQUENCE RPSgame_seq
+	START WITH 1
+	MINVALUE 1
+	MAXVALUE 999999
+	INCREMENT BY 1;
+
+SELECT * FROM rpsgameresult;
 
 
 CREATE TABLE bet_notice(

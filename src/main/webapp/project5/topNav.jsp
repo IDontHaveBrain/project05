@@ -12,11 +12,11 @@
 <html>
 <head>
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="${path}/project5/css/Main_css.css">
+    <link rel="stylesheet" type="text/css" href="${path}/project5/css/Main.css">
     <style>   
        
     </style>
- <link rel="stylesheet" type="text/css" href="css/topup.css">   
+ <link rel="stylesheet" type="text/css" href="project5/css/topup.css">
 </head>
 <body>
 <header> <a href="#home">
