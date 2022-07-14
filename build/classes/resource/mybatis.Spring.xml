@@ -6,6 +6,7 @@
         <typeAlias type="toto.vo.OeGameResult" alias="oegame"/>
 		<typeAlias alias="mypage" type="toto.vo.MyPage"/>
 		<typeAlias alias="oneoneinq" type="toto.vo.OneOneinq"/>
+		<typeAlias alias="rpsgameresult" type="toto.vo.RPSGameResult"/>
 	</typeAliases>
     <mappers>
         <mapper resource="resource/testMapper.xml"/>

@@ -25,7 +25,6 @@ create table Account (
 insert into Account values (1, 'asdasd123', '123123', 50000, to_date('19980101','YYYYMMDD'), 1);
 insert into Account values ((select NVL(max(idno),1)+1 from Account), 'asdasd111', '123456', 30000, to_date('19970505','YYYYMMDD'), 1);
 select * from Account;
-
 -- 홀짝게임결과
 create table OeGameResult (
     oegno number primary key,

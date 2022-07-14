@@ -29,7 +29,7 @@
         <ul id="main-menu">
             <li><a href="#">게임구매</a>
                 <ul id="sub-menu">
-                    <li><a href="#" aria-label="subemnu">submenu</a></li>
+                    <li><a href="${path}/rpsgame.do" aria-label="subemnu">가위바위보 게임</a></li>
                     <li><a href="#" aria-label="subemnu">submenu</a></li>
                     <li><a href="${path}/oegame.do" aria-label="subemnu">홀짝게임</a></li>
                     <li><a href="${path}/oegameHistory.do" aria-label="subemnu">홀짝게임 내역</a></li>
