@@ -13,6 +13,7 @@ grant dba to p05;
 
 drop table Account;
 -- 계정
+SELECT * FROM Account;
 create table Account (
     idno number primary key,
     id varchar2(50) not null unique,
@@ -147,3 +148,36 @@ SELECT * FROM bet_notice;
 SELECT * FROM bet_faq;
 SELECT * FROM bet_inquiry;
 SELECT * FROM BOARD ;
+
+-- 포인트 충전
+CREATE TABLE Mypoint(
+	idno number PRIMARY KEY,
+	id varchar2(50),
+	point NUMBER
+);
+INSERT INTO Mypoint values(1,'test123',50000);
+SELECT * FROM mypoint;
+
+-- 1:1 문의
+CREATE TABLE OneOneinq(
+	 boardno NUMBER PRIMARY KEY,
+	 name varchar2(20),
+	 email varchar2(50),
+	 phonenumber number,
+	 title varchar2(100),
+	 content varchar2(2000)
+);
+	 
+
+
+
+
+
+
+
+
+
+
+
+
+
