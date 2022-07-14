@@ -36,3 +36,9 @@ create table OeGameResult (
     id varchar2(50)
 );
 select * from OeGameResult;
+
+-- 가위바위보 게임 결과
+CREATE TABLE RPSGameResult(
+	
+);
+
