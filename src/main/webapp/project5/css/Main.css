@@ -9,6 +9,10 @@ body {
 	justify-content: center;
 	align-items: center;
 	overflow-x: hidden;
+	background-color: #646987;
+}
+img.static {
+position: static;
 }
 
 h1 {
@@ -110,7 +114,7 @@ ul li:hover a {
 	display: inline-block;
 	background-color: #FFFFFF;
 	margin-top: 0px;
-	width: 100%;
+	width: 80%;
 }
 
 .hidden {
@@ -230,8 +234,7 @@ ul li:hover a {
 /* Parallax Section */
 .banner {
 	background-color: #2D9AB7;
-	background-image: url(../images/parallax.png);
-	height: 400px;
+	height: 420px;
 	background-attachment: fixed;
 	background-size: cover;
 	background-repeat: no-repeat;

@@ -57,7 +57,7 @@
         <input type="button" value="다시하기" class="btn btn-primary m-2"
                onclick="location.href='oegame.do';"/>
         <input type="button" value="메인" class="btn btn-secondary m-2"
-               onclick="location.href='project5/topNav.jsp';"/><br>
+               onclick="location.href='project5/Main.jsp';"/><br>
     </div>
 </div>
 </body>
