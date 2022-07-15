@@ -1,22 +1,39 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"
-    import="java.util.*" 
+    pageEncoding="UTF-8"   
     %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<c:set var="path" value="${pageContext.request.contextPath}"/>
-
-<fmt:requestEncoding value="UTF-8"/>    
+ 
 <!DOCTYPE html>
 <html>
 <head>   
 <meta charset="UTF-8">
 <title>셀프 진단평가</title>
-<link href="${path}/a00_com/a01_common.css" rel="stylesheet">
-<script src="${path}/a00_com/jquery-3.6.0.js" type="text/javascript"></script>
+<style type="text/css">
+@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
 
+h1, h3, h4{
+    font-family: 'Jeju Gothic', sans-serif;
+}  
+
+button{
+ background-color: #8181F7;
+  color: white;
+ padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="css/Main_css.css">
 </head>
 <body>
+<jsp:include page="/project5/topNav.jsp"></jsp:include>
+
+<script type="text/javascript">
+function goAns(){
+	location.href="webapp\\SelfCK\\researchAns.jsp";
+}
+</script>
 
 <%
 String arr[]={
@@ -47,7 +64,7 @@ String ans[]={"없음", "가끔","때때로","거의항상"};
 지난 1년 동안에 대해 생각해 보고, 해당하는 항목을 선택해 주세요.
 </h4>
 
-<textarea rows="5" cols="70">
+<textarea rows="5" cols="70" style="background-color:transparent">
 도박이란 돈이나 가치있는 소유물을 걸고 결과가 불확실한 사건에 내기를 거는 행위를 뜻합니다.
 예를 들면 체육진흥투표권(스포츠토토), 복권, 경마, 카지노 등을 도박이라고 할 수 있습니다.
 </textarea>
@@ -84,7 +101,30 @@ String ans[]={"없음", "가끔","때때로","거의항상"};
 		}
 	%>
 </table>
-	<input type="submit" value="결과보기"/>
+	<button type="submit" onclick="goAns()">결과보기</button>
 	</form>
+	<!-- About Section -->
+ 		<section class="about" id="about">
+   		  <h2 class="hidden">About</h2>
+		 
+    </section>
+		
+
+  
+  <!-- Footer Section -->
+  <section class="footer_banner" id="contact">
+    <h2 class="hidden">Footer Banner Section </h2>
+    <p class="home_header">Our Info &amp; News</p>
+    <div OnClick="location.href='Contact/Contact.html'" class="button">CONTACT</div>
+  </section>
+  <!-- Copyrights Section -->
+  <div class="copyright">&copy;2022 - <strong>BETMAN</strong></div>		
+	
+<script type="text/javascript">
+$(function() {
+	$( "#Tabs1" ).tabs(); 
+});
+</script>
+
 </body>
 </html>
