@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="toto.dao.OneOneinqDao">
+
+	<select id="OneOneinqList" resultType="oneoneinq" parameterType="oneoneinq">
+	   select *
+	   from OneOneinq
+	   where 1=1
+	   <if test="name!=null">
+	   and name like '%'||#{name}||'%'
+	   </if>
+	   <if test="title!=null">
+	   and title like '%'||#{title}||'%'
+	   </if>
+	   order by boardno desc
+	</select>	
+	
+</mapper>

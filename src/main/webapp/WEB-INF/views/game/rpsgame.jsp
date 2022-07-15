@@ -36,8 +36,9 @@
 </head>
 
 <body>
+<jsp:include page="/project5/topNav.jsp"></jsp:include>
 <div class="jumbotron text-center">
-  <h2 data-toggle="modal" data-target="#exampleModalCenter">타이틀</h2>
+  <h2 data-toggle="modal" data-target="#exampleModalCenter">가위바위보 게임</h2>
 
 </div>
 <div class="container">
@@ -65,7 +66,7 @@
       </tr>
     </thead>   
     <tbody>
-       <tr><td></td><td></td><td></td><td></td><td></td></tr>
+       <tr><td>${curPoint}</td><td>${odds}</td><td></td><td></td><td></td></tr>
        <tr><td></td><td></td><td></td><td></td><td></td></tr>
        <tr><td></td><td></td><td></td><td></td><td></td></tr>
     </tbody>
