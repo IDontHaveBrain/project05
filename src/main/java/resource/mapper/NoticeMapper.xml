@@ -5,16 +5,16 @@
 <mapper namespace="toto.dao.NoticeDao">
 	<select id="noticeList" resultType="notice" parameterType="notice">
 		select *
-		FROM Notice
-		WHERE 1=1
-		<if test="title">
-			AND title LIKE '%' ||#{title}|| '%'
-		</if>
-		ORDER BY no DESC
+		FROM bet_Notice
+		
 	</select>
 	
 	
-	
+	<!-- WHERE 1=1
+		<if test="title">
+			AND title LIKE '%' ||#{title}|| '%'
+		</if>
+		ORDER BY no DESC -->
 	
 	
 	

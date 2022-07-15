@@ -6,11 +6,13 @@
         <typeAlias type="toto.vo.OeGameResult" alias="oegame"/>
 		<typeAlias alias="oneoneinq" type="toto.vo.OneOneinq"/>
 		<typeAlias alias="rpsgameresult" type="toto.vo.RPSGameResult"/>
+		<typeAlias alias="notice" type="toto.vo.Notice"/>
 	</typeAliases>
     <mappers>
         <mapper resource="resource/testMapper.xml"/>
         <mapper resource="resource/mapper/oeGameMapper.xml"/>
         <mapper resource="resource/mapper/RPSGameMapper.xml"/>
         <mapper resource="resource/mapper/OneOneinqMapper.xml"/>
+        <mapper resource="resource/mapper/NoticeMapper.xml"/>
     </mappers>
 </configuration>
