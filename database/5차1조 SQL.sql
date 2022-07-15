@@ -10,9 +10,12 @@ grant dba to p05;
  샘플데이터(테이블당 최소 3개 이상씩)
  위에서부터 아래로 순차적으로 실행시 모든 테이블 및 샘플데이터 입력되게 작성
  */
-
+-- 홀짝게임 포인트충전용
+UPDATE Account SET point = 999999999 WHERE idno=1;
+--
 drop table Account;
 -- 계정
+SELECT * FROM Account;
 create table Account (
     idno number primary key,
     id varchar2(50) not null unique,
@@ -24,7 +27,6 @@ create table Account (
 insert into Account values (1, 'asdasd123', '123123', 50000, to_date('19980101','YYYYMMDD'), 1);
 insert into Account values ((select NVL(max(idno),1)+1 from Account), 'asdasd111', '123456', 30000, to_date('19970505','YYYYMMDD'), 1);
 select * from Account;
-
 -- 홀짝게임결과
 create table OeGameResult (
     oegno number primary key,
@@ -147,3 +149,45 @@ SELECT * FROM bet_notice;
 SELECT * FROM bet_faq;
 SELECT * FROM bet_inquiry;
 SELECT * FROM BOARD ;
+
+-- 포인트 충전
+CREATE TABLE Mypoint(
+	idno number PRIMARY KEY,
+	id varchar2(50),
+	point NUMBER
+);
+INSERT INTO Mypoint values(1,'test123',50000);
+SELECT * FROM mypoint;
+
+-- 1:1 문의
+DROP TABLE OneOneinq;
+
+CREATE TABLE OneOneinq(
+	 boardno NUMBER PRIMARY KEY,
+	 name varchar2(20),
+	 email varchar2(50),
+	 phonenumber number,
+	 title varchar2(100),
+	 content varchar2(2000),
+	 nowtime date
+);
+CREATE SEQUENCE OneOneinq_seq
+	START WITH 1
+	MINVALUE 1 
+	MAXVALUE 77777
+	INCREMENT BY 1;
+INSERT INTO OneOneinq VALUES (1,'송우신','abc@naver.com',01012345678,'자바좋아용','너무좋은데 푸헤헿',sysdate);	 
+SELECT * FROM OneOneinq;
+
+
+
+
+
+
+
+
+
+
+
+
+
