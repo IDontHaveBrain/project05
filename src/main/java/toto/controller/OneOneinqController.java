@@ -18,4 +18,9 @@ public class OneOneinqController {
 		d.addAttribute("oneList", service.OneOneinqList(sch));
 		return "WEB-INF\\views\\mypage\\OneOneinqMain.jsp";
 	}
+	// http://localhost:7082/project05/MyPoint.do
+	@RequestMapping("MyPoint.do")
+	public String MyPointList(Model d) {
+		return "WEB-INF\\views\\mypage\\MyPointMain.jsp";
+	}
 }

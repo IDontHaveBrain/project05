@@ -10,7 +10,9 @@ grant dba to p05;
  샘플데이터(테이블당 최소 3개 이상씩)
  위에서부터 아래로 순차적으로 실행시 모든 테이블 및 샘플데이터 입력되게 작성
  */
-
+-- 홀짝게임 포인트충전용
+UPDATE Account SET point = 999999999 WHERE idno=1;
+--
 drop table Account;
 -- 계정
 SELECT * FROM Account;
