@@ -50,6 +50,15 @@
                     <li><a href="#" aria-label="subemnu">마감게임보기</a></li>
                     <li><a href="#" aria-label="subemnu">게임일정</a></li>
                 </ul></li>
+                
+                <li><a href="#">건전토토</a>
+                <ul id="sub-menu">
+                    <li><a href="#" aria-label="subemnu">나의 건전상태</a></li>
+                    <li><a href="#" aria-label="subemnu">셀프 진단평가</a></li>
+                    <li><a href="#" aria-label="subemnu">submenu</a></li>
+                    <li><a href="#" aria-label="subemnu">submenu</a></li>
+                    <li><a href="#" aria-label="subemnu">submenu</a></li>
+                </ul></li>
 
             <li><a href="#">로그인/회원가입</a>
                 <ul id="sub-menu">
