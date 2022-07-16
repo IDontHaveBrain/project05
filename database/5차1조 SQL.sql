@@ -184,10 +184,37 @@ INSERT INTO OneOneinq VALUES (oneoneinq_seq.nextval,'송우신','abc@naver.com',
 INSERT INTO OneOneinq VALUES (oneoneinq_seq.nextval,'송우신','abc@naver.com','010-1234-5678','늦은밤','너무좋은데 푸헤헿',sysdate,0);	 
 SELECT * FROM OneOneinq;
 
+-- 승부예측 경기정보
+CREATE TABLE soccer(
+	snum char(5) PRIMARY KEY,
+	gamedate date,
+	place varchar2(50),
+	hteam varchar2(50),
+	vteam varchar2(50),
+	gresult varchar2(50)
+);
+INSERT INTO soccer(snum, gamedate, place, hteam, vteam) values('0001','2022-07-16','가시마사커스타디움','가시마','비셀고베');
+INSERT INTO soccer(snum, gamedate, place, hteam, vteam) values('0002','2022-07-16','IAI스타디움니혼다이라','시미즈','우라와');
+INSERT INTO soccer(snum, gamedate, place, hteam, vteam) values('0003','2022-07-16','전주월드컵경기장','전북현대','성남FC');
+INSERT INTO soccer(snum, gamedate, place, hteam, vteam) values('0004','2022-07-16','울산문수축구경기장','울산현대','수원삼성');
+INSERT INTO soccer(snum, gamedate, place, hteam, vteam) values('0005','2022-07-16','김천종합운동장','김천상무','인천유나');
+INSERT INTO soccer(snum, gamedate, place, hteam, vteam) values('0006','2022-07-16','도요타스타디움','나고야','가와사키');
 
+-- 승부예측 구매
+CREATE TABLE forecast(
+	gnum char(5) PRIMARY KEY,
+	fsnum01 char(5) REFERENCES soccer(snum),
+	fsnum02 char(5) REFERENCES soccer(snum),
+	fsnum03 char(5) REFERENCES soccer(snum),
+	fsnum04 char(5) REFERENCES soccer(snum),
+	fsnum05 char(5) REFERENCES soccer(snum),
+	fsnum06 char(5) REFERENCES soccer(snum),
+	id varchar2(50) REFERENCES Account(id)
+);
+INSERT INTO forecast values('1001','0001','0002','0003','0004','0005','0006','asdasd123'); 
 
-
-
+SELECT * FROM soccer;
+SELECT * FROM forecast;
 
 
 
