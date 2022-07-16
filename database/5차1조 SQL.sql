@@ -43,9 +43,9 @@ select * from OeGameResult;
 CREATE TABLE RPSGameResult(
 	gameno number PRIMARY KEY,
 	id varchar2(50) REFERENCES Account(id),
-	com varchar2(5),
-	player varchar2(5),
-	gameresult number,
+	com varchar2(15),
+	player varchar2(15),
+	gameresult varchar2(15),
 	prevpoint number,
 	resultpoint number
 );
@@ -57,7 +57,6 @@ CREATE SEQUENCE RPSgame_seq
 	INCREMENT BY 1;
 
 SELECT * FROM rpsgameresult;
-
 
 CREATE TABLE bet_notice(
 bt_no NUMBER,
