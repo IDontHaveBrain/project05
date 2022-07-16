@@ -32,6 +32,12 @@
       
       --%>   
    });
+	function goInsert(){
+		location.href="${path}/oneoneinqInsertForm.do"
+	}
+	function goDetail(boardno){
+		location.href="${path}/oneoneinqDetail.do?boardno="+boardno;
+	}
 </script>
 </head>
 
@@ -42,20 +48,23 @@
 
 </div>
 <div class="container">
-   <form id="frm01" class="form-inline"  method="post">
+   <form id="frm01" class="form"  method="post">
      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-       <input class="form-control mr-sm-2" name="name" 
-       		value="${param.name}" placeholder="작성자" />
        <input class="form-control mr-sm-2" name="title" 
        		value="${param.title}" placeholder="제목" />
+       <input class="form-control mr-sm-2" name="name" 
+       		value="${param.name}" placeholder="작성자" />
+
        <button class="btn btn-info" type="submit">검색</button>
+       <button class="btn btn-success" onclick="goInsert()" type="button">1:1문의 등록</button>
     </nav>
    </form>
    <table class="table table-hover table-striped">
       <col width="10%">
-      <col width="20%">
-      <col width="45%">
       <col width="25%">
+      <col width="40%">
+      <col width="15%">
+      <col width="10%">
     <thead>
     
       <tr class="table-success text-center">
@@ -63,12 +72,14 @@
         <th>작성자</th>
         <th>제목</th>
         <th>작성일자</th>
+        <th>조회수</th>
       </tr>
     </thead>   
     <tbody>
     <c:forEach var="ol" items="${oneList}">
-       <tr><td>${ol.boardno}</td><td>${ol.name}</td><td>${ol.title}</td>
-       	   <td><fmt:formatDate value="${ol.nowtime}"/></td></tr>
+       <tr ondblclick="goDetail(${ol.boardno})">
+       <td>${ol.boardno}</td><td>${ol.name}</td><td>${ol.title}</td>
+       	   <td><fmt:formatDate value="${ol.nowtime}"/></td><td>${ol.readcnt}</td></tr>
     </c:forEach>
     </tbody>
    </table>    

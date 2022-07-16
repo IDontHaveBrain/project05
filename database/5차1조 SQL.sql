@@ -164,23 +164,25 @@ DROP TABLE OneOneinq;
 
 CREATE TABLE OneOneinq(
 	 boardno NUMBER PRIMARY KEY,
-	 name varchar2(20),
-	 email varchar2(50),
-	 phonenumber number,
+	 name varchar2(100),
+	 email varchar2(100),
+	 phonenumber varchar2(50),
 	 title varchar2(100),
 	 content varchar2(2000),
-	 nowtime date
+	 nowtime DATE ,
+	 readcnt number
 );
+
+DROP SEQUENCE OneOneinq_seq;
 CREATE SEQUENCE OneOneinq_seq
 	START WITH 1
 	MINVALUE 1 
 	MAXVALUE 77777
 	INCREMENT BY 1;
-INSERT INTO OneOneinq VALUES (1,'송우신','abc@naver.com',01012345678,'자바좋아용','너무좋은데 푸헤헿',sysdate);	 
+INSERT INTO OneOneinq VALUES (oneoneinq_seq.nextval,'송우신','abc@naver.com','010-1234-5678','자바좋아용','너무좋은데 푸헤헿',sysdate,0);	 
+INSERT INTO OneOneinq VALUES (oneoneinq_seq.nextval,'송우신','abc@naver.com','010-1234-5678','자바너무좋아용','너무좋은데 푸헤헿',sysdate,0);	 
+INSERT INTO OneOneinq VALUES (oneoneinq_seq.nextval,'송우신','abc@naver.com','010-1234-5678','늦은밤','너무좋은데 푸헤헿',sysdate,0);	 
 SELECT * FROM OneOneinq;
-
-
-
 
 
 
