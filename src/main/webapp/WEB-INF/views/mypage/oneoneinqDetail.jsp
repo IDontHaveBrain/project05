@@ -134,6 +134,7 @@ var proc = "${proc}"
 	}
 	function goMain(){
 	   location.href="${path}/OneOneinq.do";
+	   
 	}
 
 
