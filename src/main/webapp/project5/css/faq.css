@@ -1,97 +1,43 @@
 @charset "UTF-8";
 
-.contTitle{position:relative;margin-bottom: 40px}
-.contTitle h3{color:#000;font-size:30px; line-height: 36px; text-align:center}
-.contTitle > p.titSub{ margin-top:10px; font-size:14px; color:#555555; text-align:center}
-.contTitle h3 > .titSub{ display: block;margin-top:4px; font-size:18px; color:#222; text-align:center}
-
-.contTitle.lybox{ padding-top:40px;margin-bottom: 10px}
-.contTitle.lybox > div:last-child {text-align: right;}
-.contTitle.lybox > div {  vertical-align: bottom; }
-
-.contTitle.lybox .selLeft {text-align: left !important;}
-.contTitle.lybox .selLeft .selectBox {width: 606px;}
-
-.contTitle + .contTitle.lybox{  padding-top: 0 }
-.caleandarList + .contTitle.lybox{padding-top:30px;}
-.pagingBox + .contTitle.lybox{padding-top:50px;}
-.indiTitArea + .contTitle.lybox{padding-top:20px;}
-
-.contTitle h4 { display: inline-block;color:#222;font-size:20px; line-height:20px;margin-bottom: 10px  }
-.contTitle h5 { display: inline-block;color:#222;font-size:16px; line-height:16px;margin-bottom: 10px  }
-.contTitle h5.small {  font-size: 14px;line-height: 20px;margin-bottom: 0px }
-.contTitle h5.h4 { font-size:20px; line-height:20px;  }
-.contTitle h6.h5 { color:#222;font-size:16px; line-height:16px;  }
+.tbl_type,.tbl_type th,.tbl_type td{border:0}
+.tbl_type a{color:#383838;text-decoration:none}
+.tbl_type{width:100%;border-bottom:1px solid #999;color:#666;font-size:12px;table-layout:fixed}
+.tbl_type caption,.tbl_type .frm label{display:none}
+.tbl_type th{padding:5px 0 4px;border-top:solid 1px #999;border-bottom:solid 1px #b2b2b2;background-color:#f1f1f4;color:#333;font-weight:bold;line-height:18px;vertical-align:top}
+.tbl_type td{padding:8px 0 5px;border-bottom:solid 1px #d2d2d2;text-align:center}
+.tbl_type .frm{padding:0;text-align:center}
+.tbl_type .frm input{margin:0}
+.tbl_type .num,.tbl_type .date,.tbl_type .hit{padding:0;font-family:Tahoma;font-size:11px;line-height:normal}
+.tbl_type .title{text-align:center}
+.tbl_type .title .pic,.tbl_type .title .new{margin:0 0 2px;vertical-align:middle}
+.tbl_type tr.reply .title a{padding-left:12px;background:url(img/ic_reply.gif) 0 1px no-repeat}
+.tbl_type tr.reply td a.comment{padding:0;background:none;color:#f00;font-size:12px;font-weight:bold}
 
 
-.contTitle .date, .popHead .date { font-size:12px;line-height:inherit;}
-.contTitle .date em, .popHead .date em{  color:#222; }
-
-.contTitle.voteTitle {   padding-top: 0px;margin-bottom: 20px }
-.contTitle.voteTitle h4 {  vertical-align: middle;margin-bottom: 0 }
-.contTitle.voteInfo { margin-bottom: 5px   }
-
-
-.faqSearchWrap{ margin-top:-10px; }
-.faqSearchWrap .inputSch { margin: 0 auto; position: relative; width: 450px; }
-.inputSch input[type="text"]{ -webkit-box-sizing: border-box; -moz-box-sizing: border-box; font-family: 'NanumGothic',나눔고딕,sans-serif; width: 100%; height: 45px; padding: 3px 10px; padding-right: 35px; border: 1px solid #333333; font-size: 14px; color: #222222; }
-.inputSch input[type="button"]{ position: absolute; right: 0; top: 0; width: 43px; height: 43px; border: 0; background: url(/images/customer/ico_sch.png) no-repeat 50% 50%; font-size: 0; }
-.faqSearchWrap .schWordBox { margin-top: 15px; text-align: center; }
-.faqSearchWrap > .schWordBox span.wordTitle{ display: inline-block; padding-right: 10px; font-size: 11px; font-weight: 700; color: #222222; background: url(/images/customer/bg_bar_2x11px.png) no-repeat right center; }
-.faqSearchWrap > .schWordBox span.wordSnap { display: inline-block; padding-left: 5px; font-size: 11px; color: #555555; }
-.faqSearchWrap > .schWordBox span.wordSnap a:hover{ color:#0f4c81; text-decoration:underline; }
-.tblBottomInfoMsg{ position: relative; font-size: 12px; }
-.tblBottomInfoMsg a { font-size: 12px !important; border-bottom: 1px solid #d81526; }
-
-
-.faqListWrap { position:relative; border-top: 1px solid #222222; }
-.faqListWrap dl dt{ display: block; cursor: pointer; position: relative; margin: 0; padding:18px 30px 18px 16px; line-height:14px; background: #ffffff; font-weight: normal; color: #454545; border:none; border-bottom:1px solid #dddddd; }
-.faqListWrap dl dt.active{ border: none; border-bottom:none; background: #f8f8f8 !important; font-weight: normal; color: #0f4c81; outline:none; }
-.faqListWrap dl dt.active a:before{ content: 'Q.'; display: inline-block; color: #0f4c81 !important; font-weight: 700; padding-right: 13px; font-family: Roboto; font-size: 18px; line-height:1; }
-.faqListWrap dl dt a:before{content: 'Q.';display: inline-block;color: #555555;font-weight: 700;padding-right: 13px;font-family: Roboto;font-size: 18px;line-height:1;position: absolute;left: 0;top: -2px;}
-.faqListWrap dl dt.active a,
-.faqListWrap dl dt.active a:link,
-.faqListWrap dl dt.active a:visited { color: #0f4c81 !important; text-decoration: none; font-size: 14px; line-height:18px; font-weight: bold; }
-.faqListWrap dl dt a,
-.faqListWrap dl dt a:link,
-.faqListWrap dl dt a:visited{color: #555555;text-decoration: none;font-size: 14px;line-height: 19px;position: relative;padding: 0px 20px 0px 28px;display: block;}
-.faqListWrap dl dt .uiIcon{ background: url(/images/customer/ico_acclist_down.png) no-repeat right center; position: absolute; width: 30px; height:8px; top: 23px; right: 0; }
-.faqListWrap dl dt.active .uiIcon{ background: url(/images/customer/ico_acclist_up.png) no-repeat right center; font-weight:700; position: absolute; width: 30px; height:8px; top: 23px; right: 0; }
-.faqListWrap dl dd{ padding: 3px 15px 25px 47px; display:none; }
-.faqListWrap dl dd.active{ display:block; padding: 0px 15px 25px 47px; border-top: 0; overflow: auto; background: #f8f8f8 !important; font-size:14px; line-height:23px; border:none; border-bottom:1px solid #dddddd; height:auto !Important; }
-
-.faqListWrap dl dt.on{ border: none; border-bottom:none; background: #f8f8f8 !important; font-weight: normal; color: #0f4c81; outline:none; }
-.faqListWrap dl dt.on a:before{ content: 'Q.'; display: inline-block; color: #0f4c81 !important; font-weight: 700; padding-right: 13px; font-family: Roboto; font-size: 18px; line-height:1; }
-.faqListWrap dl dt.on a,
-.faqListWrap dl dt.on a:link,
-.faqListWrap dl dt.on a:visited { color: #0f4c81 !important; text-decoration: none; font-size: 14px; line-height:19px; font-weight: bold; }
-.faqListWrap dl dt.on .uiIcon{ background: url(/images/customer/ico_acclist_up.png) no-repeat right center; font-weight:700; position: absolute; width: 30px; height:8px; top: 23px; right: 0; }
-.faqListWrap dl dd{ padding: 0px 55px 25px 47px; border-top: 0; overflow: auto; background: #f8f8f8 !important; font-size:14px; line-height:23px; border:none; border-bottom:1px solid #dddddd; height:auto !Important; }
-.faqListWrap dl dd.on{display:block;}
-.faqListWrap .nocBox.bd{border-top-width:0;}
-.faqListWrap .nocBox.bd p{}
-
-
-.selectDiv { position: relative;display: inline-block;vertical-align: middle; text-align: left; }
-.selectDiv strong,
-.selectDiv button {display: block;width:100%;height: 30px;font-weight: 400;border: 1px solid #aaa;color:#222;line-height: 18px;background: #fff;padding: 5px 26px 6px 10px;text-align:left;cursor: pointer;}
-.selectDiv strong:after,
-.selectDiv button:after {  content: '';position: absolute;right: 12px;top:50%;width: 16px;height: 16px;margin-top:-8px;background: url(/images/comm/selbox_ico.png) no-repeat right 50%;}
-.selectDiv .list {z-index: 9;position: absolute;width: 100%;/*height: 0;*/left:0;top:29px;color:#222;background: #fff;overflow: hidden;display:none;z-index: 21;}
-.selectDiv .list ul {border: 1px solid #aaa;max-height: 340px;overflow: auto;}
-.selectDiv .list li a{display: block;padding: 4px 12px 5px;cursor:pointer;}
-.selectDiv .list li a:hover {  color: #999;background: #f1f9ff;color: #2e75b6; }
-.selectDiv.open .list{  /*height: auto;*/ display: block }
-
-.selectDiv.disabled {cursor: default;}
-.selectDiv.disabled strong,
-.selectDiv.disabled button{ border: 1px solid #e6e6e6;color: #999; background: #fafbfc;}
-.selectDiv.disabled.open .list{  display: none; }
-.selectDiv+ .selectDiv  {  margin-left:2px; }
-
-.selectDiv.bottom {width: 106px}
-.selectDiv.bottom strong,
-.selectDiv.bottom button{  height:41px;padding:10px 28px 0 5px;border:none;border-bottom:1px solid #555;font-weight:700;color:#222;font-size:18px; }
-.selectDiv.bottom strong:hover,
-.selectDiv.bottom button:hover{background:#f1f9ff; color: #2E75B6; font-weight:700}
-.selectDiv.bottom .list { top:40px;  }
+  .answer {
+    display: none;
+    padding-bottom: 30px;
+  }
+  #faq-title {
+    font-size: 25px;
+  }
+  .faq-content {
+    border-bottom: 1px solid #e0e0e0;
+  }
+  .question {
+    font-size: 19px;
+    padding: 30px 0;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+  }
+  .question:hover {
+    color: #2962ff;
+  }
+  [id$="-toggle"] {
+    margin-right: 15px;
+  }

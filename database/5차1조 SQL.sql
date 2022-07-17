@@ -216,7 +216,54 @@ INSERT INTO forecast values('1001','0001','0002','0003','0004','0005','0006','as
 SELECT * FROM soccer;
 SELECT * FROM forecast;
 
+CREATE TABLE closing(
+ctype varchar(20),
+ctitle varchar(100),
+cdate varchar(100))
 
+INSERT INTO closing values('축구','축구토토 스페셜 트리플 27회차','22.07.16(토) 18:50');
+INSERT INTO closing values('축구','축구토토 스페셜 더블 27회차','22.07.16(토) 18:50');
+INSERT INTO closing values('축구','축구토토 승무패 36회차','22.07.16(토) 17:50');
+INSERT INTO closing values('야구','야구토토 승1패 29회차','22.07.15(금) 21:50');
+INSERT INTO closing values('프로토','프로토 승부식 56회차','22.07.15(금) 12:50');
+INSERT INTO closing values('야구','야구토토 스페셜 트리플 74회차','22.07.14(목) 18:20');
+INSERT INTO closing values('야구','야구토토 스페셜 더블 74회차','22.07.14(목) 18:20');
+INSERT INTO closing values('골프','골프토토 스페셜 7명 21회차','22.07.14(목) 13:50');
+INSERT INTO closing values('골프','골프토토 스페셜 5명 21회차','22.07.13(수) 17:00');
+INSERT INTO closing values('야구','야구토토 스페셜 트리플 73회차','22.07.13(수) 17:00');
+INSERT INTO closing values('야구','야구토토 스페셜 더블 73회차','22.07.12(화) 18:20');
+INSERT INTO closing values('야구','야구토토 스페셜 더블 72회차','22.07.12(화) 18:20');
+INSERT INTO closing values('야구','야구토토 스페셜 트리플 72회차','22.07.12(화) 18:20');
+INSERT INTO closing values('프로토','프로토 승부식 55회차','22.07.10(일) 21:50');
+INSERT INTO closing values('프로토','프로토 기록식 28회차','22.07.10(일) 19:20');
+INSERT INTO closing values('축구','축구토토 스페셜 더블 26회차','22.07.10(일) 18:50');
+INSERT INTO closing values('축구','축구토토 스페셜 트리플 26회차','22.07.10(일) 18:50');
+INSERT INTO closing values('축구','축구토토 승무패 35회차','22.07.09(토) 18:50');
+INSERT INTO closing values('야구','야구토토 스페셜 더블 71회차','22.07.09(토) 17:50');
+
+CREATE TABLE calendar(
+ctime varchar(50),
+team varchar(100),
+place varchar(50));
+
+INSERT INTO calendar values('22.07.23 (토) 18:00','서울이랜 vs 경남FC','목동운동장');
+INSERT INTO calendar values('22.07.23 (토) 20:00','안산그리 vs 김포FS','안산와스타디움');
+INSERT INTO calendar values('22.07.23 (토) 20:00','부천FC vs 충남아산','부천종합운동장');
+INSERT INTO calendar values('22.07.24 (일) 08:00','뉴욕시티 vs 인터마이','양키스타디움');
+INSERT INTO calendar values('22.07.24 (일) 08:30','FC신시내 vs 내슈빌SC','TQL스타디움');
+INSERT INTO calendar values('22.07.23 (토) 18:00','한화 vs KT','한화생명이글스파크');
+INSERT INTO calendar values('22.07.23 (토) 18:00','롯데 vs KIA','부산사직운동장');
+INSERT INTO calendar values('22.07.23 (토) 18:00','NC vs LG','창원NC파크');
+INSERT INTO calendar values('22.07.22 (금) 18:30','한화 vs KT','한화생명이글스파크');
+INSERT INTO calendar values('22.07.22 (금) 18:30','롯데 vs KIA','부산사직운동장');
+INSERT INTO calendar values('22.07.22 (금) 18:30','NC vs LG','창원NC파크');
+INSERT INTO calendar values('22.07.14 (목) 18:30','LG vs KIA','서울잠실야구장');
+INSERT INTO calendar values('22.07.14 (목) 18:30','SSG vs 키움','인천SSG랜더스필드');
+INSERT INTO calendar values('22.07.14 (목) 18:30','KT vs 삼성','수원케이티위즈파크');
+INSERT INTO calendar values('22.07.14(목) ~ 22.07.14(목)','PGA 디 오픈 챔피언십 ','파이프(스코틀랜드)');
+INSERT INTO calendar values('22.07.10 (일) 19:00','수원FC vs FC서울','수원종합운동장');
+INSERT INTO calendar values('22.07.10 (일) 19:00','충남아산 vs 전남드래','이순신종합운동장');
+INSERT INTO calendar values('22.07.08(금) ~ 22.07.08(금)','KLPGA 대보 하우스디 오픈','서원밸리CC');
 
 
 

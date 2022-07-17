@@ -8,10 +8,12 @@ import org.springframework.stereotype.Service;
 import toto.dao.NoticeDao;
 import toto.vo.Notice;
 
+
 @Service
 public class NoticeService {
 	@Autowired(required = false)
 	private NoticeDao dao;
+	
 	public List<Notice> noticeList(Notice sch) {
 		return dao.noticeList(sch);
 	}
