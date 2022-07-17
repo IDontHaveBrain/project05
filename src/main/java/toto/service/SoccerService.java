@@ -13,6 +13,10 @@ public class SoccerService {
 	@Autowired(required = false)
 	private SoccerDao dao;
 	
+	public List<Soccer> getSoccerList(Soccer sch){
+		return dao.getSoccerList(sch);		
+	}
+	
 	public void updateSoccer(Soccer upt) {
 		dao.updateSoccer(upt); 	
 	}
