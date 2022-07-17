@@ -7,6 +7,7 @@
 		<typeAlias alias="oneoneinq" type="toto.vo.OneOneinq"/>
 		<typeAlias alias="rpsgameresult" type="toto.vo.RPSGameResult"/>
 		<typeAlias alias="notice" type="toto.vo.Notice"/>
+		<typeAlias alias="soccer" type="toto.vo.Soccer"/>
 	</typeAliases>
     <mappers>
         <mapper resource="resource/testMapper.xml"/>
@@ -14,5 +15,6 @@
         <mapper resource="resource/mapper/RPSGameMapper.xml"/>
         <mapper resource="resource/mapper/OneOneinqMapper.xml"/>
         <mapper resource="resource/mapper/NoticeMapper.xml"/>
+        <mapper resource="resource/mapper/SoccerMapper.xml"/>
     </mappers>
 </configuration>
