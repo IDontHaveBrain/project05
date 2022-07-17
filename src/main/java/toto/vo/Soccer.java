@@ -20,6 +20,10 @@ public class Soccer {
 		this.vteam = vteam;
 		this.gresult = gresult;
 	}
+	public Soccer(String snum, String gresult) {
+		this.snum = snum;
+		this.gresult = gresult;
+	}
 	public String getSnum() {
 		return snum;
 	}
