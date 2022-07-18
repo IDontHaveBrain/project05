@@ -21,7 +21,7 @@
 <body>
 <header> <a href="#home">
 </a>
-    <div>
+    <div OnClick="location.href='${path}/project5/Main.jsp'">
         <img src="${path}/project5/img/logo.png"  width="80" height="40"
              style="float:left; margin-top:15px; margin-left:50px;"/>
     </div>
