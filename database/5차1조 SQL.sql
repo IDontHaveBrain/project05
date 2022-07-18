@@ -78,49 +78,46 @@ bt_title varchar(50),
 bt_content varchar(500));
 
 --notice
-INSERT INTO bet_notice values(13588,'토토','[안내] 골프스페셜 21회차 발매개시 안내','2022.07.12');
-INSERT INTO bet_notice values(13587,'토토','[적중자 현황 안내] 축구토토 승무패 35회차 2등 적중자 관련','2022.07.10');
-INSERT INTO bet_notice values(13586,'토토','[안내] 야구토토 승1패 차회차 이월 규정 적용안내','2022.07.09');
-INSERT INTO bet_notice values(13585,'토토','[안내] NPB경기취소 안내_7월9일(토)','2022.07.09');
-INSERT INTO bet_notice values(13584,'프로토','[게임일정 안내] 프로토 기록식 29회차 대상경기 등록관련','2022.07.09');
-INSERT INTO bet_notice values(13583,'프로토','[게임일정 안내] 프로토 기록식 29회차 대상경기 등록관련','2022.07.09');
-INSERT INTO bet_notice values(13582,'프로토','[게임일정 안내] 프로토 승부식 56회차 대상경기 등록관련','2022.07.09');
-INSERT INTO bet_notice values(13581,'알림','[게임일정 안내] 7월 게임일정 등록 관련 안내','2022.07.08');
-INSERT INTO bet_notice values(13580,'토토','[적중자 현황 안내] 축구토토 승무패 34회차 1등 적중자 관련','2022.07.06');
-
-INSERT INTO bet_notice values(13579,'토토','[적중자 현황 안내] 야구토토 승1패 26회차 2등 적중자 관련','2022.07.06');
-INSERT INTO bet_notice values(13578,'프로토','[게임일정 안내] 프로토 승부식 55회차 대상경기 등록관련','2022.07.06');
-INSERT INTO bet_notice values(13577,'프로토','프로토_기록식_2022년도_28회차_A게임_환불적중결과','2022.07.05');
-INSERT INTO bet_notice values(13576,'토토','[안내]NPB, KBO경기취소 안내_7월5일(화)','2022.07.05');
-INSERT INTO bet_notice values(13575,'토토','[안내] 골프스페셜 20회차 발매개시 안내','2022.07.05');
-INSERT INTO bet_notice values(13574,'프로토','[안내] 7월 6일 J리그 (가와사키프론탈레:사간도스) 대상경기 연기에 따른 안내','2022.07.05');
-INSERT INTO bet_notice values(13573,'프로토','[안내] FIBA남자농구월드컵예선 세르비아_남자 : 벨기에_남자 경기 취소','2022.07.04');
-INSERT INTO bet_notice values(13572,'토토','[적중자 현황 안내] 축구토토 승무패 33회차 1등 적중자 관련','2022.07.03');
-INSERT INTO bet_notice values(13571,'토토','[적중자 현황 안내] 야구토토 승1패 25회차 3등 적중자 관련','2022.07.02');
-INSERT INTO bet_notice values(13570,'프로토','[게임일정 안내] 프로토 기록식 28회차 대상경기 등록관련','2022.07.02');
-INSERT INTO bet_notice values(13569,'프로토','[게임일정 안내] 프로토 승부식 54회차 대상경기 등록관련','2022.07.02');
-
-INSERT INTO bet_notice values(13568,'토토','[안내] 골프스페셜 19회차 5, 7명 유형 이월금 관련 안내','2022.07.01');
-INSERT INTO bet_notice values(13567,'토토','[안내]KBO경기취소 안내_7월1일(금)','2022.07.01');
-INSERT INTO bet_notice values(13566,'알림','[게임일정 안내] 7월 게임일정 등록 관련 안내','2022.07.01');
-INSERT INTO bet_notice values(13565,'알림','[안내]KBO경기취소 안내_6월30일(목)','2022.06.30');
-INSERT INTO bet_notice values(13564,'프로토','프로토_기록식_2022년도_27회차_B게임_환불적중결과','2022.03.29');
-INSERT INTO bet_notice values(13563,'알림','[안내]KBO경기 취소 안내_6월29일(수)','2022.06.29');
-INSERT INTO bet_notice values(13562,'토토','[적중자 현황 안내] 야구토토 승1패 24회차 2등 적중자 관련','2022.06.29');
-INSERT INTO bet_notice values(13561,'프로토','[게임일정 안내] 프로토 승부식 53회차 대상경기 등록관련','2022.06.29');
-INSERT INTO bet_notice values(13560,'프로토','프로토_기록식_2022년도_27회차_A게임_환불적중결과','2022.06.28');
-
-INSERT INTO bet_notice values(13555,'토토','[적중자 현황 안내] 야구토토 승1패 23회차 3등 적중자 관련','2022.06.25');
-INSERT INTO bet_notice values(13554,'프로토','[게임일정 안내] 프로토 기록식 27회차 대상경기 등록관련','2022.06.25');
-INSERT INTO bet_notice values(13553,'프로토','[게임일정 안내] 프로토 승부식 52회차 대상경기 등록관련','2022.06.25');
-INSERT INTO bet_notice values(13552,'알림','[게임일정 안내]6월 게임일정 등록 관련 안내','2022.06.24');
-INSERT INTO bet_notice values(13551,'알림','베트맨 개인정보처리방침 개정에 따른 사전 안내','2022.06.24');
-INSERT INTO bet_notice values(13550,'알림','[안내]KBO경기 취소 안내_6월23일(목)','2022.06.06.23');
-INSERT INTO bet_notice values(13549,'알림','[안내]가상계좌 입금 지연 안내','2022.06.22');
-INSERT INTO bet_notice values(13548,'토토','[적중자 현황 안내] 야구토토 승1패 22회차 2등 적중자 관련','2022.06.22');
-INSERT INTO bet_notice values(13547,'프로토','[게임일정 안내] 프로토 승부식 51회차 대상경기 등록관련','2022.06.22');
-INSERT INTO bet_notice values(13546,'토토','[안내] 골프스페셜 18회차 발매개시 안내','2022.06.21');
-INSERT INTO bet_notice values(13545,'토토','[적중자 현황 안내] 축구토토 승무패 31회차 1등 적중자 관련','2022.06.19');
+INSERT INTO bet_notice values(40,'토토','[안내] 골프스페셜 21회차 발매개시 안내','2022.07.12');
+INSERT INTO bet_notice values(39,'토토','[적중자 현황 안내] 축구토토 승무패 35회차 2등 적중자 관련','2022.07.10');
+INSERT INTO bet_notice values(38,'토토','[안내] 야구토토 승1패 차회차 이월 규정 적용안내','2022.07.09');
+INSERT INTO bet_notice values(37,'토토','[안내] NPB경기취소 안내_7월9일(토)','2022.07.09');
+INSERT INTO bet_notice values(36,'프로토','[게임일정 안내] 프로토 기록식 29회차 대상경기 등록관련','2022.07.09');
+INSERT INTO bet_notice values(35,'프로토','[게임일정 안내] 프로토 기록식 29회차 대상경기 등록관련','2022.07.09');
+INSERT INTO bet_notice values(34,'프로토','[게임일정 안내] 프로토 승부식 56회차 대상경기 등록관련','2022.07.09');
+INSERT INTO bet_notice values(33,'알림','[게임일정 안내] 7월 게임일정 등록 관련 안내','2022.07.08');
+INSERT INTO bet_notice values(32,'토토','[적중자 현황 안내] 축구토토 승무패 34회차 1등 적중자 관련','2022.07.06');
+INSERT INTO bet_notice values(31,'토토','[적중자 현황 안내] 야구토토 승1패 26회차 2등 적중자 관련','2022.07.06');
+INSERT INTO bet_notice values(30,'프로토','[게임일정 안내] 프로토 승부식 55회차 대상경기 등록관련','2022.07.06');
+INSERT INTO bet_notice values(29,'프로토','프로토_기록식_2022년도_28회차_A게임_환불적중결과','2022.07.05');
+INSERT INTO bet_notice values(28,'토토','[안내]NPB, KBO경기취소 안내_7월5일(화)','2022.07.05');
+INSERT INTO bet_notice values(27,'토토','[안내] 골프스페셜 20회차 발매개시 안내','2022.07.05');
+INSERT INTO bet_notice values(26,'프로토','[안내] 7월 6일 J리그 (가와사키프론탈레:사간도스) 대상경기 연기에 따른 안내','2022.07.05');
+INSERT INTO bet_notice values(25,'프로토','[안내] FIBA남자농구월드컵예선 세르비아_남자 : 벨기에_남자 경기 취소','2022.07.04');
+INSERT INTO bet_notice values(24,'토토','[적중자 현황 안내] 축구토토 승무패 33회차 1등 적중자 관련','2022.07.03');
+INSERT INTO bet_notice values(23,'토토','[적중자 현황 안내] 야구토토 승1패 25회차 3등 적중자 관련','2022.07.02');
+INSERT INTO bet_notice values(22,'프로토','[게임일정 안내] 프로토 기록식 28회차 대상경기 등록관련','2022.07.02');
+INSERT INTO bet_notice values(21,'프로토','[게임일정 안내] 프로토 승부식 54회차 대상경기 등록관련','2022.07.02');
+INSERT INTO bet_notice values(20,'토토','[안내] 골프스페셜 19회차 5, 7명 유형 이월금 관련 안내','2022.07.01');
+INSERT INTO bet_notice values(19,'토토','[안내]KBO경기취소 안내_7월1일(금)','2022.07.01');
+INSERT INTO bet_notice values(18,'알림','[게임일정 안내] 7월 게임일정 등록 관련 안내','2022.07.01');
+INSERT INTO bet_notice values(17,'알림','[안내]KBO경기취소 안내_6월30일(목)','2022.06.30');
+INSERT INTO bet_notice values(16,'프로토','프로토_기록식_2022년도_27회차_B게임_환불적중결과','2022.03.29');
+INSERT INTO bet_notice values(15,'알림','[안내]KBO경기 취소 안내_6월29일(수)','2022.06.29');
+INSERT INTO bet_notice values(14,'토토','[적중자 현황 안내] 야구토토 승1패 24회차 2등 적중자 관련','2022.06.29');
+INSERT INTO bet_notice values(13,'프로토','[게임일정 안내] 프로토 승부식 53회차 대상경기 등록관련','2022.06.29');
+INSERT INTO bet_notice values(12,'프로토','프로토_기록식_2022년도_27회차_A게임_환불적중결과','2022.06.28');
+INSERT INTO bet_notice values(11,'토토','[적중자 현황 안내] 야구토토 승1패 23회차 3등 적중자 관련','2022.06.25');
+INSERT INTO bet_notice values(10,'프로토','[게임일정 안내] 프로토 기록식 27회차 대상경기 등록관련','2022.06.25');
+INSERT INTO bet_notice values(9,'프로토','[게임일정 안내] 프로토 승부식 52회차 대상경기 등록관련','2022.06.25');
+INSERT INTO bet_notice values(8,'알림','[게임일정 안내]6월 게임일정 등록 관련 안내','2022.06.24');
+INSERT INTO bet_notice values(7,'알림','베트맨 개인정보처리방침 개정에 따른 사전 안내','2022.06.24');
+INSERT INTO bet_notice values(6,'알림','[안내]KBO경기 취소 안내_6월23일(목)','2022.06.06.23');
+INSERT INTO bet_notice values(5,'알림','[안내]가상계좌 입금 지연 안내','2022.06.22');
+INSERT INTO bet_notice values(4,'토토','[적중자 현황 안내] 야구토토 승1패 22회차 2등 적중자 관련','2022.06.22');
+INSERT INTO bet_notice values(3,'프로토','[게임일정 안내] 프로토 승부식 51회차 대상경기 등록관련','2022.06.22');
+INSERT INTO bet_notice values(2,'토토','[안내] 골프스페셜 18회차 발매개시 안내','2022.06.21');
+INSERT INTO bet_notice values(1,'토토','[적중자 현황 안내] 축구토토 승무패 31회차 1등 적중자 관련','2022.06.19');
 
 
 
