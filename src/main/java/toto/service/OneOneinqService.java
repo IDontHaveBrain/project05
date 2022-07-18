@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import toto.dao.OneOneinqDao;
+import toto.vo.Mypoint;
 import toto.vo.OneOneinq;
 
 @Service
@@ -35,4 +36,9 @@ public class OneOneinqService {
 	public void deleteOneOneinq(int boardno) {
 		dao.deleteOneOneinq(boardno);
 	}
+	// 포인트 충전
+	public void updateMypoint(Mypoint upt) {
+		dao.updateMypoint(upt); 
+	}
+
 }

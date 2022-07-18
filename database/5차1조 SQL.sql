@@ -11,10 +11,20 @@ grant dba to p05;
  위에서부터 아래로 순차적으로 실행시 모든 테이블 및 샘플데이터 입력되게 작성
  */
 -- 홀짝게임 포인트충전용
-UPDATE Account SET point = 999999999 WHERE idno=1;
+UPDATE Account SET point = 0 WHERE idno=1;
 --
 drop table Account;
 -- 계정
+ create table totologin(
+    idno number primary key,
+    id varchar2(50) not null unique,
+    pw varchar2(50) not null,
+    point number,
+    birthdate DATE
+);
+SELECT * FROM TOTOLOGIN;
+INSERT INTO TOTOLOGIN values(3,'banana','abc123',7000,to_date('20001125','YYYYMMDD')); 
+
 SELECT * FROM Account;
 create table Account (
     idno number primary key,
@@ -25,7 +35,7 @@ create table Account (
     auth number -- 0 일반사용자, 1 총관리자, 2 ....
 );
 insert into Account values (1, 'asdasd123', '123123', 50000, to_date('19980101','YYYYMMDD'), 1);
-insert into Account values ((select NVL(max(idno),1)+1 from Account), 'asdasd111', '123456', 30000, to_date('19970505','YYYYMMDD'), 1);
+insert into Account values ((select NVL(max(idno),1)+1 from Account), 'asdasd111', '123456', 30000, to_date('19970505','YYYYMMDD'), 0);
 select * from Account;
 -- 홀짝게임결과
 create table OeGameResult (
@@ -43,9 +53,9 @@ select * from OeGameResult;
 CREATE TABLE RPSGameResult(
 	gameno number PRIMARY KEY,
 	id varchar2(50) REFERENCES Account(id),
-	com varchar2(5),
-	player varchar2(5),
-	gameresult number,
+	com varchar2(15),
+	player varchar2(15),
+	gameresult varchar2(15),
 	prevpoint number,
 	resultpoint number
 );
@@ -58,7 +68,7 @@ CREATE SEQUENCE RPSgame_seq
 
 SELECT * FROM rpsgameresult;
 
-
+-- notice
 CREATE TABLE bet_notice(
 bt_no NUMBER,
 bt_division varchar(10),
@@ -145,7 +155,7 @@ INSERT INTO bet_faq values('회원정보는 가입 후 변경 할 수 있나요?
 SELECT * FROM bet_notice;
 SELECT * FROM bet_faq;
 SELECT * FROM bet_inquiry;
-SELECT * FROM BOARD ;
+--SELECT * FROM BOARD ;
 
 -- 포인트 충전
 CREATE TABLE Mypoint(
@@ -176,9 +186,10 @@ CREATE SEQUENCE OneOneinq_seq
 	MINVALUE 1 
 	MAXVALUE 77777
 	INCREMENT BY 1;
-INSERT INTO OneOneinq VALUES (oneoneinq_seq.nextval,'송우신','abc@naver.com','010-1234-5678','자바좋아용','너무좋은데 푸헤헿',sysdate,0);	 
-INSERT INTO OneOneinq VALUES (oneoneinq_seq.nextval,'송우신','abc@naver.com','010-1234-5678','자바너무좋아용','너무좋은데 푸헤헿',sysdate,0);	 
-INSERT INTO OneOneinq VALUES (oneoneinq_seq.nextval,'송우신','abc@naver.com','010-1234-5678','늦은밤','너무좋은데 푸헤헿',sysdate,0);	 
+INSERT INTO OneOneinq VALUES (oneoneinq_seq.nextval,'홍길동','abc@naver.com','010-1234-5678','충전을 했는데 돈이 안들어왔습니다.','내용1',sysdate,0);	 
+INSERT INTO OneOneinq VALUES (oneoneinq_seq.nextval,'마길동','def@daum.net','010-9876-5432','회원탈퇴는 어떻게하나요?','내용2',sysdate,0);	 
+INSERT INTO OneOneinq VALUES (oneoneinq_seq.nextval,'이길동','ghi@naver.com','010-2314-8444','게임진행 방법을 알고싶습니다.','내용3',sysdate,0);	 
+INSERT INTO OneOneinq VALUES (oneoneinq_seq.nextval,'정길동','jkl@naver.com','010-5644-1877','밤에도 게임을 할 수 있나요?.','내용4',sysdate,0);	 
 SELECT * FROM OneOneinq;
 
 -- 승부예측 경기정보
@@ -197,6 +208,8 @@ INSERT INTO soccer(snum, gamedate, place, hteam, vteam) values('0004','2022-07-1
 INSERT INTO soccer(snum, gamedate, place, hteam, vteam) values('0005','2022-07-16','김천종합운동장','김천상무','인천유나');
 INSERT INTO soccer(snum, gamedate, place, hteam, vteam) values('0006','2022-07-16','도요타스타디움','나고야','가와사키');
 
+		
+)
 -- 승부예측 구매
 CREATE TABLE forecast(
 	gnum char(5) PRIMARY KEY,
@@ -216,7 +229,7 @@ SELECT * FROM forecast;
 CREATE TABLE closing(
 ctype varchar(20),
 ctitle varchar(100),
-cdate varchar(100))
+cdate varchar(100));
 
 INSERT INTO closing values('축구','축구토토 스페셜 트리플 27회차','22.07.16(토) 18:50');
 INSERT INTO closing values('축구','축구토토 스페셜 더블 27회차','22.07.16(토) 18:50');

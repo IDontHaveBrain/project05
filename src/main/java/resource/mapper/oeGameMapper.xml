@@ -17,4 +17,14 @@
     <select id="getOeGameResultList" parameterType="string" resultType="oegame">
         select * from oegameresult where id = #{id}
     </select>
+    <select id="getAuth" parameterType="string" resultType="int">
+        select auth from account where id = #{id}
+    </select>
+    <select id="schOeGameResult" parameterType="oegame" resultType="oegame">
+        select * from oegameresult
+        where 1=1
+        <if test="id != null">
+            and id like '%'||#{id}||'%'
+        </if>
+    </select>
 </mapper>
