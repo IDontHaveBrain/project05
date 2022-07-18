@@ -13,6 +13,7 @@
 		<typeAlias alias="cal" type="toto.vo.Calendar"/>
 		<typeAlias alias="clo" type="toto.vo.Closing"/>
 		<typeAlias alias="mypoint" type="toto.vo.Mypoint"/>
+		<typeAlias alias="acc" type="toto.vo.Account"/>
 	</typeAliases>
     <mappers>
         <mapper resource="resource/testMapper.xml"/>

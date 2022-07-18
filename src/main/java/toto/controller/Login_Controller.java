@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import toto.service.LoginService;
 import toto.util.inputCheck;
-import toto.vo.Totologin2;
+import toto.vo.Account;
 
 //toto.controller.Login_Controller
 
@@ -20,7 +20,7 @@ public class Login_Controller {
 	private LoginService service;
 	 // http://localhost:7080/project05/Login2.do
 	@RequestMapping("Login2.do")
-	public String loginList(Totologin2 sch, Model d, HttpSession session) {
+	public String loginList(Account sch, Model d, HttpSession session) {
 		if(sch != null && sch.getId() != null && sch.getPw() != null )
 		{
 			boolean logged = service.ck(sch) != null;
@@ -42,8 +42,8 @@ public class Login_Controller {
 	
 	// http://localhost:7080/project05/Insert.do
 	  @RequestMapping("Insert.do")
-		public String totoInsert(Totologin2 ins, Model d){
-			d.addAttribute(new Totologin2());
+		public String totoInsert(Account ins, Model d){
+			d.addAttribute(new Account());
 			return "WEB-INF\\views\\Member.jsp";
 		}
 
