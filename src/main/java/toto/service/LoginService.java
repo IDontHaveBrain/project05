@@ -6,20 +6,25 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import toto.dao.LoginDao;
-import toto.vo.Totologin2;
+import toto.vo.Account;
 
 
 @Service
 public class LoginService {
 	@Autowired(required=false) 
 	private LoginDao dao;
-	public List<Totologin2> getLoginList(Totologin2 sch){
+	public List<Account> getLoginList(Account sch){
 	
 		return dao.getLoginList(sch);
 		
 	}
 	
-	public void totoInsert(Totologin2 ins) {
+	public Account ck(Account sch) {
+		return dao.ck(sch);
+	}
+	
+	
+	public void totoInsert(Account ins) {
 		dao.totoInsert(ins);
 		
 	}

@@ -5,12 +5,17 @@
 <mapper namespace="toto.dao.LoginDao">
 
 	
-	<select id="getLoginList" resultType="totologin" parameterType="totologin">
-		select * from TOTOLOGIN
+	<select id="getLoginList" resultType="acc" parameterType="acc">
+		select * from Account
 	</select>
-	<insert id="insertToto" parameterType="totologin">
-		insert into TOTOLOGIN(id, pw)
-				values(#{id},#{pw})
+	<select id="ck" resultType="acc" parameterType="acc">
+		select * from Account
+		WHERE id=#{id}
+		and pw=#{pw}
+	</select>
+	<insert id="insertToto" parameterType="acc">
+		insert into Account(idno,id, pw)
+				values(#{idno},#{id},#{pw})
 	</insert>
 	
 
