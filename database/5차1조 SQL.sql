@@ -11,7 +11,7 @@ grant dba to p05;
  위에서부터 아래로 순차적으로 실행시 모든 테이블 및 샘플데이터 입력되게 작성
  */
 -- 홀짝게임 포인트충전용
-UPDATE Account SET point = 999999999 WHERE idno=1;
+UPDATE Account SET point = 0 WHERE idno=1;
 --
 drop table Account;
 -- 계정
@@ -58,7 +58,7 @@ CREATE SEQUENCE RPSgame_seq
 
 SELECT * FROM rpsgameresult;
 
-
+-- notice
 CREATE TABLE bet_notice(
 bt_no NUMBER,
 bt_division varchar(10),
@@ -179,9 +179,10 @@ CREATE SEQUENCE OneOneinq_seq
 	MINVALUE 1 
 	MAXVALUE 77777
 	INCREMENT BY 1;
-INSERT INTO OneOneinq VALUES (oneoneinq_seq.nextval,'송우신','abc@naver.com','010-1234-5678','자바좋아용','너무좋은데 푸헤헿',sysdate,0);	 
-INSERT INTO OneOneinq VALUES (oneoneinq_seq.nextval,'송우신','abc@naver.com','010-1234-5678','자바너무좋아용','너무좋은데 푸헤헿',sysdate,0);	 
-INSERT INTO OneOneinq VALUES (oneoneinq_seq.nextval,'송우신','abc@naver.com','010-1234-5678','늦은밤','너무좋은데 푸헤헿',sysdate,0);	 
+INSERT INTO OneOneinq VALUES (oneoneinq_seq.nextval,'홍길동','abc@naver.com','010-1234-5678','충전을 했는데 돈이 안들어왔습니다.','내용1',sysdate,0);	 
+INSERT INTO OneOneinq VALUES (oneoneinq_seq.nextval,'마길동','def@daum.net','010-9876-5432','회원탈퇴는 어떻게하나요?','내용2',sysdate,0);	 
+INSERT INTO OneOneinq VALUES (oneoneinq_seq.nextval,'이길동','ghi@naver.com','010-2314-8444','게임진행 방법을 알고싶습니다.','내용3',sysdate,0);	 
+INSERT INTO OneOneinq VALUES (oneoneinq_seq.nextval,'정길동','jkl@naver.com','010-5644-1877','밤에도 게임을 할 수 있나요?.','내용4',sysdate,0);	 
 SELECT * FROM OneOneinq;
 
 -- 승부예측 경기정보
@@ -200,6 +201,8 @@ INSERT INTO soccer(snum, gamedate, place, hteam, vteam) values('0004','2022-07-1
 INSERT INTO soccer(snum, gamedate, place, hteam, vteam) values('0005','2022-07-16','김천종합운동장','김천상무','인천유나');
 INSERT INTO soccer(snum, gamedate, place, hteam, vteam) values('0006','2022-07-16','도요타스타디움','나고야','가와사키');
 
+		
+)
 -- 승부예측 구매
 CREATE TABLE forecast(
 	gnum char(5) PRIMARY KEY,

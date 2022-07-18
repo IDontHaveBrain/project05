@@ -24,6 +24,7 @@
 <script src="${path}/a00_com/popper.min.js"></script>
 <script src="${path}/a00_com/bootstrap.min.js"></script>
 <script src="${path}/a00_com/jquery-ui.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://developers.google.com/web/ilt/pwa/working-with-the-fetch-api" type="text/javascript"></script>
 <script type="text/javascript">
@@ -32,20 +33,27 @@
       
       --%>   
    });
+	function goDetail(){
+		location.href="${path}/mypointDetail.do?boardno="+boardno;
+	}
 </script>
 </head>
 
 <body>
+<jsp:include page="/project5/topNav.jsp"></jsp:include>
 <div class="jumbotron text-center">
-  <h2 data-toggle="modal" data-target="#exampleModalCenter">타이틀</h2>
+  <h2>포인트 충전</h2>
 
 </div>
 <div class="container">
-   <form id="frm01" class="form-inline"  method="post">
+   <form id="frm01" class="form"  method="post">
      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-       <input class="form-control mr-sm-2" placeholder="제목" />
-       <input class="form-control mr-sm-2" placeholder="내용" />
-       <button class="btn btn-info" type="submit">Search</button>
+       <input class="form-control mr-sm-2" name="pw" 
+       		value="${param.pw}" placeholder="해당 계정 정보 비밀번호 입력" />
+       <input class="form-control mr-sm-2" name="point" 
+       		value="${param.point}" placeholder="포인트" />
+       <button ondblclick="goDetail" class="btn btn-info" type="submit">충전하기</button>
+       
     </nav>
    </form>
    <table class="table table-hover table-striped">

@@ -8,6 +8,7 @@
 		<typeAlias alias="rpsgameresult" type="toto.vo.RPSGameResult"/>
 		<typeAlias alias="notice" type="toto.vo.Notice"/>
 		<typeAlias alias="soccer" type="toto.vo.Soccer"/>
+		<typeAlias alias="mypoint" type="toto.vo.Mypoint"/>
 	</typeAliases>
     <mappers>
         <mapper resource="resource/testMapper.xml"/>
