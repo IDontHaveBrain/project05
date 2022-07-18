@@ -35,7 +35,7 @@ create table Account (
     auth number -- 0 일반사용자, 1 총관리자, 2 ....
 );
 insert into Account values (1, 'asdasd123', '123123', 50000, to_date('19980101','YYYYMMDD'), 1);
-insert into Account values ((select NVL(max(idno),1)+1 from Account), 'asdasd111', '123456', 30000, to_date('19970505','YYYYMMDD'), 1);
+insert into Account values ((select NVL(max(idno),1)+1 from Account), 'asdasd111', '123456', 30000, to_date('19970505','YYYYMMDD'), 0);
 select * from Account;
 -- 홀짝게임결과
 create table OeGameResult (
@@ -158,7 +158,7 @@ INSERT INTO bet_faq values('회원정보는 가입 후 변경 할 수 있나요?
 SELECT * FROM bet_notice;
 SELECT * FROM bet_faq;
 SELECT * FROM bet_inquiry;
-SELECT * FROM BOARD ;
+--SELECT * FROM BOARD ;
 
 -- 포인트 충전
 CREATE TABLE Mypoint(
@@ -229,7 +229,7 @@ SELECT * FROM forecast;
 CREATE TABLE closing(
 ctype varchar(20),
 ctitle varchar(100),
-cdate varchar(100))
+cdate varchar(100));
 
 INSERT INTO closing values('축구','축구토토 스페셜 트리플 27회차','22.07.16(토) 18:50');
 INSERT INTO closing values('축구','축구토토 스페셜 더블 27회차','22.07.16(토) 18:50');

@@ -2,7 +2,6 @@ package toto.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import toto.dao.MyPageDao;
 import toto.dao.OeGameDao;
 import toto.vo.OeGameResult;
 
@@ -44,5 +43,13 @@ public class OeGameService {
         //System.out.println("내역 수 : "  + list.size());
         //System.out.println("첫번째 결과 : "+list.get(0).getWin());
         return list;
+    }
+
+    public int getAuth(String curId){
+        return dao.getAuth(curId);
+    }
+
+    public List<OeGameResult> schOeGameResult(OeGameResult sch){
+        return dao.schOeGameResult(sch);
     }
 }

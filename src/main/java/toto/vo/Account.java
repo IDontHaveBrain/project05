@@ -8,16 +8,18 @@ public class Account {
     private String pw;
     private int point;
     private Date birthdate;
+    private int auth;
 
     public Account() {
     }
 
-    public Account(int idno, String id, String pw, int point, Date birthdate) {
+    public Account(int idno, String id, String pw, int point, Date birthdate, int auth) {
         this.idno = idno;
         this.id = id;
         this.pw = pw;
         this.point = point;
         this.birthdate = birthdate;
+        this.auth = auth;
     }
 
     public int getIdno() {
@@ -58,5 +60,13 @@ public class Account {
 
     public void setBirthdate(Date birthdate) {
         this.birthdate = birthdate;
+    }
+
+    public int getAuth() {
+        return auth;
+    }
+
+    public void setAuth(int auth) {
+        this.auth = auth;
     }
 }

@@ -66,8 +66,44 @@ public class OeGameController {
             return "redirect:project5\\Main.jsp";
         }
 
+        d.addAttribute("auth", service.getAuth(curId));
         d.addAttribute("result",service.getOeHistory(curId));
 
         return "WEB-INF\\views\\game\\oegameHistory.jsp";
+    }
+    @RequestMapping("oegameAdmin.do")
+    public String oegameAdmin(OeGameResult sch, Model d, HttpSession session,
+                              @RequestParam(value = "setOdds", defaultValue = "") String setOdds,
+                                @RequestParam(value = "setod", defaultValue = "") String setod){
+        String curId = (String)session.getAttribute("id");
+        if(inputCheck.isEmpty(curId) || service.getAuth(curId) != 1){
+            return "redirect:project5\\Main.jsp";
+        }
+        if(!inputCheck.isEmpty(setOdds) && Double.parseDouble(setOdds) != odds && setod.equals("Y")){
+            odds = Double.parseDouble(setOdds);
+        }
+
+        d.addAttribute("odds", odds);
+        d.addAttribute("result",service.schOeGameResult(sch));
+
+        return "WEB-INF\\views\\game\\oegameAdmin.jsp";
+    }
+
+    @RequestMapping("oegameAdminAjax.do")
+    public String oegameAdminAjax(OeGameResult sch, Model d, HttpSession session,
+                                  @RequestParam(value = "setOdds", defaultValue = "") String setOdds,
+                                  @RequestParam(value = "setod", defaultValue = "") String setod){
+        String curId = (String)session.getAttribute("id");
+        if(inputCheck.isEmpty(curId) || service.getAuth(curId) != 1){
+            return "pageJsonReport";
+        }
+        if(!inputCheck.isEmpty(setOdds) && Double.parseDouble(setOdds) != odds && setod.equals("Y")){
+            odds = Double.parseDouble(setOdds);
+        }
+
+        d.addAttribute("odds", odds);
+        d.addAttribute("result",service.schOeGameResult(sch));
+
+        return "pageJsonReport";
     }
 }
