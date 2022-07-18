@@ -53,9 +53,9 @@ select * from OeGameResult;
 CREATE TABLE RPSGameResult(
 	gameno number PRIMARY KEY,
 	id varchar2(50) REFERENCES Account(id),
-	com varchar2(5),
-	player varchar2(5),
-	gameresult number,
+	com varchar2(15),
+	player varchar2(15),
+	gameresult varchar2(15),
 	prevpoint number,
 	resultpoint number
 );
