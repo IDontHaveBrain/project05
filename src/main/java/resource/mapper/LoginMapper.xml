@@ -5,9 +5,13 @@
 <mapper namespace="toto.dao.LoginDao">
 
 	
-	<select id="loginList">
+	<select id="getLoginList" resultType="totologin" parameterType="totologin">
 		select * from TOTOLOGIN
 	</select>
-
+	<insert id="insertToto" parameterType="totologin">
+		insert into TOTOLOGIN(id, pw)
+				values(#{id},#{pw})
+	</insert>
+	
 
 </mapper>

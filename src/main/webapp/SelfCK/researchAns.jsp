@@ -11,13 +11,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>셀프조사 다음</title>
+<title>셀프진단평가 결과</title>
 <link href="${path}/a00_com/a01_common.css" rel="stylesheet">
 
 <script src="${path}/a00_com/jquery-3.6.0.js" type="text/javascript"></script>
 
 </head>
 <body>
+<jsp:include page="/project5/topNav.jsp"></jsp:include>
 	<%! int jumsu=0;
 		int total=0;
 		String level="";
@@ -84,6 +85,15 @@
 	
 	</h2>
 	
+
+  <!-- Copyrights Section -->
+  <div class="copyright">&copy;2022 - <strong>BETMAN</strong></div>		
+	
+<script type="text/javascript">
+$(function() {
+	$( "#Tabs1" ).tabs(); 
+});
+</script>
 
 </body>
 </html>

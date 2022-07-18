@@ -24,6 +24,12 @@
 <jsp:include page="/project5/topNav.jsp"></jsp:include>
 
 <div class="container w-75" style="margin-top: 150px;">
+    <c:if test="${auth == 1}">
+        <div class="text-center m-3">
+        <input type="button" value="홀짝 관리자화면" class="btn btn-primary m-2" align="center"
+               onclick="location.href='oegameAdmin.do';"/>
+        </div>
+    </c:if>
     <table class="table table-dark table-hover">
         <tr>
             <th>번호</th>

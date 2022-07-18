@@ -18,62 +18,165 @@
    td{text-align:center;}
    .input-group-text{width:100%;background-color:#cfffdf;color:black;font-weight:bolder;}
    .input-group-prepend{width:20%;}
+   
+ body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #8181F7;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}  
 </style>
-<script src="${path}/a00_com/jquery.min.js"></script>
-<script src="${path}/a00_com/popper.min.js"></script>
-<script src="${path}/a00_com/bootstrap.min.js"></script>
-<script src="${path}/a00_com/jquery-ui.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="https://developers.google.com/web/ilt/pwa/working-with-the-fetch-api" type="text/javascript"></script>
-<script type="text/javascript">
-   $(document).ready(function(){
-      <%-- 
-      
-      --%>   
-   });
-</script>
+
+
+
+
 </head>
 
 <body>
+<jsp:include page="/project5/topNav.jsp"></jsp:include>
+<script type="text/javascript">
+	function goMain(){
+		location.href="";
+	}
+	 function goInsert(){	
+			location.href="WEB-INF\\views\\Member.jsp"
+		}
+	
+	function canLog(){
+		var id = document.querySelector("#id")
+		if(id.value!=null){
+			if(id.value==""){
+				alert("아이디를 입력해주세요")
+				id.focus();
+				return
+			}else{
+				if(id.value.length<5 || id.value.length>16){
+					alert("id는 3~16자만 입력가능합니다")
+					id.focus()
+					return
+				}
+			}
+		}
+		var pw = document.querySelector("#pw")
+		if(pw.value!=null){//비밀번호 유효성검사
+			if(pw.value==""){
+				alert("비밀번호를 입력해주세요")
+				pw.focus()
+				return
+			}else{
+				if(pw.value.length<3 || pw.value.length>12){
+					alert("비밀번호는 5~12자리여야합니다")
+					pw.value=""
+					pw.focus()
+					return
+				}
+			}
+		}
+	}
+
+
+</script>
+	
 <div class="jumbotron text-center">
-  <h2>로그인</h2>
+   <h2 class="home_header">스포츠토토 <span class="light">로그인</span></h2>
+    		<p class="tagline">건전하게 즐겨보세요</p>
+  아이디<input name="id" type="text"
+  			 value="${param.id}"  placeholder="아이디를 입력하세요"/><span></span><br>
+  비밀번호<input name="pw" type="password"  
+  			value="${param.pw}" placeholder="비밀번호를 입력하세요"/><span></span><br>
 
 </div>
-<div class="container">
-   <form id="frm01"  class="form"  method="post">
-      <div class="input-group mb-3">
-         <div class="input-group-prepend">
-            <span class="text-center input-group-text">아이디</span>
-         </div>
-         <input name="empno" class="form-control" 
-            value="${totologin.id}" readonly  placeholder="아이디를 입력하세요" />   
-      </div>
-      <div class="input-group mb-3">
-         <div class="input-group-prepend">
-            <span class="text-center input-group-text">비밀번호</span>
-         </div>
-         <input name="pw" class="form-control" 
-            value="${totologin.id}" placeholder="비밀번호를 입력하세요" />   
-      </div>    
-    
+
       <div class="text-right">
                
-            <button type="button" onclick="goMain()" class="btn btn-info">로그인</button>    
-      </div>  
-   </form>
-</div>
-<script type="text/javascript">
-function @@(){
-	if(confirm("수정하시겠습니까?")){
-		$("form").attr("action", "");
-		$("form").submit();
-	}
-}
+    <button type="button" onclick="goMain()" class="btn btn-info">로그인</button>    
+    <button class="btn btn-success"  onclick="goInsert()"
+      				 type="button">회원가입</button>  </div>  
+
+<table border> 
+<c:forEach var="totologin" items="${loginList}"> 
+<tr><td>${totologin.id}</td><td>${totologin.pw}</td></tr>
+</c:forEach>
+</table>
+   
+  <!-- Copyrights Section -->
+  <div class="copyright">&copy;2022 - <strong>BETMAN</strong></div>		
 
 	
-	function goMain(){
-	      location.href="메인페이지";
-	   }	
-</script>
+  <%
+	String logPass = request.getParameter("logPass");
+	
+	if(logPass!=null && logPass.equals("0")){
+		out.println("");
+	}else if(logPass!=null && logPass.equals("-1")){
+		out.println("");
+	}
+	
+  %>
+  <%
+String id = request.getParameter("id");
+if(id == null) id="";
+
+String pw = request.getParameter("pw");
+if(pw==null) pw="";
+
+
+
+%>
 </body>
 </html>
