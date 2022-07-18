@@ -18,7 +18,6 @@
 <link rel="stylesheet" href="${path}/a00_com/bootstrap.min.css" >
 <link rel="stylesheet" href="${path}/a00_com/jquery-ui.css" >
 <style>
-<style>
 h2{    font-family: "paybooc-Light", sans-serif;}
    table {
     margin-left:auto; 
@@ -110,7 +109,6 @@ button {
     color: #1e6b7b;
 }
 </style>
-</style>
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 <script src="${path}/a00_com/jquery.min.js"></script>
 <script src="${path}/a00_com/popper.min.js"></script>
@@ -133,52 +131,69 @@ button {
   <h2>1:1문의 게시판등록</h2>
 
 </div>
-
+<table>
+<tr>
 <div class="container">
    <form id="frm01" action="${path}/oneoneinqInsert.do" 
          class="form"  method="post">
+         <th>
       <div class="input-group mb-3">
          <div class="input-group-prepend">
-            <span class="text-center input-group-text">제 목</span>
-         </div>
+            <span class="text-center input-group-text">제 목</span><br>
+ 
          <input name="title" class="form-control" 
             value="${oneoneinq.title}" placeholder="제목입력하세요" />   
+                    </div>
       </div>
+      </th>
+             <tr>  <th>
       <div class="input-group mb-3">
          <div class="input-group-prepend">
             <span class="text-center input-group-text">작성자</span>
-         </div>
+
          <input name="name" class="form-control" 
-            value="${oneoneinq.name}" placeholder="작성자를입력하세요" />   
+            value="${oneoneinq.name}" placeholder="작성자를입력하세요" />  
+                     </div> 
       </div>    
+               </th>
+                        <th></tr>
       <div class="input-group mb-3">
          <div class="input-group-prepend">
             <span class="text-center input-group-text">이메일</span>
-         </div>
+
          <input name="email" class="form-control" 
             value="${oneoneinq.email}" placeholder="이메일을 입력하세요" />   
+                     </div>
       </div>   
+               </th>
+                        <th>
       <div class="input-group mb-3">
          <div class="input-group-prepend">
             <span class="text-center input-group-text">핸드폰번호</span>
-         </div>
+
          <input name="phonenumber" class="form-control" 
-            value="${oneoneinq.phonenumber}" placeholder="번호를 입력하세요" />   
+            value="${oneoneinq.phonenumber}" placeholder="번호를 입력하세요" /> 
+                     </div>  
       </div>   
+               </th>
+                        <th>
       <div class="input-group mb-3">
          <div class="input-group-prepend">
             <span class="text-center input-group-text">내 용</span>
-         </div>
+  
          <textarea name="content" rows="10" cols="100" class="form-control" 
             placeholder="내용 입력하세요"></textarea>    
+                   </div>
       </div>
+               </th>
       <div class="text-right">
-         <button type="button" onclick="insertProc()" class="btn btn-success">등록</button>
-         <button type="button" onclick="goMain()" class="btn btn-info">메인화면</button>
+         <button type="button" onclick="insertProc()" class="w-btn-outline">등록</button>
+         <button type="button" onclick="goMain()" class="w-btn-outline">메인화면</button>
       </div>  
    </form>
   </div>
-  </table>
+  </tr>
+ </table>
 <script type="text/javascript">
 var isInsert = "${isInsert}"
    if(isInsert=="Y"){

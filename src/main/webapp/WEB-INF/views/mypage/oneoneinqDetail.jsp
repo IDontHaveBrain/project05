@@ -18,7 +18,6 @@
 <link rel="stylesheet" href="${path}/a00_com/bootstrap.min.css" >
 <link rel="stylesheet" href="${path}/a00_com/jquery-ui.css" >
 <style>
-   <style>
 h2{    font-family: "paybooc-Light", sans-serif;}
    table {
     margin-left:auto; 
