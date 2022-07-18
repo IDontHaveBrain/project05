@@ -31,6 +31,7 @@ h1 {
 	margin-left: auto;
 	margin-right: auto;
 	background-color: #646987;
+	text-align: center;
 }
 .container2 {
 	width: 100%;
@@ -287,6 +288,7 @@ ul li:hover a {
 footer {
 	background-color: #FFFFFF;
 	padding-bottom: 35px;
+	
 }
 
 .footer_column {

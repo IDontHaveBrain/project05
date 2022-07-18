@@ -13,6 +13,7 @@
 <link href="${path}/a00_com/a01_common.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/Main.css">
 <style>
+td{text-align:center;}
 </style>
 </head>
 <script src="${path}/a00_com/jquery.min.js"></script>
@@ -30,8 +31,8 @@ function timer(){
   var $interval=setInterval(function(){slide()},2000);                        
 }
 function slide(){
-  $(".bannerbox").animate({left:"400px"},3000,function(){
-    $(this).css({"left":700});
+  $(".bannerbox").animate({left:"200px"},4000,function(){
+    $(this).css({"left":1000});
     $(".bannerbox").append( $("li").children("li").eq(0) );
   });    
   current++;
@@ -80,7 +81,7 @@ function slide(){
 			<section class="footer_banner" id="contact">
 				<h2 class="hidden">Footer Banner Section</h2>
 				<p class="home_header">데이터 &amp; 분석</p>
-				<div OnClick="location.href='Contact/Contact.html'" class="button">CONTACT</div>
+				<div OnClick="location.href='Contact.jsp'" class="button">CONTACT</div>
 			</section>
 			<!-- Copyrights Section -->
 			<div class="copyright">

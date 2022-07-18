@@ -8,7 +8,7 @@
 <title>toto</title>
 <%--link href="${path}/a00_com/a01_common.css" rel="stylesheet"> --%>
 
-<link rel="stylesheet" type="text/css" href="../css/Contact.css">
+<link rel="stylesheet" type="text/css" href="css/Contact.css">
 <style>
     
 </style>
@@ -28,7 +28,7 @@
 <body>
 	<form>
 	<div class="container">
-	<h4 class="logo">Tuner</h4>
+	<h4 class="logo">BETMAN</h4>
 		<header> <a href="#home">
 			</a>
 			<nav>
@@ -49,42 +49,34 @@
 					cssApplier = rangy.createCssClassApplier("someClass", true); //true turns on normalization
 			});
 			</script>
-			<h2 class="home_header">CONTACT <span class="light">TUNER</span></h2>
-    		<p class="tagline">Our Info detail!</p>
+			<h2 class="home_header">빅데이터 <span class="light">도박관리센터</span></h2>
 		</section>
-		<!-- About Section -->
- 		<section class="about" id="about">
-    		<h2 class="hidden">About</h2>
-   			<p class="text_column">공통 정보<br>
-			대학교 : <br>
-			학과 : <br>
-			</p>
-    		<p class="text_column">학번 : <br>
-			이름 : </p>
-  		</section>
-  <!-- More Info Section -->
+
   <footer>
    <article class="footer_column">
-      <h3>Guide</h3>
-      <a href="../infop/Info.html"><img src="images/가이드.jpg" alt="" width="400" height="200" class="cards"
-									 onmouseover="this.src='images/가이드1.jpg'" onmouseout="this.src='images/가이드.jpg'"/></a>
-      <p style="text-align:center"> 본 서비스가 처음이신가요?</p>
+      <a href="../infop/Info.html"><img src="img/r1.png" alt="" width="800" height="400"></a>
     </article>
-    <article class="footer_column">
-      <h3>Order</h3>
-      <a href="../Order/Order.html"><img src="images/대패.jpg" alt="" width="400" height="200" class="cards"
-										onmouseover="this.src='images/대패1.jpg'" onmouseout="this.src='images/대패.jpg'"/></a>
-      <p style="text-align:center">세상에서 하나뿐인 당신의 가구를 만들어보세요.</p>
+   
+      <article class="footer_column">
+      <a href="../infop/Info.html"><img src="img/r2.png" alt="" width="800" height="400"></a>
+    </article>
+    
+       <article class="footer_column">
+      <a href="../infop/Info.html"><img src="img/r3.png" alt="" width="800" height="400"></a>
+    </article>
+    
+     <article class="footer_column">
+      <a href="../infop/Info.html"><img src="img/r4.png" alt="" width="800" height="400"></a>
     </article>
   </footer>
   <!-- Footer Section -->
   <section class="footer_banner" id="contact">
     <h2 class="hidden">Footer Banner Section </h2>
-    <p class="home_header">Our Info &amp; News</p>
+    <p class="home_header">데이터 &amp; 분석</p>
     <div OnClick="location.href='#home'" class="button">CONTACT</div>
   </section>
   <!-- Copyrights Section -->
-  <div class="copyright">&copy;2019 - <strong>TUNER</strong></div>		
+  <div class="copyright">&copy;2022 - <strong>BETMAN</strong></div>		
 	</div>
 	</form>
 </body>
