@@ -1,9 +1,0 @@
-jdbc.driver=oracle.jdbc.driver.OracleDriver
-# 개인pc DB
-jdbc.url=jdbc:oracle:thin:@localhost:1521:xe
-jdbc.user=scott
-jdbc.pass=tiger
-# 고정ip(DB서버) DB
-#jdbc.url=jdbc:oracle:thin:@210.205.120.236:1521:xe
-#jdbc.user=p05
-#jdbc.pass=1111

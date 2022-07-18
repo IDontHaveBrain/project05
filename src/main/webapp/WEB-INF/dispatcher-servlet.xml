@@ -54,4 +54,5 @@
         <property name="basePackage" value="toto.dao"/>
     </bean>
  
+    
 </beans>

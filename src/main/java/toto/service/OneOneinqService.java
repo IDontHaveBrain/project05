@@ -11,10 +11,28 @@ import toto.vo.OneOneinq;
 @Service
 public class OneOneinqService {
 	@Autowired(required = false)
+	// 다오
 	private OneOneinqDao dao;
-	
+	// 리스트
 	public List<OneOneinq> OneOneinqList(OneOneinq sch){
-		
 		return dao.OneOneinqList(sch);
+	}
+	// 등록
+	public void insertOneOneinq(OneOneinq ins) {
+		dao.insertOneOneinq(ins);
+	}
+	// 상세화면
+	public OneOneinq getOneOneinqDetail(int boardno){		
+		dao.readCountup(boardno);	
+		return dao.getOneOneinqDetail(boardno);
+	}
+	// 수정
+	public OneOneinq updateOneOneinq(OneOneinq upt) {
+		dao.updateOneOneinq(upt); 
+		return dao.getOneOneinqDetail(upt.getBoardno());
+	}
+	// 삭제
+	public void deleteOneOneinq(int boardno) {
+		dao.deleteOneOneinq(boardno);
 	}
 }

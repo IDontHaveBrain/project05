@@ -42,9 +42,13 @@
 </head>
 
 <body>
+<jsp:include page="/project5/topNav.jsp"></jsp:include>
+<br>
+<br>
+<br>
 <div class="jumbotron text-center">
-  <h1>공지사항</h1>
-  
+  <h2>마겜게임보기</h2>
+
 </div>
 <div class="container">
 	<!-- 
@@ -52,65 +56,30 @@
 	   name="subject"  name="writer"    -->
 	<form id="frm01" class="form"  method="post">
   	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-	    <input class="form-control mr-sm-2" name="title" placeholder="제목+내용" 
-	    	value="${param.title}"/>
-	    	
-	    	<!-- controller  public String boardList(Board sch)-->
+	    <input class="form-control mr-sm-2" name="ctitle" placeholder="제목" 
+	    	value="${param.ctitle}"/>
 	    <button class="btn btn-info" type="submit">Search</button>
 	    <button class="btn btn-success" onclick="goInsert()" 
 	    	type="button">등록</button>
  	</nav>
 	</form>
-   <table class="table table-hover table-striped">
-   	<col width="10%">
-   	<col width="45%">
-   	<col width="15%">
-   	<col width="15%">
-   	<col width="15%">
+   <table class="table table-hover table-striped text-center">
+   
     <thead>
-    
       <tr class="table-success text-center">
-        <th>번호</th>
-        <th>구분</th>
-        <th>제목</th>
-        <th>등록일</th>
+        <th>종류</th>
+        <th>게임명</th>
+        <th>회차 마감일시</th>
       </tr>
     </thead>	
     <tbody>
     	<!-- controller에서 넘겨준 모델데이터 : blist -->
     	<c:forEach var="bd" items="${blist}">
-    	<tr ondblclick="goDetail(${bd.no})" ><td>${bd.no}</td><td>${bd.division}</td>
-    		<td>${bd.title }</td>
-    		<td><fmt:formatDate value="${bd.regdte}"/>
+    	<tr><td>${bd.ctype}</td><td>${bd.ctitle}</td>
+    		<td>${bd.cdate }</td>
     	</c:forEach>
     </tbody>
 	</table>    
-    
-</div>
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">타이틀</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-		<form id="frm02" class="form"  method="post">
-	     <div class="row">
-	      <div class="col">
-	        <input type="text" class="form-control" placeholder="제목 입력" name="title">
-	      </div>
-	     </div>
-	    </form> 
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
 </div>
 </body>
 </html>

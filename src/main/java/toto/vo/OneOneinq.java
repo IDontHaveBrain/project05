@@ -7,15 +7,16 @@ public class OneOneinq {
 	private int boardno;
 	private String name;
 	private String email;
-	private int phonenumber;
+	private String phonenumber;
 	private String title;
 	private String content;
 	private Date nowtime;
+	private int readcnt;
 	public OneOneinq() {
 		// TODO Auto-generated constructor stub
 	}
-	public OneOneinq(int boardno, String name, String email, int phonenumber, String title, String content,
-			Date nowtime) {
+	public OneOneinq(int boardno, String name, String email, String phonenumber, String title, String content,
+			Date nowtime, int readcnt) {
 		this.boardno = boardno;
 		this.name = name;
 		this.email = email;
@@ -23,6 +24,7 @@ public class OneOneinq {
 		this.title = title;
 		this.content = content;
 		this.nowtime = nowtime;
+		this.readcnt = readcnt;
 	}
 	public int getBoardno() {
 		return boardno;
@@ -42,10 +44,10 @@ public class OneOneinq {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public int getPhonenumber() {
+	public String getPhonenumber() {
 		return phonenumber;
 	}
-	public void setPhonenumber(int phonenumber) {
+	public void setPhonenumber(String phonenumber) {
 		this.phonenumber = phonenumber;
 	}
 	public String getTitle() {
@@ -66,6 +68,11 @@ public class OneOneinq {
 	public void setNowtime(Date nowtime) {
 		this.nowtime = nowtime;
 	}
+	public int getReadcnt() {
+		return readcnt;
+	}
+	public void setReadcnt(int readcnt) {
+		this.readcnt = readcnt;
+	}
 
-	
 }
