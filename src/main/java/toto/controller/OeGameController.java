@@ -20,8 +20,8 @@ public class OeGameController {
 
     @RequestMapping("oegame.do")
     public String oegame(Model d, HttpSession session){
-        session.setAttribute("id","asdasd123");
-        session.setMaxInactiveInterval(60*10); // 로그인 세션 10분간 유지.
+        //session.setAttribute("id","asdasd123");
+        //session.setMaxInactiveInterval(60*10); // 로그인 세션 10분간 유지.
         System.out.println("세션 id 가져오기 : " + session.getAttribute("id"));
 
         String curId = (String)session.getAttribute("id");
