@@ -56,7 +56,7 @@
 <body>
 <jsp:include page="/project5/topNav.jsp"></jsp:include>
 
-<div class="container w-75" style="margin-top: 150px;">
+<div class="container w-50" style="margin-top: 150px;">
     <form action="oegameAdmin.do">
         <div class="container-fluid row justify-content-center align-items-center text-center">
             <input type="hidden" name="setod" id="setod" value="">
