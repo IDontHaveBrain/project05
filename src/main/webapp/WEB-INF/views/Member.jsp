@@ -11,15 +11,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>회원가입 및 회원조회</title>
+<title>회원가입</title>
 <link rel="stylesheet" href="${path}/a00_com/bootstrap.min.css" >
 <link rel="stylesheet" href="${path}/a00_com/jquery-ui.css" >
 <style>
-      td{text-align:center;}
+   td{text-align:center;}
    .input-group-text{width:100%;background-color:#cfffdf;color:black;font-weight:bolder;}
    .input-group-prepend{width:20%;}
-   
- body {font-family: Arial, Helvetica, sans-serif;}
+   body {font-family: Arial, Helvetica, sans-serif;}
 form {border: 3px solid #f1f1f1;}
 
 input[type=text], input[type=password] {
@@ -79,55 +78,48 @@ span.psw {
   .cancelbtn {
      width: 100%;
   }
-}  
+}   
 </style>
-<script src="${path}/a00_com/jquery.min.js"></script>
-<script src="${path}/a00_com/popper.min.js"></script>
-<script src="${path}/a00_com/bootstrap.min.js"></script>
-<script src="${path}/a00_com/jquery-ui.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="https://developers.google.com/web/ilt/pwa/working-with-the-fetch-api" type="text/javascript"></script>
 
 </head>
 
 <body>
 <jsp:include page="/project5/topNav.jsp"></jsp:include>
-
-
 <div class="jumbotron text-center">
- <h2 class="home_header">스포츠토토 <span class="light">회원가입 및 회원조회</span></h2>
-
+  <h2 class="home_header">스포츠토토 <span class="light">회원가입</span></h2>
+    		<p class="tagline">건전하게 즐겨보세요</p>
+  아이디<input name="id"   type="text"
+            value="${Totologin2.id}"   placeholder="아이디를 입력하세요" /><span></span><br>  
+   비밀번호<input name="pw"    type="password"
+            value="${Totologin2.pw}" placeholder="비밀번호를 입력하세요" /><span></span><br>  
+   이름<input name="name" class="form-control"   type="text"
+            value="" placeholder="이름을 입력하세요" /><span></span><br>   
+   이메일<input name="email" class="form-control"  type="text"
+            value="" placeholder="이메일을 입력하세요" /><span></span><br>         
 </div>
- 아이디<input name="id" type="text"
-  			 value="${MEMBERtoto.id}"  placeholder="아이디를 입력하세요"/><span></span><br>
- 비밀번호<input name="pw" type="password"  
-  			value="${MEMBERtoto.pw}" placeholder="비밀번호를 입력하세요"/><span></span><br>
- 이름<input name="name" type="text"
-  			 value="${MEMBERtoto.name}"  placeholder="이름을 입력하세요"/><span></span><br>
- 이메일<input name="email" type="password"  
-  			value="${MEMBERtoto.email}" placeholder="이메일을 입력하세요"/><span></span><br>
 
       <div class="text-right">
-          <button type="button" onclick="insertProc()" class="btn btn-success">등록</button>             
-            <button type="button" onclick="goMain()" class="btn btn-info">메인화면</button>    
+          <button type="button" onclick="goMain()" class="btn btn-success">회원가입 완료/메인화면으로 이동</button>          
+            
       </div>  
    </form>
-   <table>
-   <tr><td>{$MEMBERtoto.id}</td>
-   		<td>{$MEMBERtoto.name}</td><td>{$MEMBERtoto.email}</td></tr>
-   </table>
+   <table border> 
+	<c:forEach var="totologin" items="${loginList}"> 
+	<tr><td>${Totologin2.id}</td><td>${Totologin2.pw}</td></tr>
+	</c:forEach>
+	</table>
+	 <!-- Copyrights Section -->
+  <div class="copyright">&copy;2022 - <strong>BETMAN</strong></div>		
+	
 </div>
 <script type="text/javascript">
-function insertProc(){
-	if(confirm("회원가입 하시겠습니까?")){
-		$("form").attr("action", "${path}/");
-		$("form").submit();
-	}
+function jointoto(){
+	location.href="";
 }
 
-
+	
 	function goMain(){
-	      location.href="${path}/emp.do?method=list";
+	      location.href="";
 	   }	
 </script>
 </body>

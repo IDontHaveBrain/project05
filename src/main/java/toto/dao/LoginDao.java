@@ -4,12 +4,13 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import toto.vo.TOTOLOGIN;
+import toto.vo.Totologin2;
 //toto.dao.LoginDao
 @Repository
 public interface LoginDao {
-	public List<TOTOLOGIN> getLoginList(TOTOLOGIN sch);
-	
+	public List<Totologin2> getLoginList(Totologin2 sch);
+	public void totoInsert(Totologin2 ins);
+
 
 
 }

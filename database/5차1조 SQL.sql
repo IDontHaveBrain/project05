@@ -15,6 +15,16 @@ UPDATE Account SET point = 999999999 WHERE idno=1;
 --
 drop table Account;
 -- 계정
+ create table totologin(
+    idno number primary key,
+    id varchar2(50) not null unique,
+    pw varchar2(50) not null,
+    point number,
+    birthdate DATE
+);
+SELECT * FROM TOTOLOGIN;
+INSERT INTO TOTOLOGIN values(3,'banana','abc123',7000,to_date('20001125','YYYYMMDD')); 
+
 SELECT * FROM Account;
 create table Account (
     idno number primary key,
