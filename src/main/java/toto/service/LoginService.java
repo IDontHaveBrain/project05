@@ -19,6 +19,11 @@ public class LoginService {
 		
 	}
 	
+	public Totologin2 ck(Totologin2 sch) {
+		return dao.ck(sch);
+	}
+	
+	
 	public void totoInsert(Totologin2 ins) {
 		dao.totoInsert(ins);
 		

@@ -8,9 +8,14 @@
 	<select id="getLoginList" resultType="totologin" parameterType="totologin">
 		select * from TOTOLOGIN
 	</select>
+	<select id="ck" resultType="totologin" parameterType="totologin">
+		select * from TOTOLOGIN
+		WHERE id=#{id}
+		and pw=#{pw}
+	</select>
 	<insert id="insertToto" parameterType="totologin">
-		insert into TOTOLOGIN(id, pw)
-				values(#{id},#{pw})
+		insert into TOTOLOGIN(idno,id, pw)
+				values(#{idno},#{id},#{pw})
 	</insert>
 	
 

@@ -24,11 +24,11 @@ public class Totologin2 {
 	}
 	
 	
-	public Totologin2(String id, String pw, Date birthdate) {
+	public Totologin2(String id, String pw, int idno) {
 		super();
 		this.id = id;
 		this.pw = pw;
-		this.birthdate = birthdate;
+		this.idno = idno;
 	}
 	public Totologin2(String id, String pw) {
 		super();
