@@ -18,7 +18,44 @@
 <link rel="stylesheet" href="${path}/a00_com/bootstrap.min.css" >
 <link rel="stylesheet" href="${path}/a00_com/jquery-ui.css" >
 <style>
-	td{text-align:center;}
+td{text-align:center;}
+.table14_5 table {
+	width:100%;
+	margin:15px 0;
+	border:0;
+}
+.table14_5 th {
+	font-weight:bold;
+	background-color:#c6c6dd;
+	color:#202020
+}
+.table14_5,.table14_5 th,.table14_5 td {
+	font-size:0.95em;
+	text-align:center;
+	padding:4px;
+	border-collapse:collapse;
+}
+.table14_5 th,.table14_5 td {
+	border: 1px solid #ffffff;
+	border-width:1px
+}
+.table14_5 th {
+	border: 1px solid #c6c6dd;
+	border-width:1px 0 1px 0
+}
+.table14_5 td {
+	border: 1px solid #eeeeee;
+	border-width:1px 0 1px 0
+}
+.table14_5 tr {
+	border: 1px solid #ffffff;
+}
+.table14_5 tr:nth-child(odd){
+	background-color:#f7f7f7;
+}
+.table14_5 tr:nth-child(even){
+	background-color:#ffffff;
+}
 </style>
 <script src="${path}/a00_com/jquery.min.js"></script>
 <script src="${path}/a00_com/popper.min.js"></script>
@@ -50,7 +87,7 @@
   <h2>게임일정</h2>
 
 </div>
-<div class="container">
+<div class="table14_5">
 	<!-- 
 	form action="호출할 controller url"
 	   name="subject"  name="writer"    -->
@@ -63,15 +100,13 @@
 	    	type="button">등록</button>
  	</nav>
 	</form>
+	
    <table class="table table-hover table-striped">
-   	<col width="10%">
+  	<col width="20%">
+   	<col width="20%">
    	<col width="45%">
-   	<col width="15%">
-   	<col width="15%">
-   	<col width="15%">
     <thead>
-    
-      <tr class="table-success text-center">
+      <tr class="table14_5">
         <th>경기일시</th>
         <th>홈팀 vs 원정팀</th>
         <th>경기장소</th>
@@ -80,7 +115,6 @@
     <tbody>
     	<!-- controller에서 넘겨준 모델데이터 : blist -->
     	<c:forEach var="bd" items="${blist}">
-    	
     	<tr><td>${bd.ctime}</td><td>${bd.team}</td>
     		<td>${bd.place }</td></tr>
     	</c:forEach>
