@@ -1,20 +1,20 @@
 package toto.vo;
-
+//  toto.vo.Totologin
 
 import java.util.Date;
 
-public class TOTOLOGIN {
+public class Totologin2 {
 	
 	private int idno;
 	private String id;
 	private String pw;
 	private int point;
 	private Date birthdate;
-	public TOTOLOGIN() {
+	public Totologin2() {
 		
 		// TODO Auto-generated constructor stub
 	}
-	public TOTOLOGIN(int idno, String id, String pw, int point, Date birthdate) {
+	public Totologin2(int idno, String id, String pw, int point, Date birthdate) {
 		super();
 		this.idno = idno;
 		this.id = id;
@@ -23,7 +23,14 @@ public class TOTOLOGIN {
 		this.birthdate = birthdate;
 	}
 	
-	public TOTOLOGIN(String id, String pw) {
+	
+	public Totologin2(String id, String pw, Date birthdate) {
+		super();
+		this.id = id;
+		this.pw = pw;
+		this.birthdate = birthdate;
+	}
+	public Totologin2(String id, String pw) {
 		super();
 		this.id = id;
 		this.pw = pw;

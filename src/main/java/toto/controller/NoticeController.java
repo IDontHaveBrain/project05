@@ -19,3 +19,4 @@ public class NoticeController {
 		return "WEB-INF\\views\\board\\notice.jsp";
 	}
 }
+ 

@@ -13,7 +13,6 @@ public interface NoticeDao {
 	public List<Notice> noticeList(Notice sch);
 
 	public Notice getDetail(int no);
-	
 	public void readCountup(int no);
 	public void insertNotice(Notice ins);
 	public void updateNotice(Notice upt);
