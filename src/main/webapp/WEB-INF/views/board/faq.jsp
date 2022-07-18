@@ -83,7 +83,7 @@ body{text-align:center;}
   <h2>FAQ</h2>
 
 </div>
-<div class="container">
+<div class="">
 	<!-- 
 	form action="호출할 controller url"
 	   name="subject"  name="writer"    -->
@@ -105,6 +105,7 @@ body{text-align:center;}
     </thead>
 	</table>   
 	<span id="faq-title">자주 묻는 질문(FAQ)</span>
+	
 <div class="faq-content">
   <button class="question" id="que-1"><span id="que-1-toggle">+</span><span>'HTML'이란 무엇인가요?</span></button>
   <div class="answer" id="ans-1">하이퍼텍스트 마크업 언어(HyperText Markup Language)입니다.</div>

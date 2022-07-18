@@ -35,6 +35,14 @@
 .tbl_type .title .pic,.tbl_type .title .new{margin:0 0 2px;vertical-align:middle}
 .tbl_type tr.reply .title a{padding-left:12px;background:url(img/ic_reply.gif) 0 1px no-repeat}
 .tbl_type tr.reply td a.comment{padding:0;background:none;color:#f00;font-size:12px;font-weight:bold}
+
+.container {
+	width: 100%;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #EFF2FA;
+}
 </style>
 <script src="${path}/a00_com/jquery.min.js"></script>
 <script src="${path}/a00_com/popper.min.js"></script>
@@ -67,25 +75,7 @@
 <br>
 <div class="jumbotron text-center">
   <h1>공지사항</h1>
-</div>
-<div style="width:88px;">
-				<button id="selectCnt"><!-- 웹접근성_button태그 구조로 변경 -->
-					<span class="blind">조회 선택 :</span>
-					<span class="seltxt" id="selectCntC">10개씩</span>
-				</button>
-				<div class="list" style="display: none;">
-					<ul id="selectCntT">
-						<li><a data-cate="10" href="javascript:;" title="선택됨">10개씩</a></li>
-						<li><a data-cate="20" href="javascript:;">20개씩</a></li>
-						<li><a data-cate="30" href="javascript:;">30개씩</a></li>
-						<li><a data-cate="60" href="javascript:;">60개씩</a></li>
-					</ul>
-				</div>
-			</div>
-<div >
-	<!-- 
-	form action="호출할 controller url"
-	   name="subject"  name="writer"    -->
+
 	<form id="frm01" class="form"  method="post">
   	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 	    <input class="form-control mr-sm-2" name="bt_title" placeholder="제목+내용" 
@@ -94,6 +84,7 @@
 	    <button class="btn btn-info" type="submit">Search</button>
 	    <button class="btn btn-success" onclick="goInsert()" 
 	    	type="button">등록</button>
+	    	
  	</nav>
  	</form>
  	</div>
