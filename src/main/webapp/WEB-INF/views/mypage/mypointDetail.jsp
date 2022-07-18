@@ -18,6 +18,8 @@
 <link rel="stylesheet" href="${path}/a00_com/bootstrap.min.css" >
 <link rel="stylesheet" href="${path}/a00_com/jquery-ui.css" >
 <style>
+   td{text-align:center;}
+      <style>
 h2{    font-family: "paybooc-Light", sans-serif;}
    table {
     margin-left:auto; 
@@ -81,7 +83,9 @@ input {
 
 
 button {
-    margin: 20px;
+    margin: auto;
+    display:block;
+    padding:10px 20px
 }
 
 .w-btn {
@@ -109,10 +113,12 @@ button {
     color: #1e6b7b;
 }
 </style>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 <script src="${path}/a00_com/jquery.min.js"></script>
 <script src="${path}/a00_com/popper.min.js"></script>
 <script src="${path}/a00_com/bootstrap.min.js"></script>
 <script src="${path}/a00_com/jquery-ui.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://developers.google.com/web/ilt/pwa/working-with-the-fetch-api" type="text/javascript"></script>
 <script type="text/javascript">
@@ -121,57 +127,63 @@ button {
       
       --%>   
    });
-	function goInsert(){
-		location.href="${path}/oneoneinqInsertForm.do"
-	}
-	function goDetail(boardno){
-		location.href="${path}/oneoneinqDetail.do?boardno="+boardno;
-	}
 </script>
 </head>
 
 <body>
 <jsp:include page="/project5/topNav.jsp"></jsp:include>
-
 <div class="jumbotron text-center">
-  <h2 style="color: black;">1:1문의 게시판</h2>
-  <button class="w-btn w-btn-indigo" onclick="goInsert()" type="button" style="float:right;">1:1문의 등록</button>
+  <h2>포인트 충전</h2>
+
 </div>
 <div class="container">
-   <form id="frm01" class="form"  method="post">
-     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-       <input class="form-control mr-sm-2" name="title" 
-       		value="${param.title}" placeholder="제목" />
-       <button class="w-btn w-btn-indigo" type="submit">검색</button>
-    </nav>
-   </form>
-
-   <br>
-   <table class="type07" width="80%">
-      <col width="5%">
-      <col width="7%">
-      <col width="20%">
-      <col width="7%">
-      <col width="5%">
-   <thead>
-    
-      <tr>
-        <th>번호(최신)</th>
-        <th>작성자</th>
-        <th>제목</th>
-        <th>작성일자</th>
-        <th>조회수</th>
-      </tr>
-    </thead>   
-    <tbody>
-    <c:forEach var="ol" items="${oneList}" varStatus="sts">
-       <tr ondblclick="goDetail(${ol.boardno})">
-       <td>${sts.count}</td><td>${ol.name}</td><td>${ol.title}</td>
-       	   <td><fmt:formatDate value="${ol.nowtime}"/></td><td>${ol.readcnt}</td></tr>
-    </c:forEach>
-    </tbody>
-   </table>    
-    
+<table>
+   <form id="frm01" action="${path}/mypointDetail.do" 
+         class="form"  method="post">
+         <tr><th>
+      <div class="input-group mb-3">
+         <div class="input-group-prepend">
+            <span class="text-center input-group-text">비밀 번호</span>
+         <input name="pw" class="form-control" 
+            value="${param.pw}" placeholder="비밀번호를 입력하세요" />   
+      </div>
+	<th></tr>
+       </div>
+         <tr><th>
+      <div class="input-group mb-3">
+         <div class="input-group-prepend">
+            <span class="text-center input-group-text">충전 포인트</span>
+         <input name="point" class="form-control" 
+            value="${param.point}" placeholder="포인트 입력하세요" /> 
+      </div>    
+         </div>
+      <div class="text-right">
+         <button type="submit" onclick="updateProc()" class="btn btn-success">충전</button>
+      </div>  
+      </tr></th>
+      <tr><th>유의사항</th></tr>
+            <tr><th>' 가상계좌는 한 ID당 1개만 발급됩니다.</th></tr>
+            <tr><th>' 1회에 1만원부터 100만원까지 충전 가능하며 횟수 제한이 없습니다.</th></tr>
+            <tr><th>' 가상계좌번호로 입금 시 약 10분 이내로 자동 충전됩니다.</th></tr>
+            <tr><th>' 발급받은 가상계조를 사용 중에 충전 전 가상계조 변경하나 타인의 가상계좌로 입금했을 경우 기존 발급받았던 예치금의 자동 충전은 불가합니다.</th></tr>
+            <tr><th>' 본인 가상계좌가 아닌 가상계좌로 입금한 경우 타인의 예치금으로 충전되며, 이에 대한 책임은 본인에게 있습니다.</th></tr>
+            <tr><th>' 은행 전산장애 등으로 충전시간이 지연될 수 있습니다.</th></tr>
+            <tr><th>' ATM 기기에 따라 무매체 입금이 불가할 수 있습니다!</th></tr>
+   </form>   
+    </table>
 </div>
+<script type="text/javascript">
+function updateProc(){
+	if(confirm("충전하시겠습니까?")){
+		$("form").attr("action","${path}/updateMypoint.do");
+		$("form").submit();
+	}
+}
+var proc = "${proc}"
+	if(proc=="upt"){
+		alert("충전 완료되었습니다.");
+		location.href="${path}/MypointList.do";
+	}
+</script>
 </body>
 </html>

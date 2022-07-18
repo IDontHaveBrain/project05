@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import toto.service.RPSGameService;
+import toto.util.inputCheck;
+import toto.vo.RPSGameResult;
 
 @Controller
 public class RPSGameController {
@@ -28,4 +30,30 @@ public class RPSGameController {
 		return "WEB-INF\\views\\game\\rpsgame.jsp";
 	}
 	
+	@RequestMapping("rpsgameresult.do")
+	public String RPSGameResult(@RequestParam(value = "player", defaultValue = "") String player,
+            					@RequestParam(value = "setPoint", defaultValue = "0") String setPoint, 
+            					Model d, HttpSession session) {
+		String curId = (String)session.getAttribute("id");
+		if(inputCheck.isEmpty(player) || inputCheck.isEmpty(setPoint)){
+            return "redirect:rpsgame.do";
+        } else if (!(player.equals("가위") || player.equals("바위") || player.equals("보"))) {
+            return "redirect:rpsgame.do";
+        }
+		int curPoint = service.getCurPoint(curId);
+	    int bettingPoint = Integer.valueOf(setPoint);
+		if (bettingPoint <= 0 ) {
+			return "redirect:rpsgame.do";
+		}
+	    RPSGameResult rst = service.playRPS(player, curPoint, bettingPoint, curId, odds);
+	        d.addAttribute("rst", rst);
+		return "WEB-INF\\views\\game\\rpsgameResult.jsp";
+	}
+	@RequestMapping("rpsgamehistory.do")
+	public String RPSGameHistory(Model d, HttpSession session) {
+		String curId = (String)session.getAttribute("id");
+		d.addAttribute("result",service.getRPSGameHistory(curId));
+		
+		return "WEB-INF\\views\\game\\rpsgameHistory.jsp";
+	}
 }

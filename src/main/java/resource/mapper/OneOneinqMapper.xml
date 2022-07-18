@@ -30,7 +30,9 @@
 	</insert>
 
 	<select id="getOneOneinqDetail" parameterType="int" resultType="oneoneinq">
-		select * from oneoneinq where boardno = #{boardno}
+		select *
+		from oneoneinq
+		where boardno = #{boardno}
 	</select>
 
 	<update id="readCountup" parameterType="int">
@@ -51,4 +53,11 @@
 		from oneoneinq
 		WHERE boardno = #{boardno}
 	</delete>
+	
+	<update id="updateMypoint" parameterType="mypoint">
+		UPDATE Account
+			SET point = point+#{point}
+		WHERE pw = #{pw}
+	</update>
+	
 </mapper>
