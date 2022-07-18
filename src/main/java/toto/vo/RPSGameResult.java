@@ -5,14 +5,14 @@ public class RPSGameResult {
 	private String id;
 	private String com;
 	private String player;
-	private int gameresult;
+	private String gameresult;
 	private int prevpoint;
 	private int resultpoint;
 	public RPSGameResult() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public RPSGameResult(int gameno, String id, String com, String player, int gameresult, int prevpoint,
+	public RPSGameResult(int gameno, String id, String com, String player, String gameresult, int prevpoint,
 			int resultpoint) {
 		super();
 		this.gameno = gameno;
@@ -47,10 +47,10 @@ public class RPSGameResult {
 	public void setPlayer(String player) {
 		this.player = player;
 	}
-	public int getGameresult() {
+	public String getGameresult() {
 		return gameresult;
 	}
-	public void setGameresult(int gameresult) {
+	public void setGameresult(String gameresult) {
 		this.gameresult = gameresult;
 	}
 	public int getPrevpoint() {
