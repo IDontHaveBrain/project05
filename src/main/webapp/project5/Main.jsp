@@ -30,9 +30,9 @@ function timer(){
   var $interval=setInterval(function(){slide()},2000);                        
 }
 function slide(){
-  $(".bannerbox").animate({left:"-=187px"},3000,function(){
-    $(this).css({"left":0});
-    $(".bannerbox").append( $("ul").children("li").eq(0) );
+  $(".bannerbox").animate({left:"400px"},3000,function(){
+    $(this).css({"left":700});
+    $(".bannerbox").append( $("li").children("li").eq(0) );
   });    
   current++;
   if(current==5)current=0;
@@ -50,15 +50,19 @@ function slide(){
 				</h1>
 				<p class="tagline">한경기구매! 싱글플레이!</p>
 			</section>
+			
 			<div class="slidebanner">
 			 <ul class="bannerbox">    
-			    <li><img src="img\banner1.PNG" alt="dw" class="static" /></li>
-			    <li><img src="img\banner2.PNG" alt="dw" class="static" /></li>
+			    <li class="rollli"><img src="img\banner1.PNG" alt="dw" class="static" /></li>
 			  </ul>
-			<!--  <img src="img\calendar.PNG" class="static"
-			width="800" height="380"/>-->
 			</div>
-			<!-- More Info Section -->
+			<div class="slidebanner">
+			 <ul class="bannerbox">    
+			    <li class="rollli"><img src="img\banner2.PNG" alt="dw" class="static" /></li>
+			  </ul>
+			</div>
+			
+			
 			<footer>
 				<article class="footer_column">
 					<h3>적중결과</h3>

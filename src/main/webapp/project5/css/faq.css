@@ -41,3 +41,9 @@
   [id$="-toggle"] {
     margin-right: 15px;
   }
+  
+.paging {text-align: center;}    
+.paging a {display: inline-block;font-weight: bold;text-decoration: none;padding: 5px 8px;border: 1px solid #ccc;color: #000;background-color: #F5F5DC;}
+.paging a.select {color:#fff;background-color: #FFA7A7;}
+
+

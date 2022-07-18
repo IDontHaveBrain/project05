@@ -15,11 +15,14 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link href="${path}/a00_com/a01_common.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/faq.css">
+
 <link rel="stylesheet" href="${path}/a00_com/bootstrap.min.css" >
 <link rel="stylesheet" href="${path}/a00_com/jquery-ui.css" >
 <style>
 	td{text-align:center;}
-	.tbl_type,.tbl_type th,.tbl_type td{border:0}
+.tbl_type,.tbl_type th,.tbl_type td{border:0}
 .tbl_type a{color:#383838;text-decoration:none}
 .tbl_type{width:100%;border-bottom:1px solid #999;color:#666;font-size:12px;table-layout:fixed}
 .tbl_type caption,.tbl_type .frm label{display:none}
@@ -44,13 +47,16 @@
 		<%-- 
 		
 		--%>	
-	});
+	
 	function goInsert(){
 		location.href="${path}/boardInsertForm.do"
 	}
 	function goDetail(no){
 		location.href="${path}/boardDetail.do?no="+no;
 	}	
+
+	
+});
 </script>
 </head>
 
@@ -61,9 +67,22 @@
 <br>
 <div class="jumbotron text-center">
   <h1>공지사항</h1>
-  
 </div>
-<div class="container">
+<div style="width:88px;">
+				<button id="selectCnt"><!-- 웹접근성_button태그 구조로 변경 -->
+					<span class="blind">조회 선택 :</span>
+					<span class="seltxt" id="selectCntC">10개씩</span>
+				</button>
+				<div class="list" style="display: none;">
+					<ul id="selectCntT">
+						<li><a data-cate="10" href="javascript:;" title="선택됨">10개씩</a></li>
+						<li><a data-cate="20" href="javascript:;">20개씩</a></li>
+						<li><a data-cate="30" href="javascript:;">30개씩</a></li>
+						<li><a data-cate="60" href="javascript:;">60개씩</a></li>
+					</ul>
+				</div>
+			</div>
+<div >
 	<!-- 
 	form action="호출할 controller url"
 	   name="subject"  name="writer"    -->
@@ -76,15 +95,17 @@
 	    <button class="btn btn-success" onclick="goInsert()" 
 	    	type="button">등록</button>
  	</nav>
-	</form>
+ 	</form>
+ 	</div>
+ 	
+ 	<div >
    <table class="table table-hover table-striped">
+   	<col width="10%">
    	<col width="10%">
    	<col width="45%">
    	<col width="15%">
-   	<col width="15%">
-   	<col width="15%">
+   	
     <thead>
-    
       <tr class="table-success text-center">
         <th>번호</th>
         <th>구분</th>
@@ -92,6 +113,8 @@
         <th>등록일</th>
       </tr>
     </thead>	
+    
+    
     <tbody>
     	<!-- controller에서 넘겨준 모델데이터 : blist -->
     	<c:forEach var="bd" items="${blist}">
@@ -99,9 +122,12 @@
     		<td>${bd.bt_title}</td>
     		<td>${bd.bt_date}</td>
     	</c:forEach>
+    	
     </tbody>
 	</table>    
-    
+	
+	
+   
 </div>
 </body>
 </html>
