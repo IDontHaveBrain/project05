@@ -14,6 +14,7 @@
 <head>
     <title>Title</title>
   <script>
+
       location.href="${path}/project5/Main.jsp";
   </script>
 </head>
