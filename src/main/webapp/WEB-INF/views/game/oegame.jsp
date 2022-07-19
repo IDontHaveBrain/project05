@@ -16,9 +16,6 @@
     <script src="${path}/project5/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
     <style>
         body {
-            margin: 0;
-            padding: 0;
-            font-family: "Roboto", serif;
             display: flex;
             flex-flow: column nowrap;
             justify-content: center;

@@ -17,9 +17,6 @@
     <script src="${path}/project5/js/jquery-3.6.0.min.js"></script>
     <style>
         body {
-            margin: 0;
-            padding: 0;
-            font-family: "Roboto", serif;
             display: flex;
             flex-flow: column nowrap;
             justify-content: center;
@@ -57,14 +54,14 @@
 
     function setOdd() {
         document.querySelector("#setod").value = "Y";
-        document.querySelector("form").submit();
+        document.querySelector("#oeAdminForm").submit();
     }
 </script>
 <body>
 <jsp:include page="/project5/topNav.jsp"></jsp:include>
 
 <div class="container w-50" style="margin-top: 150px;">
-    <form action="oegameAdmin.do">
+    <form action="oegameAdmin.do" id="oeAdminForm">
         <div class="container-fluid row justify-content-center align-items-center text-center">
             <input type="hidden" name="setod" id="setod" value="">
             <div class="col-sm-4">

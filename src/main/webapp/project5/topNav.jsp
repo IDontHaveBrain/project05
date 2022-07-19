@@ -16,6 +16,7 @@
     <style>
         header{
             background-color: #646987;
+            z-index: 999999;
         }
     </style>
  <link rel="stylesheet" type="text/css" href="${path}/project5/css/topup.css">
@@ -33,7 +34,7 @@
         <img src="${path}/project5/img/logo.png"  width="80" height="40"
              style="float:left; margin-top:15px; margin-left:50px;"/>
     </div>
-    <nav role="navigation">
+    <nav role="navigation" style="z-index: 99999999;">
         <ul id="main-menu">
             <li><a href="#">게임구매</a>
                 <ul id="sub-menu">
