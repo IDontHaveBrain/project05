@@ -64,10 +64,11 @@ public class OneOneinqController {
 		System.out.println(upt.getId() + upt.getPoint());
 		if(upt!=null && upt.getId() != null && service.getAccount(upt.getId())==1) {
 			service.updateMypoint(upt);
+			d.addAttribute("okay", 1);
 			d.addAttribute("proc","upt");
 			return "WEB-INF\\views\\mypage\\mypointDetail.jsp"; 
 		}else {
-			d.addAttribute("okay", 0);
+			d.addAttribute("okay", 2);
 			return "WEB-INF\\views\\mypage\\mypointDetail.jsp";
 		}
 		
