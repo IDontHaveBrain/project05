@@ -61,9 +61,15 @@ public class OneOneinqController {
 	// 포인트 수정
 	@RequestMapping("updateMypoint.do")
 	public String updateMypoint(Mypoint upt, Model d) {
-		System.out.println(upt.getPw() + upt.getPoint());
-		service.updateMypoint(upt);
-		d.addAttribute("proc","upt");
-		return "WEB-INF\\views\\mypage\\mypointDetail.jsp";
+		System.out.println(upt.getId() + upt.getPoint());
+		if(upt!=null && upt.getId() != null && service.getAccount(upt.getId())==1) {
+			service.updateMypoint(upt);
+			d.addAttribute("proc","upt");
+			return "WEB-INF\\views\\mypage\\mypointDetail.jsp"; 
+		}else {
+			d.addAttribute("okay", 0);
+			return "WEB-INF\\views\\mypage\\mypointDetail.jsp";
+		}
+		
 	}
 }

@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import toto.vo.Account;
 import toto.vo.Mypoint;
 import toto.vo.OneOneinq;
 
@@ -17,4 +18,5 @@ public interface OneOneinqDao {
 	public void deleteOneOneinq(int boardno);
 	
 	public void updateMypoint(Mypoint upt);
+	public Account getAccount(String id);
 }

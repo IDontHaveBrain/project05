@@ -13,9 +13,9 @@
 		WHERE id=#{id}
 		and pw=#{pw}
 	</select>
-	<insert id="insertToto" parameterType="acc">
-		insert into Account(idno,id, pw)
-				values(#{idno},#{id},#{pw})
+	<insert id="totoInsert" parameterType="acc">
+		insert into Account(idno, id, pw)
+				values((select NVL(max(idno),1)+1 from Account),#{id},#{pw})
 	</insert>
 	
 

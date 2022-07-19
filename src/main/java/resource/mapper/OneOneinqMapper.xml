@@ -57,7 +57,12 @@
 	<update id="updateMypoint" parameterType="mypoint">
 		UPDATE Account
 			SET point = point+#{point}
-		WHERE pw = #{pw}
+		WHERE id = #{id}
 	</update>
+	<select id="getAccount" resultType="acc" parameterType="string">
+		SELECT *
+		from Account
+		where id = #{id}
+	</select>
 	
 </mapper>

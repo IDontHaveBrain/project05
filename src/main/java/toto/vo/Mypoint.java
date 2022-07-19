@@ -4,13 +4,15 @@ public class Mypoint {
 	private String pw;
 	private int point;
 	private int addpoint;
+	private String id;
 	public Mypoint() {
 		// TODO Auto-generated constructor stub
 	}
-	public Mypoint(String pw, int point, int addpoint) {
+	public Mypoint(String pw, int point, int addpoint, String id) {
 		this.pw = pw;
 		this.point = point;
 		this.addpoint = addpoint;
+		this.id = id;
 	}
 	public String getPw() {
 		return pw;
@@ -30,5 +32,12 @@ public class Mypoint {
 	public void setAddpoint(int addpoint) {
 		this.addpoint = addpoint;
 	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+
 
 }

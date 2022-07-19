@@ -275,5 +275,5 @@ INSERT INTO calendar values('22.07.10 (일) 19:00','수원FC vs FC서울','수�
 INSERT INTO calendar values('22.07.10 (일) 19:00','충남아산 vs 전남드래','이순신종합운동장');
 INSERT INTO calendar values('22.07.08(금) ~ 22.07.08(금)','KLPGA 대보 하우스디 오픈','서원밸리CC');
 
-
+SELECT * FROM Account;
 

@@ -15,13 +15,21 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="/css/layout.css" >
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/style_game.css">
+<link rel="stylesheet" type="text/css" href="css/ui-game.css">
+<link rel="stylesheet" type="text/css" href="css/ui-customer.css">
+<link rel="stylesheet" type="text/css" href="css/ui-service.css">
+
 
 </head>
 
 <body>
 <jsp:include page="/project5/topNav.jsp"></jsp:include>
-<%--  
+<%-- 
+ <link rel="stylesheet" type="text/css" href="${path}/SoccerGame/css/layout.css">
+ <link rel="stylesheet" href="/css/layout.css" >
 <img src="img\calendar.PNG" class="static" width="800" height="380"/>--%>
 <div class="docWrap">
 <div class="articleArea">
@@ -223,8 +231,8 @@
 	</div>
 
 	<div class="btnArea" id="asideGameTabBtn0">
-		<button class="btn btnBB gray" onclick="rightA.insertToCartCheck();" disabled="">카트담기</button> 
-		<button class="btn btnBB red" onclick="rightA.checkCart();" disabled="">바로구매</button>
+		<button class="btn btnBB gray" onclick="rightA.insertToCartCheck();" >카트담기</button> 
+		<button class="btn btnBB red" onclick="rightA.checkCart();" >바로구매</button>
 	</div>
 	
 </div>
@@ -237,7 +245,6 @@
  <footer>
 </footer>
 </div>
-
 
 
 

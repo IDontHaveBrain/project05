@@ -85,42 +85,89 @@ span.psw {
 
 <body>
 <jsp:include page="/project5/topNav.jsp"></jsp:include>
+<script>
+$(document).ready(function(){
+
+
+	$("#submit").on("click", function(){
+		if($("#id").val()==""){
+			alert("아이디를 입력해주세요.");
+			$("#id").focus();
+			return false;
+		}
+		if($("#pw").val()==""){
+			alert("비밀번호를 입력해주세요.");
+			$("#pw").focus();
+			return false;
+		}
+		
+		var pw = document.querySelector("#pw")
+		var ckpw = document.querySelector("[name=ckpw]")
+		if(pw.value!=null){
+			if(pw.value==""){
+				alert("비밀번호를 입력해주세요")
+				pw.focus();
+				return
+			}else{
+				if(pw.value.length<5 || pw.value.length>12){
+					alert("비밀번호는 5~12자리만 입력가능합니다")
+					pw.value=""
+					pw.focus()
+					return
+				}else{
+					if(ckpw.value==""){
+						alert("비밀번호확인을 입력해주세요")
+						ckpw.focus()
+						return
+					}else{
+						if(pw.value!=ckpw.value){
+							alert("비밀번호가 확인되지않습니다")
+							alert("비밀번호를 확인해주세요")
+							ckpw.focus()
+							return
+						}
+					}
+				}
+			}
+		}
+		
+	});
+	
+	
+});
+</script>
 <div class="jumbotron text-center">
   <h2 class="home_header">스포츠토토 <span class="light">회원가입</span></h2>
     		<p class="tagline">건전하게 즐겨보세요</p>
+    		</div>
+<form id="Insert" action="Insert.do" method="post">    		
   아이디<input name="id"   type="text"
-            value="${Totologin2.id}"   placeholder="아이디를 입력하세요" /><span></span><br>  
+            value="${param.id}"   placeholder="아이디를 입력하세요" /><span></span><br>  
    비밀번호<input name="pw"    type="password"
-            value="${Totologin2.pw}" placeholder="비밀번호를 입력하세요" /><span></span><br>  
-   이름<input name="name" class="form-control"   type="text"
-            value="" placeholder="이름을 입력하세요" /><span></span><br>   
-   이메일<input name="email" class="form-control"  type="text"
-            value="" placeholder="이메일을 입력하세요" /><span></span><br>         
-</div>
+            value="${param.pw}" placeholder="비밀번호를 입력하세요" /><span></span><br>  
+ 비밀번호확인<input name="ckpw"    type="password"
+            value="ckpw" placeholder="비밀번호를 재입력하세요" /><span></span><br> 
+       
 
       <div class="text-right">
-          <button type="button" onclick="goMain()" class="btn btn-success">회원가입 완료/메인화면으로 이동</button>          
-            
+          <button type="submit" id="submit" class="btn btn-success">회원가입</button>  
+         <button class="btn btn-success"  onclick="golog()" type="button" value="로그인">로그인 하러가기</button> 
       </div>  
-   </form>
+</form>
+
    <table border> 
 	<c:forEach var="totologin" items="${loginList}"> 
-	<tr><td>${Totologin2.id}</td><td>${Totologin2.pw}</td></tr>
+	<tr><td>${totologin.id}</td>
+	<td>${totologin.pw}</td></tr>
+
 	</c:forEach>
 	</table>
 	 <!-- Copyrights Section -->
   <div class="copyright">&copy;2022 - <strong>BETMAN</strong></div>		
-	
-</div>
-<script type="text/javascript">
-function jointoto(){
-	location.href="";
+<script>
+function golog(){	
+	location.href="${path}/Login2.do"
 }
-
-	
-	function goMain(){
-	      location.href="";
-	   }	
 </script>
 </body>
 </html>
