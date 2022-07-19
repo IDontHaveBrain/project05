@@ -114,8 +114,6 @@
 
 <body>
 <jsp:include page="/project5/topNav.jsp"></jsp:include>
-<%-- 
---%>
 
 <div class="docWrap">
 <div class="articleArea">
@@ -310,7 +308,7 @@
 	</ul>
 
 	<div class="asideGameCont tab1 selected" id="asideGame-1">
-		<h4 class="blind">구매하기</h4><!-- 웹접근성_0605 -->
+		<h4 class="blind">구매하기</h4>
 		<div class="setBox none" id="asideSetBox" style="display: none;">
 			<span class="tit" id="asideGameTitle"></span>
 			<button class="del" id="btnAsideGameCont">삭제하기</button>
@@ -322,28 +320,22 @@
 				<p>
 					베트맨 이외의 사이트를 통한 <br>투표권 발행 유사행위는 법으로 금지되며, <br>청소년 및 발행대상 운동경기 관계자는 <br>구매하거나 환급받을 수 없습니다.<br>
 					<b style="color: #C4113C;">(환급 및 출금은 본인명의 계좌만 가능합니다.)</b>
-				</p>
-			
+				</p>			
 			</div>
 			<h3 id="showbuy" style="display: none; margin-top:2px; border: solid;"></h3>
-		</div><div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-dark-thick mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; height: 0px; top: 0px;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
-		
+		</div><div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-dark-thick mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; height: 0px; top: 0px;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>	
 		<div class="totalBoxDef" id="sumAreaDef">
 			<ul>
 				<li class="totals">
 					<strong>구매가능금액</strong>
-					<em id="availableBuyAmountDef">50,000</em> <span class="text">원</span>
+					<em >50,000</em> <span class="text">원</span>
 				</li>
 			</ul>
 		</div>
-
 	</div>
 	<div class="asideGameCont tab2" id="asideGame-2">
-		<h4 class="blind">카트내역</h4><!-- 웹접근성_0605 -->
-		
-		
+		<h4 class="blind">카트내역</h4>
 	</div>
-
 	<div class="btnArea" id="asideGameTabBtn0">
 		<input type="button" class="btn btnBB gray" value="카트담기" id="cartbtn" onclick="cartbtn"/>
 		<input type="button" class="btn btnBB red" value="바로구매" id="buybtn" onclick=" location='buysoccer.jsp'"/>
@@ -351,9 +343,9 @@
 	  
 </div>
 </div>
-<!--  asideRight 영역 끝 -->
+
 </div>
-<!-- div articleArea 영역 끝  -->	
+
 
 
  <footer>

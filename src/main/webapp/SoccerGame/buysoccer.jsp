@@ -16,7 +16,7 @@
 <link rel="stylesheet" type="text/css" href="css/style_game.css">
 <link rel="stylesheet" type="text/css" href="css/ui-customer.css">
 
-<title>구매하기 &lt; 마이페이지 | BETMAN</title></head>
+</head>
 
 <body>
 <jsp:include page="/project5/topNav.jsp"></jsp:include>
@@ -98,8 +98,8 @@
 				<th scope="col" class="bdl0" id="btnVoteTypeMidTxt">무</th>
 				<th scope="col" class="bdl0">패</th>
 			</tr>
-		</thead>
-		<tbody id="grid_victory_tbody"><tr><td class=""><span class="db">1경기</span></td><td><span class="fs11">22.07.16 (토)<br> 18:00</span>
+		</thead>		
+<tbody id="grid_victory_tbody"><tr><td class=""><span class="db">1경기</span></td><td><span class="fs11">22.07.16 (토)<br> 18:00</span>
 
 <div class="tooltipHBox"><button type="button" class="icoG stadium">경기장</button><div class="ttHLayer" tabindex="0"><span>가시마사커스타디움</span></div></div></td><td><div class="vsDIv fwb">
 <div>가시마</div><div><span class="center fwn">vs</span> 비셀고베</div></div></td><td class="tar"><div class="formBox viewArea chek2"><span class="btnChkList v7"><span class="btnChk w90 viewSelect"><span>승</span><span class="select">선택내역</span></span></span></div></td><td class="bdl0"><div class="formBox viewArea chek2"><span class="btnChkList v7"><span class="btnChk w90"><span>무</span></span></span></div></td><td class="bdl0 tal"><div class="formBox viewArea chek2"><span class="btnChkList v7"><span class="btnChk w90"><span>패</span></span></span></div></td><td id="rowSlipSelectCnt_0">x1</td><td class="detailAreaTd" style="display:none"><button type="button" class="btnOn" title="1경기  가시마 : 비셀고베 상세정보 열기"><span class="hidden">1경기  가시마 : 비셀고베 상세정보 열기</span></button></td></tr><tr><td class=""><span class="db">2경기</span></td><td><span class="fs11">22.07.16 (토)<br> 18:00</span>
@@ -234,10 +234,6 @@
 				<li>
 					<strong>게임별 벳머니</strong>
 					<em class="none" id="totalGameBetMoney">0</em> <span class="text">원</span>
-				</li>
-				<li>
-					<strong>베트맨 벳머니</strong>
-					<em class="none" id="totalBetmanMoney">0</em> <span class="text">원</span>
 				</li>
 				<li class="totals">
 					<strong>결제금액</strong>
