@@ -22,6 +22,9 @@ public class NoticeService {
 		dao.insertNotice(ins);
 	}
 	
+	public int checkAdmin(String id) {
+		return dao.checkAdmin(id);
+	}
 /*
 	public Notice getNoticeDetail(int no) {
 		dao.readCountup(no);

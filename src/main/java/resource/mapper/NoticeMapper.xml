@@ -14,7 +14,11 @@
 	</select>
 	
 	<insert id="insertNotice" parameterType="notice">
-			insert into BET_NOTICE values(notice_seq2.nextval,0,0,0)
+			insert into BET_NOTICE values(notice_seq3.nextval,#{bt_title},#{bt_title},#{bt_title})
 	</insert>
+	
+	<select id="checkAdmin" parameterType="string" resultType="int">
+		select auth from Account where id = #{id}
+	</select>
 	
 </mapper>

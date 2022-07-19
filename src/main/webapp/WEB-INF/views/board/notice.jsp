@@ -98,9 +98,10 @@ td{text-align:center;}
 	    	value="${param.bt_title}"/>
 	    	<!-- controller  public String boardList(Board sch)-->
 	    <button class="btn btn-info" type="submit">Search</button>
+	    <c:if test="${hide == 1}">
 	    <button class="btn btn-success" onclick="goInsert()" 
 	    	type="button">등록</button>
-	    	
+    	</c:if>
  	</nav>
  	</form>
  	</div>

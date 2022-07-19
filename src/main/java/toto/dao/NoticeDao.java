@@ -18,5 +18,5 @@ public interface NoticeDao {
 	public void updateNotice(Notice upt);
 	public void deleteNotice(int no);
 	public Notice getNoticeDetail(int no);
-	
+	public int checkAdmin(String id);
 }

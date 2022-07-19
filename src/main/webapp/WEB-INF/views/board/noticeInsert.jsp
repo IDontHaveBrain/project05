@@ -107,7 +107,7 @@ td{text-align:center;}
 </div>
 
 <div class="container">
-	<form id="frm01" enctype="multipart/form-data" action="${path}/noticeInsert.do" 
+	<form id="frm01" action="${path}/noticeInsert.do" 
 		 class="form"  method="post">
 		<div class="input-group mb-3">
 			<div class="input-group-prepend">
