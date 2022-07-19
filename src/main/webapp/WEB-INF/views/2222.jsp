@@ -137,7 +137,7 @@ span.psw {
   <form id="login" action="Login2.do">  
  <br>
  <br>
- <br>
+ <br>   
   아이디<br>
   <input id="id" name="id" type="text"
   			 value="${param.id}"  placeholder="아이디를 입력하세요"/><span></span><br>

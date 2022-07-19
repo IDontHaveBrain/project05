@@ -15,11 +15,14 @@
 <link rel="stylesheet" href="${path}/a00_com/bootstrap.min.css" >
 <link rel="stylesheet" href="${path}/a00_com/jquery-ui.css" >
 <style>
+
    td{text-align:center;}
    .input-group-text{width:100%;background-color:#cfffdf;color:black;font-weight:bolder;}
    .input-group-prepend{width:20%;}
    body {font-family: Arial, Helvetica, sans-serif;}
-form {border: 3px solid #f1f1f1;}
+form {border: 3px solid #f1f1f1;
+		align:center;
+}
 
 input[type=text], input[type=password] {
   width: 50%;
@@ -28,11 +31,11 @@ input[type=text], input[type=password] {
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
-  align: center;
+  align:center;
 }
   
 button {
-  background-color: #9F81F7;
+  background-color: #8282FF;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -154,12 +157,10 @@ $(document).ready(function(){
  <input name="name"    type="text"  placeholder="이름을 입력하세요" /><span></span><br> 
  이메일<br>
  <input name="mail"    type="text"  placeholder="이메일을 입력하세요" /><span></span><br> 
-       
-
-      <div class="text-right">
+    
           <button type="submit" id="submit"  onclick="join()" class="btn btn-success">회원가입</button>  
          <button class="btn btn-success"  onclick="golog()" type="button" value="로그인">로그인 하러가기</button> 
-      </div>  
+   
 </form>
 
    <table border> 
