@@ -13,7 +13,6 @@
 <meta charset="UTF-8">
 <title>셀프진단평가 결과</title>
 <link href="${path}/a00_com/a01_common.css" rel="stylesheet">
-
 <script src="${path}/a00_com/jquery-3.6.0.js" type="text/javascript"></script>
 
 </head>
@@ -44,12 +43,7 @@
 		System.out.print(total+"점");
 	}
 	%>
-	<%--
-	<img src="level1.jpg" alt="문제없음" width="300" height="300">
-	<img src="level2.jpg" alt="저위험" width="300" height="300">
-	<img src="level3.jpg" alt="중위험" width="300" height="300">
-	<img src="level4.jpg" alt="문제성도박" width="300" height="300">
-	 --%>
+
 	<%
 	if(total==0){
 		level="문제없음";
