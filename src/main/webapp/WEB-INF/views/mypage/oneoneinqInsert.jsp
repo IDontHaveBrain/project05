@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="${path}/a00_com/bootstrap.min.css" >
 <link rel="stylesheet" href="${path}/a00_com/jquery-ui.css" >
 <style>
-h2{    font-family: "paybooc-Light", sans-serif;}
+h2{font-family: "paybooc-Light", sans-serif;}
    table {
     margin-left:auto; 
     margin-right:auto;
@@ -27,6 +27,7 @@ h2{    font-family: "paybooc-Light", sans-serif;}
 table, th {
     border-collapse : collapse;
     border : 1px solid black;
+    width:800px;
 };
 table, td {
     border-collapse : collapse;
@@ -132,33 +133,27 @@ button {
 
 <body>
 <jsp:include page="/project5/topNav.jsp"></jsp:include>
-<div class="jumbotron text-center">
- 
 
+<div class="jumbotron text-center">
+ <th colspan="2"><h2>1:1문의 등록페이지</h2></th>
 </div>
-<h2>_</h2>
 <table class="type07">
- <th colspan="2"><h2>1:1문의 게시판등록</h2></th>
 <div class="container">
    <form id="frm01" action="${path}/oneoneinqInsert.do" 
          class="form"  method="post">
 <tr colspan="2"><td >
-      <div class="input-group mb-3">
+      <div >
          <div class="input-group-prepend">
-      <div class="input-group mb-3">
-         <div class="input-group-prepend">
-            <span class="text-center input-group-text">제  목</span>
-         
- 		
+            <span style="display:inline-block; width:100px;" class="text-center input-group-text">제  목</span>
          <input style="text-align:center" name="title" class="form-control" 
             value="${oneoneinq.title}" placeholder="제목을 입력하세요" />   
                     </div>
       </div>
 </td></tr>
 <tr><td>  
-      <div class="input-group mb-3">
+      <div >
          <div class="input-group-prepend">
-            <span class="text-center input-group-text">작성자</span>
+            <span style="display:inline-block; width:100px;" class="text-center input-group-text">작성자</span>
 
          <input style="text-align:center" name="name" class="form-control" 
             value="${oneoneinq.name}" placeholder="작성자를 입력하세요" />  
@@ -166,9 +161,9 @@ button {
       </div>    
 </td></tr> 
 <tr><td>           
-      <div class="input-group mb-3">
+      <div >
          <div class="input-group-prepend">
-            <span class="text-center input-group-text">이메일</span>
+            <span style="display:inline-block; width:100px;" class="text-center input-group-text">이메일</span>
 
          <input style="text-align:center" name="email" class="form-control" 
             value="${oneoneinq.email}" placeholder="이메일을 입력하세요" />   
@@ -176,9 +171,9 @@ button {
       </div>   
 </td></tr>           
 <tr><td>                      
-      <div class="input-group mb-3">
+      <div>
          <div class="input-group-prepend">
-            <span class="text-center input-group-text">번 호</span>
+            <span style="display:inline-block; width:100px;" class="text-center input-group-text">번 호</span>
 
          <input style="text-align:center" name="phonenumber" class="form-control" 
             value="${oneoneinq.phonenumber}" placeholder="핸드폰번호를 입력하세요" /> 
@@ -198,7 +193,7 @@ button {
 <tr><td>   
       <div class="text-right">
          <button type="button" onclick="insertProc()" class="w-btn-outline">등록</button>
-         <button type="button" onclick="goMain()" class="w-btn-outline">메인화면</button>
+         <button type="button" onclick="goMain()" class="w-btn-outline">1:1문의 게시판</button>
       </div>
 </td></tr>        
    </form>

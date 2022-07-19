@@ -108,7 +108,11 @@ button {
     background-color: aliceblue;
     color: #1e6b7b;
 }
-
+.w-btn-indigo2 {
+    background-color: aliceblue;
+    color: #1e6b7b;
+    width:200px;
+}
 </style>
 <script src="${path}/a00_com/jquery.min.js"></script>
 <script src="${path}/a00_com/popper.min.js"></script>
@@ -135,15 +139,15 @@ button {
 <jsp:include page="/project5/topNav.jsp"></jsp:include>
 
 <div class="jumbotron text-center">
-  <h2 style="color: black;">1:1문의 게시판</h2>
+  <div style="color: black;"><h2>1:1문의 게시판</h2>
   <button class="w-btn w-btn-indigo" onclick="goInsert()" type="button" style="float:right;">1:1문의 등록</button>
-</div>
+</div></div>
 <div class="container">
    <form id="frm01" class="form"  method="post">
-     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+     <nav style="background:white;" class="navbar navbar-expand-sm bg-gray navbar-gray">
        <input style="text-align:center" class="form-control mr-sm-2" name="title" 
        		value="${param.title}" placeholder="제목을 입력 후 검색버튼을 눌러주세요" />
-       <button class="w-btn w-btn-indigo" type="submit">검색</button>
+       <button class="w-btn w-btn-indigo2" type="submit">검색</button>
     </nav>
    </form>
 

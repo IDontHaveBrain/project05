@@ -20,12 +20,6 @@
 <style>
 
 
-
-
-
-
-
-
 h2{    font-family: "paybooc-Light", sans-serif;}
    table {
     margin-left:auto; 
