@@ -111,7 +111,7 @@ button {
 .w-btn-indigo2 {
     background-color: aliceblue;
     color: #1e6b7b;
-    width:200px;
+    width:100px;
 }
 </style>
 <script src="${path}/a00_com/jquery.min.js"></script>

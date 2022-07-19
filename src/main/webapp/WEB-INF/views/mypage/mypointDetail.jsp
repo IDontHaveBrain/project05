@@ -139,8 +139,8 @@ button {
 
 	var proc = "${proc}"
 	if(proc=="upt"){
-		alert("충전 완료되었습니다.");
-		location.href="${path}/MypointList.do";
+		alert("충전 완료되었습니다.\n 메인페이지로 이동합니다.");
+		location.href="${path}/project5/Main.jsp";
 	}
 </script>
 </head>

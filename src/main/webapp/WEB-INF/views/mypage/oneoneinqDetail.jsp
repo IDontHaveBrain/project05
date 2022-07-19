@@ -18,15 +18,21 @@
 <link rel="stylesheet" href="${path}/a00_com/bootstrap.min.css" >
 <link rel="stylesheet" href="${path}/a00_com/jquery-ui.css" >
 <style>
-h2{    font-family: "paybooc-Light", sans-serif;}
+h2{font-family: "paybooc-Light", sans-serif;}
    table {
     margin-left:auto; 
     margin-right:auto;
 }
 
-table, td, th {
+table, th {
     border-collapse : collapse;
     border : 1px solid black;
+    width:800px;
+};
+table, td {
+    border-collapse : collapse;
+    border : 1px solid black;
+    height:50px;
 };
 HTML CSSResult Skip Results Iframe
 EDIT ON
@@ -56,7 +62,7 @@ table.type07 tbody th {
   font-weight: bold;
   vertical-align: top;
   border-bottom: 1px solid #ccc;
-  background: #fcf1f4;
+  background: #EFF2FA;
 }
 table.type07 td {
   width: 350px;
@@ -71,7 +77,7 @@ input {
 
   width: 500px;
   height:50px;
-  margin: 20px;
+  margin: 7px;
   font-size: 15px;
   border: 0;
   border-radius: 5px;
@@ -129,7 +135,7 @@ button {
 <body>
 <jsp:include page="/project5/topNav.jsp"></jsp:include>
 <div class="jumbotron text-center">
-  <h2>1:1문의 상세화면</h2>
+  <h2>1:1문의</h2>
 
 </div>
 <div class="container">
@@ -138,19 +144,32 @@ button {
          <div class="input-group-prepend">
             <span class="text-center input-group-text">게시판 번호</span>
          <input name="boardno" class="form-control" 
-            value="${oneoneinq.boardno}"  />   
+            value="${oneoneinq.boardno}" readonly />   
          </div>
+                  <div class="input-group-prepend">
+            <span class="text-center input-group-text">조회수</span>
+         <input name="readcnt" class="form-control" 
+            value="${oneoneinq.readcnt}" readonly />  
+         </div>
+              
+         <div class="input-group-prepend">
+            <span class="text-center input-group-text">등록일</span>
+         <input class="form-control" 
+            value='<fmt:formatDate value="${oneoneinq.nowtime}"
+             type="both"/>' readonly/>
+              </div>
+   
       </div>
       <div class="input-group mb-3">
          <div class="input-group-prepend">
-            <span class="text-center input-group-text">제 목</span>
-         <input name="title" class="form-control" 
-            value="${oneoneinq.title}"/>
+            <span style="display:inline-block; width:150px;" class="text-center input-group-text">작성자</span>
+         <input name="name" class="form-control" 
+            value="${oneoneinq.name}"/>
          </div> 
       </div>    
             <div class="input-group mb-3">
          <div class="input-group-prepend">
-            <span class="text-center input-group-text">이메일</span>
+            <span style="display:inline-block; width:150px;" class="text-center input-group-text">이메일</span>
 
          <input name="email" class="form-control" 
             value="${oneoneinq.email}" /> 
@@ -158,33 +177,20 @@ button {
       </div>    
             <div class="input-group mb-3">
          <div class="input-group-prepend">
-            <span class="text-center input-group-text">핸드폰번호</span>
+            <span style="display:inline-block; width:150px;" class="text-center input-group-text">핸드폰번호</span>
 
          <input name="phonenumber" class="form-control" 
             value="${oneoneinq.phonenumber}"  /> 
          </div>
       </div>    
-      <div class="input-group mb-3">
+      <div >
          <div class="input-group-prepend">
-            <span class="text-center input-group-text">작성자</span>
-         <input name="name" class="form-control" 
-            value="${oneoneinq.name}" placeholder="작성자 입력하세요" />
-         </div>
-         <div class="input-group-prepend">
-            <span class="text-center input-group-text">조회수</span>
-
-         <input name="readcnt" class="form-control" 
-            value="${oneoneinq.readcnt}" readonly />  
+            <span style="display:inline-block; width:117px;" class="text-center input-group-text">제 목</span>
+         <input name="title" class="form-control" 
+            value="${oneoneinq.title}" placeholder="작성자 입력하세요" />
          </div>
       </div>    
-       <div class="input-group mb-3">
-         <div class="input-group-prepend">
-            <span class="text-center input-group-text">등록일</span>
-         </div>
-         <input class="form-control" 
-            value='<fmt:formatDate value="${oneoneinq.nowtime}"
-             type="both"/>' placeholder="작성자 입력하세요" />
-      </div>   
+   <br>
       <div class="input-group mb-3">
          <div class="input-group-prepend">
             <span class="text-center input-group-text">내 용</span>
@@ -193,9 +199,9 @@ button {
             placeholder="내용 입력하세요">${oneoneinq.content}</textarea>    
       </div>
       <div class="text-right">
-         <button type="button" onclick="updateProc()" class="btn btn-success">수정</button>
-         <button type="button" onclick="deleteProc()" class="btn btn-danger">삭제</button>
-         <button type="button" onclick="goMain()" class="btn btn-info">메인화면</button>
+         <button type="button" onclick="updateProc()" class="w-btn-outline">수정</button>
+         <button type="button" onclick="deleteProc()" class="w-btn-outline">삭제</button>
+         <button type="button" onclick="goMain()" class="w-btn-outline">메인화면</button>
       </div>  
    </form>
 </div>
