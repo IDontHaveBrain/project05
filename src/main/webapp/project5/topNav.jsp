@@ -72,8 +72,6 @@
                 <ul id="sub-menu">
                     <li><a href="${path}/MypointList.do" aria-label="subemnu">포인트 충전</a></li>
                     <li><a href="${path}/OneOneinq.do" aria-label="subemnu">1:1 문의</a></li>
-                    <li><a href="#" aria-label="subemnu">submenu</a></li>
-                    <li><a href="#" aria-label="subemnu">submenu</a></li>
                 </ul>
             </li>
                 <li><a href="#">${id}</a>
