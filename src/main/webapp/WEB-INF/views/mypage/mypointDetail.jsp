@@ -17,7 +17,6 @@
 <title>Insert title here</title>
 <link rel="stylesheet" href="${path}/a00_com/bootstrap.min.css" >
 <link rel="stylesheet" href="${path}/a00_com/jquery-ui.css" >
-<link rel="stylesheet" href="${path}/project5/css/mypoint.css">
 <style>
 
 
@@ -155,27 +154,29 @@ button {
 <body>
 <jsp:include page="/project5/topNav.jsp"></jsp:include>
 
-  <h2 style="color:#f7ea00;">포인트 충전</h2>
+
 
 
 <div class="container">
 <table style="border:0">
+	 
    <form id="frm01" action="${path}/MypointList.do" 
          class="form"  method="post">
-         <tr><th>
+         <tr><th><br>
+          <h2 >포인트 충전</h2>
          <h2>
-      <div class="input-group mb-3">
+      <div >
          <div class="input-group-prepend">
-            <span class="text-center input-group-text">★ 아이디 ★</span>
+            <div style="display:inline-block; width:100px;" class="text-center input-group-text"> I D</div>
          <input name="id" class="form-control" 
             value="${param.id}" placeholder="아이디를 입력하세요" />   
       </div>
-	</div></h2></th></tr>
+	</div></h2>
        </div style="text-align:center">
-         <tr ><th ><h2>
-      <div class="input-group mb-3">
+         <h2>
+      <div >
          <div class="input-group-prepend">
-            <span class="text-center input-group-text">충전 포인트</span>
+            <span style="display:inline-block; width:100px;" class="text-center input-group-text">POINT</span>
          <input name="point" class="form-control" 
             value="${param.point}" placeholder="포인트 입력하세요" /> 
       </div>    

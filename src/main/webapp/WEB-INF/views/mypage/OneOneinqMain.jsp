@@ -108,6 +108,7 @@ button {
     background-color: aliceblue;
     color: #1e6b7b;
 }
+
 </style>
 <script src="${path}/a00_com/jquery.min.js"></script>
 <script src="${path}/a00_com/popper.min.js"></script>
