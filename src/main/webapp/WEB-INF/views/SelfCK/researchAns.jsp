@@ -48,22 +48,22 @@
 	if(total==0){
 		level="문제없음";
 	%>
-	<img src="level1.jpg" alt="문제없음" width="500" height="500">
+	<img src="${path}/project5/img/level1.jpg" alt="문제없음" width="500" height="500">
 	<% 	
 	}else if(total>=1 && total<=2){
 		level="저위험";
 	%>
-	<img src="level2.jpg" alt="저위험" width="300" height="300">
+	<img src="${path}/project5/img/level2.jpg" alt="저위험" width="300" height="300">
 	<% 	
 	}else if(total>=3 && total<=7){
 		level="중위험";
 	%>
-	<img src="level3.jpg" alt="중위험" width="300" height="300">
+	<img src="${path}/project5/img/level3.jpg" alt="중위험" width="300" height="300">
 	<% 	
 	}else{
 		level="문제성도박";
 	%>
-	<img src="level4.jpg" alt="문제성도박" width="300" height="300">
+	<img src="${path}/project5/img/level4.jpg" alt="문제성도박" width="300" height="300">
 	<% 
 	}
 	%>

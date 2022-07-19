@@ -12,8 +12,9 @@
 <fmt:requestEncoding value="UTF-8"/>
 <html>
 <head>
-    <title>Title</title>
+    <title>Title</title>    
   <script>
+
       location.href="${path}/project5/Main.jsp";
   </script>
 </head>
