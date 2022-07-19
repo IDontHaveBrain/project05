@@ -5,7 +5,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
-<fmt:requestEncoding value="utf-8"/>     
+<c:set var="path" value="${pageContext.request.contextPath }"/>
+<fmt:requestEncoding value="utf-8"/>        
 <!DOCTYPE html>
 <%--
 
@@ -23,6 +24,92 @@
 <link rel="stylesheet" type="text/css" href="css/ui-service.css">
 
 
+<script src="${path}/a00_com/jquery.min.js"></script>
+<script src="${path}/a00_com/popper.min.js"></script>
+<script src="${path}/a00_com/bootstrap.min.js"></script>
+<script src="${path}/a00_com/jquery-ui.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://developers.google.com/web/ilt/pwa/working-with-the-fetch-api" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	
+		    $("#mk_0_0_1").click(function(){ 
+	    		 $("#show").text("x2")		  	    	  
+	    	});
+	    	  
+	    	$("#mk_0_0_2").click(function(){ 
+	        	
+	        	$("#show").text("x2")		  	        	 			
+	        });
+	        	
+	       	$("#mk_0_0_3").click(function(){ 	          
+	            $("#show").text("x2")		  	              			
+	        });	
+	       	
+	        $("#mk_0_1_1").click(function(){ 
+		    	 $("#show02").text("x2")		  	    	  
+		    });
+		    	  
+		    $("#mk_0_1_2").click(function(){ 
+				$("#show02").text("x2")		  	        	 			
+		     });
+		        	
+		     $("#mk_0_1_3").click(function(){ 	          
+		            $("#show02").text("x2")		  	              			
+		        });
+		       	
+		     $("#mk_0_2_1").click(function(){ 
+			    	$("#show03").text("x2")		  	    	  
+			  });
+			    	  
+			 $("#mk_0_2_2").click(function(){ 
+					$("#show03").text("x2")		  	        	 			
+			 });
+			        	
+			 $("#mk_0_2_3").click(function(){ 	          
+			        $("#show03").text("x2")		  	              			
+			  });		       	
+		     $("#mk_0_3_1").click(function(){ 
+			    	$("#show04").text("x2")		  	    	  
+			  });
+			    	  
+			 $("#mk_0_3_2").click(function(){ 
+					$("#show04").text("x2")		  	        	 			
+			 });
+			        	
+			 $("#mk_0_3_3").click(function(){ 	          
+			        $("#show04").text("x2")		  	              			
+			  });
+		     $("#mk_0_4_1").click(function(){ 
+			    	$("#show05").text("x2")		  	    	  
+			  });
+			    	  
+			 $("#mk_0_4_2").click(function(){ 
+					$("#show05").text("x2")		  	        	 			
+			 });
+			        	
+			 $("#mk_0_4_3").click(function(){ 	          
+			        $("#show05").text("x2")		  	              			
+			  });
+			 $("#mk_0_5_1").click(function(){ 
+			    	$("#show06").text("x2")		  	    	  
+			  });
+			    	  
+			 $("#mk_0_5_2").click(function(){ 
+					$("#show06").text("x2")		  	        	 			
+			 });
+			        	
+			 $("#mk_0_5_3").click(function(){ 	          
+			        $("#show06").text("x2")		  	              			
+			        $("#show07").text("x64")		  	              			
+			  });
+	    
+			 $("#cartbtn").click(function(){ 	          
+			        $("#asideNoneBox").hide()		  	              			
+			       	$("#showbuy").text("36회차 축구토토 승무패 : 1000원").show()	              			
+			  });
+		});
+</script>
 </head>
 
 <body>
@@ -153,22 +240,50 @@
 		</thead>
 <tbody id="grid_victory_tbody"><tr><td class="bdl0"><span class="db">1경기</span></td><td><span class="fs11">22.07.16 (토) 18:00</span>
 
-<div class="tooltipHBox"><button type="button" class="icoG stadium">경기장</button><div class="ttHLayer" tabindex="0"><span>가시마사커스타디움</span></div></div></td><td><div class="vsDIv fwb"><div>가시마</div><div><span class="center fwn">vs</span> 비셀고베</div></div></td><td><div class="formBox"><span class="btnChkList v6"><input type="checkbox" id="mk_0_0_1" name="mk_0_0_1" onclick="victory.clickMarking(0,0,1)"><label for="mk_0_0_1"><span class="hidden">투표율</span>57.9%<span class="won">(177,934)</span></label></span></div></td><td><div class="formBox"><span class="btnChkList v6"><input type="checkbox" id="mk_0_0_2" name="mk_0_0_2" onclick="victory.clickMarking(0,0,2)"><label for="mk_0_0_2"><span class="hidden">투표율</span>26.4%<span class="won">(81,144)</span></label></span></div></td><td><div class="formBox"><span class="btnChkList v6"><input type="checkbox" id="mk_0_0_3" name="mk_0_0_3" onclick="victory.clickMarking(0,0,3)"><label for="mk_0_0_3"><span class="hidden">투표율</span>15.7%<span class="won">(48,237)</span></label></span></div></td><td id="rowSlipSelectCnt_0">-</td><td class="detailAreaTd"><button type="button" class="btnOn" title="1경기  가시마 : 비셀고베 상세정보 열기"><span class="hidden">1경기  가시마 : 비셀고베 상세정보 열기</span></button></td></tr><tr><td class="bdl0"><span class="db">2경기</span></td><td><span class="fs11">22.07.16 (토) 18:00</span>
+<div class="tooltipHBox"><button type="button" class="icoG stadium">경기장</button><div class="ttHLayer" tabindex="0"><span>가시마사커스타디움</span></div></div></td><td><div class="vsDIv fwb"><div>가시마</div><div><span class="center fwn">vs</span> 비셀고베</div></div></td><td><div class="formBox"><span class="btnChkList v6">
+<input type="checkbox" id="mk_0_0_1" name="mk_0_0_1" onclick="victory.clickMarking(0,0,1)"><label for="mk_0_0_1"><span class="hidden">투표율</span>57.9%<span class="won">(177,934)</span></label></span></div></td><td><div class="formBox"><span class="btnChkList v6">
+<input type="checkbox" id="mk_0_0_2" name="mk_0_0_2" onclick="victory.clickMarking(0,0,2)"><label for="mk_0_0_2"><span class="hidden">투표율</span>26.4%<span class="won">(81,144)</span></label></span></div></td><td><div class="formBox"><span class="btnChkList v6">
+<input type="checkbox" id="mk_0_0_3" name="mk_0_0_3" onclick="victory.clickMarking(0,0,3)"><label for="mk_0_0_3"><span class="hidden">투표율</span>15.7%<span class="won">(48,237)</span></label></span></div></td><td id="rowSlipSelectCnt_0"><span id="show"></span></td><td class="detailAreaTd">
+<button type="button" class="btnOn" title="1경기  가시마 : 비셀고베 상세정보 열기"><span class="hidden">1경기  가시마 : 비셀고베 상세정보 열기</span></button></td></tr><tr><td class="bdl0">
+<span class="db">2경기</span></td><td><span class="fs11">22.07.16 (토) 18:00</span>
 
-<div class="tooltipHBox"><button type="button" class="icoG stadium">경기장</button><div class="ttHLayer" tabindex="0"><span>IAI스타디움니혼다이라</span></div></div></td><td><div class="vsDIv fwb"><div>시미즈</div><div><span class="center fwn">vs</span> 우라와</div></div></td><td><div class="formBox"><span class="btnChkList v6"><input type="checkbox" id="mk_0_1_1" name="mk_0_1_1" onclick="victory.clickMarking(0,1,1)"><label for="mk_0_1_1"><span class="hidden">투표율</span>14.4%<span class="won">(391,284)</span></label></span></div></td><td><div class="formBox"><span class="btnChkList v6"><input type="checkbox" id="mk_0_1_2" name="mk_0_1_2" onclick="victory.clickMarking(0,1,2)"><label for="mk_0_1_2"><span class="hidden">투표율</span>32.6%<span class="won">(885,870)</span></label></span></div></td><td><div class="formBox"><span class="btnChkList v6"><input type="checkbox" id="mk_0_1_3" name="mk_0_1_3" onclick="victory.clickMarking(0,1,3)"><label for="mk_0_1_3"><span class="hidden">투표율</span>53%<span class="won">(1,442,916)</span></label></span></div></td><td id="rowSlipSelectCnt_1">x2</td><td class="detailAreaTd"><button type="button" class="btnOn" title="2경기  시미즈 : 우라와 상세정보 열기"><span class="hidden">2경기  시미즈 : 우라와 상세정보 열기</span></button></td></tr><tr><td class="bdl0"><span class="db">3경기</span></td><td><span class="fs11">22.07.16 (토) 18:00</span>
+<div class="tooltipHBox"><button type="button" class="icoG stadium">경기장</button><div class="ttHLayer" tabindex="0"><span>IAI스타디움니혼다이라</span></div></div></td><td><div class="vsDIv fwb"><div>시미즈</div><div><span class="center fwn">vs</span> 우라와</div></div></td><td><div class="formBox"><span class="btnChkList v6">
+<input type="checkbox" id="mk_0_1_1" name="mk_0_1_1" onclick="victory.clickMarking(0,1,1)"><label for="mk_0_1_1"><span class="hidden">투표율</span>14.4%<span class="won">(391,284)</span></label></span></div></td><td><div class="formBox"><span class="btnChkList v6">
+<input type="checkbox" id="mk_0_1_2" name="mk_0_1_2" onclick="victory.clickMarking(0,1,2)"><label for="mk_0_1_2"><span class="hidden">투표율</span>32.6%<span class="won">(885,870)</span></label></span></div></td><td><div class="formBox"><span class="btnChkList v6">
+<input type="checkbox" id="mk_0_1_3" name="mk_0_1_3" onclick="victory.clickMarking(0,1,3)"><label for="mk_0_1_3"><span class="hidden">투표율</span>53%<span class="won">(1,442,916)</span></label></span></div></td><td id="rowSlipSelectCnt_1"><span id="show02"></span></td><td class="detailAreaTd">
+<button type="button" class="btnOn" title="2경기  시미즈 : 우라와 상세정보 열기"><span class="hidden">2경기  시미즈 : 우라와 상세정보 열기</span></button></td></tr><tr><td class="bdl0">
+<span class="db">3경기</span></td><td><span class="fs11">22.07.16 (토) 18:00</span>
 
-<div class="tooltipHBox"><button type="button" class="icoG stadium">경기장</button><div class="ttHLayer" tabindex="0"><span>전주월드컵경기장</span></div></div></td><td><div class="vsDIv fwb"><div>전북현대</div><div><span class="center fwn">vs</span> 성남FC</div></div></td><td><div class="formBox"><span class="btnChkList v6"><input type="checkbox" id="mk_0_2_1" name="mk_0_2_1" onclick="victory.clickMarking(0,2,1)"><label for="mk_0_2_1"><span class="hidden">투표율</span>82.3%<span class="won">(2,237,491)</span></label></span></div></td><td><div class="formBox"><span class="btnChkList v6"><input type="checkbox" id="mk_0_2_2" name="mk_0_2_2" onclick="victory.clickMarking(0,2,2)"><label for="mk_0_2_2"><span class="hidden">투표율</span>12.4%<span class="won">(338,385)</span></label></span></div></td><td><div class="formBox"><span class="btnChkList v6"><input type="checkbox" id="mk_0_2_3" name="mk_0_2_3" onclick="victory.clickMarking(0,2,3)"><label for="mk_0_2_3"><span class="hidden">투표율</span>5.3%<span class="won">(144,194)</span></label></span></div></td><td id="rowSlipSelectCnt_2">-</td><td class="detailAreaTd"><button type="button" class="btnOn" title="3경기  전북현대 : 성남FC 상세정보 열기"><span class="hidden">3경기  전북현대 : 성남FC 상세정보 열기</span></button></td></tr><tr><td class="bdl0"><span class="db">4경기</span></td><td><span class="fs11">22.07.16 (토) 18:00</span>
+<div class="tooltipHBox">
+<button type="button" class="icoG stadium">경기장</button><div class="ttHLayer" tabindex="0"><span>전주월드컵경기장</span></div></div></td><td><div class="vsDIv fwb"><div>전북현대</div><div><span class="center fwn">vs</span> 성남FC</div></div></td><td><div class="formBox"><span class="btnChkList v6">
+<input type="checkbox" id="mk_0_2_1" name="mk_0_2_1" onclick="victory.clickMarking(0,2,1)"><label for="mk_0_2_1"><span class="hidden">투표율</span>82.3%<span class="won">(2,237,491)</span></label></span></div></td><td><div class="formBox"><span class="btnChkList v6">
+<input type="checkbox" id="mk_0_2_2" name="mk_0_2_2" onclick="victory.clickMarking(0,2,2)"><label for="mk_0_2_2"><span class="hidden">투표율</span>12.4%<span class="won">(338,385)</span></label></span></div></td><td><div class="formBox"><span class="btnChkList v6">
+<input type="checkbox" id="mk_0_2_3" name="mk_0_2_3" onclick="victory.clickMarking(0,2,3)"><label for="mk_0_2_3"><span class="hidden">투표율</span>5.3%<span class="won">(144,194)</span></label></span></div></td><td id="rowSlipSelectCnt_2"><span id="show03"></span></td><td class="detailAreaTd">
+<button type="button" class="btnOn" title="3경기  전북현대 : 성남FC 상세정보 열기"><span class="hidden">3경기  전북현대 : 성남FC 상세정보 열기</span></button></td></tr><tr><td class="bdl0">
+<span class="db">4경기</span></td><td><span class="fs11">22.07.16 (토) 18:00</span>
 
-<div class="tooltipHBox"><button type="button" class="icoG stadium">경기장</button><div class="ttHLayer" tabindex="0"><span>울산문수축구경기장</span></div></div></td><td><div class="vsDIv fwb"><div>울산현대</div><div><span class="center fwn">vs</span> 수원삼성</div></div></td><td><div class="formBox"><span class="btnChkList v6"><input type="checkbox" id="mk_0_3_1" name="mk_0_3_1" onclick="victory.clickMarking(0,3,1)"><label for="mk_0_3_1"><span class="hidden">투표율</span>75.5%<span class="won">(2,054,357)</span></label></span></div></td><td><div class="formBox"><span class="btnChkList v6"><input type="checkbox" id="mk_0_3_2" name="mk_0_3_2" onclick="victory.clickMarking(0,3,2)"><label for="mk_0_3_2"><span class="hidden">투표율</span>17.5%<span class="won">(477,164)</span></label></span></div></td><td><div class="formBox"><span class="btnChkList v6"><input type="checkbox" id="mk_0_3_3" name="mk_0_3_3" onclick="victory.clickMarking(0,3,3)"><label for="mk_0_3_3"><span class="hidden">투표율</span>6.9%<span class="won">(188,549)</span></label></span></div></td><td id="rowSlipSelectCnt_3">-</td><td class="detailAreaTd"><button type="button" class="btnOn" title="4경기  울산현대 : 수원삼성 상세정보 열기"><span class="hidden">4경기  울산현대 : 수원삼성 상세정보 열기</span></button></td></tr><tr><td class="bdl0"><span class="db">5경기</span></td><td><span class="fs11">22.07.16 (토) 18:00</span>
+<div class="tooltipHBox"><button type="button" class="icoG stadium">경기장</button><div class="ttHLayer" tabindex="0"><span>울산문수축구경기장</span></div></div></td><td><div class="vsDIv fwb"><div>울산현대</div><div><span class="center fwn">vs</span> 수원삼성</div></div></td><td><div class="formBox"><span class="btnChkList v6">
+<input type="checkbox" id="mk_0_3_1" name="mk_0_3_1" onclick="victory.clickMarking(0,3,1)"><label for="mk_0_3_1"><span class="hidden">투표율</span>75.5%<span class="won">(2,054,357)</span></label></span></div></td><td><div class="formBox"><span class="btnChkList v6">
+<input type="checkbox" id="mk_0_3_2" name="mk_0_3_2" onclick="victory.clickMarking(0,3,2)"><label for="mk_0_3_2"><span class="hidden">투표율</span>17.5%<span class="won">(477,164)</span></label></span></div></td><td><div class="formBox"><span class="btnChkList v6">
+<input type="checkbox" id="mk_0_3_3" name="mk_0_3_3" onclick="victory.clickMarking(0,3,3)"><label for="mk_0_3_3"><span class="hidden">투표율</span>6.9%<span class="won">(188,549)</span></label></span></div></td><td id="rowSlipSelectCnt_3"><span id="show04"></span></td><td class="detailAreaTd"><button type="button" class="btnOn" title="4경기  울산현대 : 수원삼성 상세정보 열기"><span class="hidden">4경기  울산현대 : 수원삼성 상세정보 열기</span></button></td></tr><tr><td class="bdl0">
+<span class="db">5경기</span></td><td><span class="fs11">22.07.16 (토) 18:00</span>
 
-<div class="tooltipHBox"><button type="button" class="icoG stadium">경기장</button><div class="ttHLayer" tabindex="0"><span>김천종합운동장</span></div></div></td><td><div class="vsDIv fwb"><div>김천상무</div><div><span class="center fwn">vs</span> 인천유나</div></div></td><td><div class="formBox"><span class="btnChkList v6"><input type="checkbox" id="mk_0_4_1" name="mk_0_4_1" onclick="victory.clickMarking(0,4,1)"><label for="mk_0_4_1"><span class="hidden">투표율</span>36.7%<span class="won">(1,083,659)</span></label></span></div></td><td><div class="formBox"><span class="btnChkList v6"><input type="checkbox" id="mk_0_4_2" name="mk_0_4_2" onclick="victory.clickMarking(0,4,2)"><label for="mk_0_4_2"><span class="hidden">투표율</span>39.8%<span class="won">(997,876)</span></label></span></div></td><td><div class="formBox"><span class="btnChkList v6"><input type="checkbox" id="mk_0_4_3" name="mk_0_4_3" onclick="victory.clickMarking(0,4,3)"><label for="mk_0_4_3"><span class="hidden">투표율</span>23.5%<span class="won">(638,535)</span></label></span></div></td><td id="rowSlipSelectCnt_4">-</td><td class="detailAreaTd"><button type="button" class="btnOn" title="5경기  김천상무 : 인천유나 상세정보 열기"><span class="hidden">5경기  김천상무 : 인천유나 상세정보 열기</span></button></td></tr><tr><td class="bdl0"><span class="db">6경기</span></td><td><span class="fs11">22.07.16 (토) 19:00</span>
+<div class="tooltipHBox"><button type="button" class="icoG stadium">경기장</button><div class="ttHLayer" tabindex="0"><span>김천종합운동장</span></div></div></td><td><div class="vsDIv fwb"><div>김천상무</div><div><span class="center fwn">vs</span> 인천유나</div></div></td><td><div class="formBox"><span class="btnChkList v6">
+<input type="checkbox" id="mk_0_4_1" name="mk_0_4_1" onclick="victory.clickMarking(0,4,1)"><label for="mk_0_4_1"><span class="hidden">투표율</span>26.7%<span class="won">(1,083,659)</span></label></span></div></td><td><div class="formBox"><span class="btnChkList v6">
+<input type="checkbox" id="mk_0_4_2" name="mk_0_4_2" onclick="victory.clickMarking(0,4,2)"><label for="mk_0_4_2"><span class="hidden">투표율</span>49.8%<span class="won">(997,876)</span></label></span></div></td><td><div class="formBox"><span class="btnChkList v6">
+<input type="checkbox" id="mk_0_4_3" name="mk_0_4_3" onclick="victory.clickMarking(0,4,3)"><label for="mk_0_4_3"><span class="hidden">투표율</span>23.5%<span class="won">(638,535)</span></label></span></div></td><td id="rowSlipSelectCnt_4"><span id="show05"></span></td><td class="detailAreaTd"><button type="button" class="btnOn" title="5경기  김천상무 : 인천유나 상세정보 열기"><span class="hidden">5경기  김천상무 : 인천유나 상세정보 열기</span></button></td></tr><tr><td class="bdl0">
+<span class="db">6경기</span></td><td><span class="fs11">22.07.16 (토) 19:00</span>
 
-<div class="tooltipHBox"><button type="button" class="icoG stadium">경기장</button><div class="ttHLayer" tabindex="0"><span>도요타스타디움</span></div></div></td><td><div class="vsDIv fwb"><div>나고야</div><div><span class="center fwn">vs</span> 가와사키</div></div></td><td><div class="formBox"><span class="btnChkList v6"><input type="checkbox" id="mk_0_5_1" name="mk_0_5_1" onclick="victory.clickMarking(0,5,1)"><label for="mk_0_5_1"><span class="hidden">투표율</span>13.2%<span class="won">(358,741)</span></label></span></div></td><td><div class="formBox"><span class="btnChkList v6"><input type="checkbox" id="mk_0_5_2" name="mk_0_5_2" onclick="victory.clickMarking(0,5,2)"><label for="mk_0_5_2"><span class="hidden">투표율</span>22.1%<span class="won">(599,794)</span></label></span></div></td><td><div class="formBox"><span class="btnChkList v6"><input type="checkbox" id="mk_0_5_3" name="mk_0_5_3" onclick="victory.clickMarking(0,5,3)"><label for="mk_0_5_3"><span class="hidden">투표율</span>64.8%<span class="won">(1,761,535)</span></label></span></div></td><td id="rowSlipSelectCnt_5">-</td><td class="detailAreaTd"><button type="button" class="btnOn" title="6경기  나고야 : 가와사키 상세정보 열기"><span class="hidden">6경기  나고야 : 가와사키 상세정보 열기</span></button></td></tr><tr><td class="bdl0">
+<div class="tooltipHBox"><button type="button" class="icoG stadium">경기장</button><div class="ttHLayer" tabindex="0"><span>도요타스타디움</span></div></div></td><td><div class="vsDIv fwb"><div>나고야</div><div><span class="center fwn">vs</span> 가와사키</div></div></td><td><div class="formBox"><span class="btnChkList v6">
+<input type="checkbox" id="mk_0_5_1" name="mk_0_5_1" onclick="victory.clickMarking(0,5,1)"><label for="mk_0_5_1"><span class="hidden">투표율</span>13.2%<span class="won">(358,741)</span></label></span></div></td><td><div class="formBox"><span class="btnChkList v6">
+<input type="checkbox" id="mk_0_5_2" name="mk_0_5_2" onclick="victory.clickMarking(0,5,2)"><label for="mk_0_5_2"><span class="hidden">투표율</span>22.1%<span class="won">(599,794)</span></label></span></div></td><td><div class="formBox"><span class="btnChkList v6">
+<input type="checkbox" id="mk_0_5_3" name="mk_0_5_3" onclick="victory.clickMarking(0,5,3)"><label for="mk_0_5_3"><span class="hidden">투표율</span>64.8%<span class="won">(1,761,535)</span></label></span></div></td><td id="rowSlipSelectCnt_5"><span id="show06"></span></td><td class="detailAreaTd">
+<button type="button" class="btnOn" title="6경기  나고야 : 가와사키 상세정보 열기"><span class="hidden">6경기  나고야 : 가와사키 상세정보 열기</span></button></td></tr><tr><td class="bdl0">
 
 	<tfoot>
 			<tr>
 				<td colspan="6">전체조합수</td>
-				<td id="tdTotalSlipSelectCnt">-</td>
+				<td id="tdTotalSlipSelectCnt"><span id="show07"></span></td>
 				<td></td>
 			</tr>
 		</tfoot>
@@ -210,7 +325,7 @@
 				</p>
 			
 			</div>
-	
+			<h3 id="showbuy" style="display: none; margin-top:2px; border: solid;"></h3>
 		</div><div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-dark-thick mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; height: 0px; top: 0px;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
 		
 		<div class="totalBoxDef" id="sumAreaDef">
@@ -230,8 +345,8 @@
 	</div>
 
 	<div class="btnArea" id="asideGameTabBtn0">
-		<button class="btn btnBB gray" >카트담기</button> 
-		<input type="button" class="btn btnBB red" value="바로구매"  onclick=" location='buysoccer.jsp'"/>
+		<input type="button" class="btn btnBB gray" value="카트담기" id="cartbtn" onclick="cartbtn"/>
+		<input type="button" class="btn btnBB red" value="바로구매" id="buybtn" onclick=" location='buysoccer.jsp'"/>
 	</div>
 	  
 </div>
