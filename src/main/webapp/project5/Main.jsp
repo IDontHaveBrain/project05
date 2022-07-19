@@ -17,7 +17,8 @@ td{text-align:center;}
   max-width: 1440px;
   position: relative;
   margin: auto;
-  margin-top: 120px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 /* effect */
@@ -78,7 +79,7 @@ h1 {
 	background-color: #646987;
 	text-align: center;
 }
-
+position:relative; z-index:10;
 header {
 	width: 100%;
 	height: 5%;
@@ -123,24 +124,22 @@ ul li:hover a {
 }
 
 .home_header {
-	color: #fefefe;
-	text-align: center;
+	color: #eee;
 	margin-top: 0px;
 	margin-right: 0px;
 	margin-bottom: 0px;
 	margin-left: 0px;
-	letter-spacing: 4px;
 	line-height: 22px;
-	padding-left: 10px;
-	padding-right: 10px;
+	text-align: center;
+	
 }
 
 .home {
 	height: 23%;
-	background-color: #555;
+	background-color: #dadadf;
 	padding-top: 150px;
 	padding-bottom: 150px;
-	text-align: center;
+	background-image : url('img/soccer2.png');
 }
 
 .tagline {
@@ -408,8 +407,6 @@ footer .footer_column p {
 
 .footer_banner {
 	background-color: #B3B3B3;
-	padding-top: 60px;
-	padding-bottom: 60PX;
 	margin-bottom: 0px;
 	background-repeat: repeat;
 	text-align: center;
@@ -419,6 +416,7 @@ footer {
 	display: inline-block;
 	width: 100%;
 	background-color: #FFFFFF;
+	background-image : url('img/qo.PNG');
 }
 </style>
 </head>
@@ -502,11 +500,16 @@ function nextSlide() {
 	<form>
 		<div class="container">
 			<!-- Home Section -->
-			<section class="home" id="home">
+			
+			<div>
 				<h1 class="home_header">
 					BET <span class="light">MAN</span>
 				</h1>
 				<p class="tagline">한경기구매! 싱글플레이!</p>
+			</div>
+			
+			<section class="home" id="home">
+			
 			</section>
 			
 			
@@ -549,6 +552,7 @@ function nextSlide() {
 				<div OnClick="location.href='Contact.jsp'" class="button">CONTACT</div>
 			</section>
 			<!-- Copyrights Section -->
+			
 			<div class="copyright">
 				&copy;2022 - <strong>BETMAN</strong>
 			</div>
