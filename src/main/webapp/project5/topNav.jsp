@@ -44,13 +44,6 @@
                     <li><a href="${path}/oegameHistory.do" aria-label="subemnu">홀짝게임 내역</a></li>
                 </ul></li>
 
-            <li><a href="#">경기정보</a>
-                <ul id="sub-menu">
-                    <li><a href="#" aria-label="subemnu">submenu</a></li>
-                    <li><a href="#" aria-label="subemnu">submenu</a></li>
-                    <li><a href="#" aria-label="subemnu">submenu</a></li>
-                    <li><a href="#" aria-label="subemnu">submenu</a></li>
-                </ul></li>
 
             <li><a href="#">게시판</a>
                 <ul id="sub-menu">

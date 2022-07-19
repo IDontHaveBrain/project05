@@ -77,6 +77,10 @@ td{text-align:center;}
 	function goInsert(){
 		location.href="${path}/noticeInsertForm.do"
 	}
+	
+	function goInsert2(bt_no){
+		location.href="${path}/noticeDetail.do?bt_no="+bt_no;
+	}
 	function goDetail(no){
 		location.href="${path}/boardDetail.do?no="+no;
 	}	
@@ -111,22 +115,22 @@ td{text-align:center;}
    	<col width="10%">
    	<col width="45%">
    	<col width="15%">
-   	
+   	<col width="15%">
     <thead>
       <tr class="table14_5">
         <th>번호</th>
         <th>구분</th>
         <th>제목</th>
         <th>등록일</th>
+        <th>조회수</th>
       </tr>
     </thead>	
     
     
     <tbody>
     	<c:forEach var="bd" items="${blist}">
-    	<tr><td>${bd.bt_no}</td><td>${bd.bt_division}</td>
-    		<td>${bd.bt_title}</td>
-    		<td>${bd.bt_date}</td>
+    	<tr ondblclick="goInsert2(${bd.bt_no})"><td>${bd.bt_no}</td><td>${bd.bt_division}</td>
+    		<td>${bd.bt_title}</td><td>${bd.bt_date}</td><td>${bd.readcnt}</td></tr>
     	</c:forEach>
     	
     </tbody>

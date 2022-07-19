@@ -14,11 +14,39 @@
 	</select>
 	
 	<insert id="insertNotice" parameterType="notice">
-			insert into BET_NOTICE values(notice_seq3.nextval,#{bt_division},#{bt_title},#{bt_date})
+			insert into BET_NOTICE values(notice_seq3.nextval,#{bt_division},#{bt_title},#{bt_date},0)
 	</insert>
 	
 	<select id="checkAdmin" parameterType="string" resultType="int">
 		select auth from Account where id = #{id}
 	</select>
+	
+	
+	<select id="getNoticeDetail" parameterType="int" resultType="notice">
+		select *
+		from bet_notice
+		where bt_no = #{bt_no}
+	</select>
+	
+	<update id="readCountup" parameterType="int">
+		update bet_notice
+		set readcnt = readcnt+1
+		where bt_no = #{bt_no}	
+	</update>	
+	
+	
+	<update id="updateNotice" parameterType="notice">
+		UPDATE bet_notice
+		   SET bt_no = #{bt_no},
+			   bt_division = #{bt_division},
+			   bt_title = #{bt_title},
+			   bt_date= #{bt_date}
+		WHERE bt_NO = #{bt_no}	
+	</update>
+	<delete id="deleteNotice" parameterType="int">
+		delete
+		from bet_notice
+		where bt_no = #{bt_no}	
+	</delete>	
 	
 </mapper>

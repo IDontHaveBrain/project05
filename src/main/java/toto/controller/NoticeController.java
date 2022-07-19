@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import toto.service.NoticeService;
 import toto.util.inputCheck;
@@ -47,5 +48,27 @@ public class NoticeController {
 		d.addAttribute("isInsert","Y");
 		return "WEB-INF\\views\\board\\noticeInsert.jsp";
 	}
+	
+	
+	@RequestMapping("noticeDetail.do")
+	public String noticeDetail(@RequestParam("bt_no") int no, Model d){
+		d.addAttribute("notice",service.getNoticeDetail(no));
+		return "WEB-INF\\views\\board\\noticeDetail.jsp";
+	}	
+	
+	@RequestMapping("updateNotice.do")
+	public String updateNotice(Notice upt, Model d) {
+		System.out.println("수정:"+upt.getBt_division());
+		d.addAttribute("notice", service.updateNotice(upt));
+		d.addAttribute("proc", "upt");
+		return "WEB-INF\\views\\board\\noticeDetail.jsp";
+	}
+	@RequestMapping("deleteNotice.do")
+	public String deleteNotice(@RequestParam("bt_no") int no, Model d) {
+		System.out.println("삭제:"+no);
+		service.deleteNotice(no);
+		d.addAttribute("proc", "del");
+		return "WEB-INF\\views\\board\\noticeDetail.jsp";
+	}	
 }
  

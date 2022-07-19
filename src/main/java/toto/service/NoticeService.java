@@ -22,17 +22,19 @@ public class NoticeService {
 		dao.insertNotice(ins);
 	}
 	
+	
 	public int checkAdmin(String id) {
 		return dao.checkAdmin(id);
 	}
-/*
+
 	public Notice getNoticeDetail(int no) {
+		// 조회 카운트업
 		dao.readCountup(no);
 
 		return dao.getNoticeDetail(no);
 	}
 
-	public Notice updateBoard(Notice upt) {
+	public Notice updateNotice(Notice upt) {
 		dao.updateNotice(upt);
 		return dao.getNoticeDetail(upt.getNo());
 	}
@@ -41,6 +43,7 @@ public class NoticeService {
 		dao.deleteNotice(no);
 	}
 
-*/
+
+	
 	
 }
