@@ -68,7 +68,7 @@ img.avatar {
   padding: 16px;
 }
 
-span.psw {
+span.psw {  
   float: right;
   padding-top: 16px;
 }
