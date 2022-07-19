@@ -37,6 +37,7 @@
         <ul id="main-menu">
             <li><a href="#">게임구매</a>
                 <ul id="sub-menu">
+                	<li><a href="${path}/SoccerGame/soccer01.jsp" aria-label="subemnu">승부예측</a></li>
                     <li><a href="${path}/rpsgame.do" aria-label="subemnu">가위바위보 게임</a></li>
                     <li><a href="${path}/rpsgamehistory.do" aria-label="subemnu">가위바위보 게임내역</a></li>
                     <li><a href="${path}/oegame.do" aria-label="subemnu">홀짝게임</a></li>

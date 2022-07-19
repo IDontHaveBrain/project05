@@ -21,10 +21,7 @@ public class SoccerController {
 		
 		}
 		
-		@RequestMapping("updateSoccer.do")
-		public String updateSoccer(@RequestParam("upt") Soccer upt, Model d){
-			System.out.println("수정: "+upt);
-			d.addAttribute("soccer","upt"); 
-			return "WEB-INF\\views\\game\\soccer.jsp";
-		}
+	
+		
+	
 }
