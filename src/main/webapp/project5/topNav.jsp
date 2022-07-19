@@ -12,9 +12,11 @@
 <html>
 <head>
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="${path}/project5/css/Main.css">
-    <style>
 
+    <style>
+        header{
+            background-color: #646987;
+        }
     </style>
  <link rel="stylesheet" type="text/css" href="${path}/project5/css/topup.css">
 
