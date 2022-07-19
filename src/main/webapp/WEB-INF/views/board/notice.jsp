@@ -15,23 +15,51 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link href="${path}/a00_com/a01_common.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/faq.css">
+
 <link rel="stylesheet" href="${path}/a00_com/bootstrap.min.css" >
 <link rel="stylesheet" href="${path}/a00_com/jquery-ui.css" >
+	
 <style>
-	td{text-align:center;}
-	.tbl_type,.tbl_type th,.tbl_type td{border:0}
-.tbl_type a{color:#383838;text-decoration:none}
-.tbl_type{width:100%;border-bottom:1px solid #999;color:#666;font-size:12px;table-layout:fixed}
-.tbl_type caption,.tbl_type .frm label{display:none}
-.tbl_type th{padding:5px 0 4px;border-top:solid 1px #999;border-bottom:solid 1px #b2b2b2;background-color:#f1f1f4;color:#333;font-weight:bold;line-height:18px;vertical-align:top}
-.tbl_type td{padding:8px 0 5px;border-bottom:solid 1px #d2d2d2;text-align:center}
-.tbl_type .frm{padding:0;text-align:center}
-.tbl_type .frm input{margin:0}
-.tbl_type .num,.tbl_type .date,.tbl_type .hit{padding:0;font-family:Tahoma;font-size:11px;line-height:normal}
-.tbl_type .title{text-align:center}
-.tbl_type .title .pic,.tbl_type .title .new{margin:0 0 2px;vertical-align:middle}
-.tbl_type tr.reply .title a{padding-left:12px;background:url(img/ic_reply.gif) 0 1px no-repeat}
-.tbl_type tr.reply td a.comment{padding:0;background:none;color:#f00;font-size:12px;font-weight:bold}
+td{text-align:center;}
+.table14_5 table {
+	width:100%;
+	margin:15px 0;
+	border:0;
+}
+.table14_5 th {
+	font-weight:bold;
+	background-color:#c6c6dd;
+	color:#202020
+}
+.table14_5,.table14_5 th,.table14_5 td {
+	font-size:0.95em;
+	text-align:center;
+	padding:4px;
+	border-collapse:collapse;
+}
+.table14_5 th,.table14_5 td {
+	border: 1px solid #ffffff;
+	border-width:1px
+}
+.table14_5 th {
+	border: 1px solid #c6c6dd;
+	border-width:1px 0 1px 0
+}
+.table14_5 td {
+	border: 1px solid #eeeeee;
+	border-width:1px 0 1px 0
+}
+.table14_5 tr {
+	border: 1px solid #ffffff;
+}
+.table14_5 tr:nth-child(odd){
+	background-color:#f7f7f7;
+}
+.table14_5 tr:nth-child(even){
+	background-color:#ffffff;
+}
 </style>
 <script src="${path}/a00_com/jquery.min.js"></script>
 <script src="${path}/a00_com/popper.min.js"></script>
@@ -44,13 +72,16 @@
 		<%-- 
 		
 		--%>	
-	});
+	
 	function goInsert(){
 		location.href="${path}/boardInsertForm.do"
 	}
 	function goDetail(no){
 		location.href="${path}/boardDetail.do?no="+no;
 	}	
+
+	
+});
 </script>
 </head>
 
@@ -61,12 +92,6 @@
 <br>
 <div class="jumbotron text-center">
   <h1>공지사항</h1>
-  
-</div>
-<div class="container">
-	<!-- 
-	form action="호출할 controller url"
-	   name="subject"  name="writer"    -->
 	<form id="frm01" class="form"  method="post">
   	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 	    <input class="form-control mr-sm-2" name="bt_title" placeholder="제목+내용" 
@@ -75,33 +100,38 @@
 	    <button class="btn btn-info" type="submit">Search</button>
 	    <button class="btn btn-success" onclick="goInsert()" 
 	    	type="button">등록</button>
+	    	
  	</nav>
-	</form>
+ 	</form>
+ 	</div>
+ 	
    <table class="table table-hover table-striped">
+   	<col width="10%">
    	<col width="10%">
    	<col width="45%">
    	<col width="15%">
-   	<col width="15%">
-   	<col width="15%">
+   	
     <thead>
-    
-      <tr class="table-success text-center">
+      <tr class="table14_5">
         <th>번호</th>
         <th>구분</th>
         <th>제목</th>
         <th>등록일</th>
       </tr>
     </thead>	
+    
+    
     <tbody>
-    	<!-- controller에서 넘겨준 모델데이터 : blist -->
     	<c:forEach var="bd" items="${blist}">
     	<tr><td>${bd.bt_no}</td><td>${bd.bt_division}</td>
     		<td>${bd.bt_title}</td>
     		<td>${bd.bt_date}</td>
     	</c:forEach>
+    	
     </tbody>
 	</table>    
-    
-</div>
+	
+	
+   
 </body>
 </html>

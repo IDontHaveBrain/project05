@@ -22,6 +22,7 @@ public class Notice {
 		super();
 		this.bt_title = bt_title;
 	}
+	
 	public int getBt_no() {
 		return bt_no;
 	}

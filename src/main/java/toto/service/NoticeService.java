@@ -18,6 +18,7 @@ public class NoticeService {
 		return dao.noticeList(sch);
 	}
 
+	
 	/*
 	public void insertNotice(Notice ins) {
 		dao.insertNotice(ins);
