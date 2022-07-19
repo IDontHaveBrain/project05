@@ -62,20 +62,15 @@
                 
                 <li><a href="#">건전토토</a>
                 <ul id="sub-menu">
-                    <li><a href="#" aria-label="subemnu">나의 건전상태</a></li>
-                    <li><a href="#" aria-label="subemnu">셀프 진단평가</a></li>
-                    <li><a href="#" aria-label="subemnu">submenu</a></li>
-                    <li><a href="#" aria-label="subemnu">submenu</a></li>
-                    <li><a href="#" aria-label="subemnu">submenu</a></li>
+                    <li><a href="${path}/SelfCk.do" aria-label="subemnu">셀프 진단평가</a></li>
+                    
                 </ul></li>
             <c:if test="${id == null}">
             <li><a href="#">로그인/회원가입</a>
                 <ul id="sub-menu">
                     <li><a href="${path}/Login2.do" aria-label="subemnu">로그인</a></li>
-                    <li><a href="#" aria-label="subemnu">submenu</a></li>
-                    <li><a href="#" aria-label="subemnu">submenu</a></li>
-                    <li><a href="#" aria-label="subemnu">submenu</a></li>
-                    <li><a href="#" aria-label="subemnu">submenu</a></li>
+                    <li><a href="${path}/Insert.do" aria-label="subemnu">회원가입</a></li>
+                   
                 </ul></li>
             </c:if>
             <c:if test="${id != null}">

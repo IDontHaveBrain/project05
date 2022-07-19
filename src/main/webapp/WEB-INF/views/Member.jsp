@@ -22,22 +22,23 @@
 form {border: 3px solid #f1f1f1;}
 
 input[type=text], input[type=password] {
-  width: 100%;
+  width: 50%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
+  align: center;
 }
-
+  
 button {
-  background-color: #8181F7;
+  background-color: #9F81F7;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: 50%;
 }
 
 button:hover {
@@ -141,16 +142,22 @@ $(document).ready(function(){
     		<p class="tagline">건전하게 즐겨보세요</p>
     		</div>
 <form id="Insert" action="Insert.do" method="post">    		
-  아이디<input name="id"   type="text"
+  아이디<br>
+  <input name="id"   type="text"
             value="${param.id}"   placeholder="아이디를 입력하세요" /><span></span><br>  
-   비밀번호<input name="pw"    type="password"
+   비밀번호<br>
+   <input name="pw"    type="password"
             value="${param.pw}" placeholder="비밀번호를 입력하세요" /><span></span><br>  
- 비밀번호확인<input name="ckpw"    type="password"
-            value="ckpw" placeholder="비밀번호를 재입력하세요" /><span></span><br> 
+ 비밀번호확인<br>
+ <input name="ckpw" value="ckpw"   type="password"  placeholder="비밀번호를 재입력하세요" /><span></span><br> 
+ 이름<br>
+ <input name="name"    type="text"  placeholder="이름을 입력하세요" /><span></span><br> 
+ 이메일<br>
+ <input name="mail"    type="text"  placeholder="이메일을 입력하세요" /><span></span><br> 
        
 
       <div class="text-right">
-          <button type="submit" id="submit" class="btn btn-success">회원가입</button>  
+          <button type="submit" id="submit"  onclick="join()" class="btn btn-success">회원가입</button>  
          <button class="btn btn-success"  onclick="golog()" type="button" value="로그인">로그인 하러가기</button> 
       </div>  
 </form>
@@ -167,6 +174,9 @@ $(document).ready(function(){
 <script>
 function golog(){	
 	location.href="${path}/Login2.do"
+}
+function join(){
+	alert("회원가입 완료!!!")
 }
 </script>
 </body>
