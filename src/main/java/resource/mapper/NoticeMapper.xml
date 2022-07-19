@@ -12,6 +12,9 @@
 			AND bt_title LIKE '%' ||#{bt_title}|| '%'
 		</if>
 	</select>
-
-
+	
+	<insert id="insertNotice" parameterType="notice">
+			insert into BET_NOTICE values(notice_seq2.nextval,0,0,0)
+	</insert>
+	
 </mapper>

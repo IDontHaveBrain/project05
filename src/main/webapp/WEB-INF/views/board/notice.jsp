@@ -72,16 +72,16 @@ td{text-align:center;}
 		<%-- 
 		
 		--%>	
-	
+		
+	});
 	function goInsert(){
-		location.href="${path}/boardInsertForm.do"
+		location.href="${path}/noticeInsertForm.do"
 	}
 	function goDetail(no){
 		location.href="${path}/boardDetail.do?no="+no;
 	}	
 
-	
-});
+
 </script>
 </head>
 
