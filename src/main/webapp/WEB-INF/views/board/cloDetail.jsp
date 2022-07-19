@@ -26,6 +26,43 @@
 .input-group-prepend {
 	width: 20%;
 }
+td{text-align:center;}
+.table14_5 table {
+	width:100%;
+	margin:15px 0;
+	border:0;
+}
+.table14_5 th {
+	font-weight:bold;
+	background-color:#c6c6dd;
+	color:#202020
+}
+.table14_5,.table14_5 th,.table14_5 td {
+	font-size:0.95em;
+	text-align:center;
+	padding:4px;
+	border-collapse:collapse;
+}
+.table14_5 th,.table14_5 td {
+	border: 1px solid #ffffff;
+	border-width:1px
+}
+.table14_5 th {
+	border: 1px solid #c6c6dd;
+	border-width:1px 0 1px 0
+}
+.table14_5 td {
+	border: 1px solid #eeeeee;
+	border-width:1px 0 1px 0
+}
+.table14_5 tr {
+	border: 1px solid #ffffff;
+}
+.table14_5 tr:nth-child(odd){
+	background-color:#f7f7f7;
+}
+.table14_5 tr:nth-child(even){
+	background-color:#ffffff;
 </style>
 <script src="${path}/a00_com/jquery.min.js"></script>
 <script src="${path}/a00_com/popper.min.js"></script>
@@ -49,7 +86,7 @@
 
 	</div>
 	<div class="container">
-		<form id="frm01" action="${path}/noticeInsert.do" class="form"
+		<form id="frm01" action="${path}/cloInsert.do" class="form"
 			method="post">
 			<div class="input-group mb-2 ">
 				<div class="input-group-prepend ">
@@ -83,7 +120,7 @@
 					<span class="text-center input-group-text">조회수</span>
 				</div>
 				<input class="form-control" value="${clo.readcnt}"
-					value="${clo.readcnt}" placeholder="조회수 입력하세요" />
+				 placeholder="조회수 입력하세요" />
 			</div>
 
 			<div class="input-group mb-2">

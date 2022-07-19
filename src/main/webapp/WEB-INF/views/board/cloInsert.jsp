@@ -73,7 +73,7 @@ td{text-align:center;}
 		if(isInsert=="Y"){
 			if(!confirm("등록성공했습니다\n계속등록하시겠습니까?")){
 				// 취소 입력시 조회화면 이동..
-				location.href="${path}/noticeList.do"
+				location.href="${path}/cloList.do"
 			}
 		}
 	
@@ -102,7 +102,7 @@ td{text-align:center;}
 
 <body class="table14_5">
 <div class="jumbotron text-center">
-  <h2>공지사항 등록</h2>
+  <h2>마감게임 등록</h2>
 
 </div>
 

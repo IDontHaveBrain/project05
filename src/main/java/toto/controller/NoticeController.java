@@ -55,10 +55,9 @@ public class NoticeController {
 		d.addAttribute("notice",service.getNoticeDetail(no));
 		return "WEB-INF\\views\\board\\noticeDetail.jsp";
 	}	
-	
+	//http://localhost:7080/project05/updateNotice.do?bt_no=40
 	@RequestMapping("updateNotice.do")
 	public String updateNotice(Notice upt, Model d) {
-		System.out.println("수정:"+upt.getBt_division());
 		d.addAttribute("notice", service.updateNotice(upt));
 		d.addAttribute("proc", "upt");
 		return "WEB-INF\\views\\board\\noticeDetail.jsp";

@@ -18,12 +18,14 @@ public class ClosingController {
 		private ClosingService service;
 		// http://localhost:7080/project05/cloList.do
 		@RequestMapping("cloList.do")
-		public String cloList(Closing sch, Model d) {
-			d.addAttribute("blist", service.cloList(sch));
-			
+		public String cloList(Closing sch,Model d, HttpSession session) {
+			String curId = (String)session.getAttribute("id");
+	        if(!inputCheck.isEmpty(curId) && service.checkAdmin(curId) == 1){
+	            d.addAttribute("hide", 1);
+	        }
+			d.addAttribute("blist",service.cloList(sch));
 			return "WEB-INF\\views\\board\\closing.jsp";
 		}
-		
 		
 		//http://localhost:7080/project05/cloInsertForm.do
 		@RequestMapping("cloInsertForm.do")
@@ -54,8 +56,7 @@ public class ClosingController {
 		
 		@RequestMapping("updateClo.do")
 		public String updateClo(Closing upt, Model d) {
-			System.out.println("수정:"+upt.getCtitle());
-			d.addAttribute("notice", service.updateClo(upt));
+			d.addAttribute("clo", service.updateClo(upt));
 			d.addAttribute("proc", "upt");
 			return "WEB-INF\\views\\board\\cloDetail.jsp";
 		}

@@ -70,10 +70,10 @@ td{text-align:center;}
 		--%>	
 	});
 	function goInsert(){
-		location.href="${path}/boardInsertForm.do"
+		location.href="${path}/calInsertForm.do"
 	}
 	function goDetail(no){
-		location.href="${path}/boardDetail.do?no="+no;
+		location.href="${path}/calDetail.do?no="+no;
 	}	
 </script>
 </head>
@@ -93,28 +93,36 @@ td{text-align:center;}
 	   name="subject"  name="writer"    -->
 	<form id="frm01" class="form"  method="post">
   	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-	    <input class="form-control mr-sm-2" name="ctime" placeholder="제목" 
-	    	value="${param.ctime}"/>
+	    <input class="form-control mr-sm-2" name="ctime" placeholder="팀 입력하세요" 
+	    	value="${param.team}"/>
 	    <button class="btn btn-info" type="submit">Search</button>
+	      <c:if test="${hide == 1}">
+	    <button class="btn btn-success" onclick="goInsert()" 
+	    	type="button">등록</button>
+    	</c:if>
  	</nav>
 	</form>
 	
    <table class="table table-hover table-striped">
-  	<col width="20%">
-   	<col width="20%">
+    	<col width="10%">
+   	<col width="10%">
    	<col width="45%">
+   	<col width="15%">
+   	<col width="15%">
     <thead>
       <tr class="table14_5">
+        <th>번호</th>
         <th>경기일시</th>
         <th>홈팀 vs 원정팀</th>
         <th>경기장소</th>
+        <th>조회수</th>
       </tr>
     </thead>	
     <tbody>
     	<!-- controller에서 넘겨준 모델데이터 : blist -->
     	<c:forEach var="bd" items="${blist}">
-    	<tr><td>${bd.ctime}</td><td>${bd.team}</td>
-    		<td>${bd.place }</td></tr>
+    	<tr ondblclick="goDetail(${bd.no})"><td>${bd.no}</td><td>${bd.ctime}</td>
+    	<td>${bd.team}</td><td>${bd.place }</td><td>${bd.readcnt}</td></tr>
     	</c:forEach>
     </tbody>
 	</table>    

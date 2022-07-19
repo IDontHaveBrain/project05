@@ -73,25 +73,25 @@ td{text-align:center;}
 		if(isInsert=="Y"){
 			if(!confirm("등록성공했습니다\n계속등록하시겠습니까?")){
 				// 취소 입력시 조회화면 이동..
-				location.href="${path}/noticeList.do"
+				location.href="${path}/calList.do"
 			}
 		}
 	
 	function goMain(){
-		location.href="${path}/noticeList.do";
+		location.href="${path}/calList.do";
 	}
 	function insertProc(){
 		if(confirm("등록하시겠습니까?")){
-			var subjectVal = $("[name=bt_division]").val();		
+			var subjectVal = $("[name=team]").val();		
 			if(	subjectVal == ""){
-				alert("구분을 등록하세요");
-				$("[name=bt_division]").focus();
+				alert("팀을 등록하세요");
+				$("[name=team]").focus();
 				return; // 프로세스를 중단 처리
 			}	
-			var writerVal = $("[name=bt_title]").val();		
+			var writerVal = $("[name=place]").val();		
 			if(	writerVal == ""){
-				alert("제목 등록하세요");
-				$("[name=bt_title]").focus();
+				alert("장소를 등록하세요");
+				$("[name=place]").focus();
 				return; // 프로세스를 중단 처리
 			}	
 			document.querySelector("form").submit();
@@ -102,33 +102,33 @@ td{text-align:center;}
 
 <body class="table14_5">
 <div class="jumbotron text-center">
-  <h2>공지사항 등록</h2>
+  <h2>게임일정 등록</h2>
 
 </div>
 
 <div class="container">
-	<form id="frm01" action="${path}/noticeInsert.do" 
+	<form id="frm01" action="${path}/calInsert.do" 
 		 class="form"  method="post">
 		<div class="input-group mb-3">
 			<div class="input-group-prepend">
-				<span class="text-center input-group-text">구분</span>
+				<span class="text-center input-group-text">일시</span>
 			</div>
-			<input name="bt_division" class="form-control" 
-				value="" placeholder="구분 입력하세요" />	
+			<input name="ctime" class="form-control" 
+				value="" placeholder="일시 입력하세요" />	
 		</div>  
 		<div class="input-group mb-3">
 			<div class="input-group-prepend">
-				<span class="text-center input-group-text">제목</span>
+				<span class="text-center input-group-text">팀</span>
 			</div>
-			<input name="bt_title" class="form-control" 
-				value="" placeholder="제목 입력하세요" />	
+			<input name="team" class="form-control" 
+				value="" placeholder="팀 입력하세요" />	
 		</div> 	
 		<div class="input-group mb-3">
 			<div class="input-group-prepend">
-				<span class="text-center input-group-text">날짜</span>
+				<span class="text-center input-group-text">장소</span>
 			</div>
-			<input name="bt_date" class="form-control" 
-				value="" placeholder="날짜 입력하세요" />	
+			<input name="place" class="form-control" 
+				value="" placeholder="장소 입력하세요" />	
 		</div> 			
 		<div class="text-right">
 			<button type="button" onclick="insertProc()" class="btn btn-success">등록</button>

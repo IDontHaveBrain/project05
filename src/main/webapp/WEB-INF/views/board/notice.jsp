@@ -109,7 +109,6 @@ td{text-align:center;}
  	</nav>
  	</form>
  	</div>
- 	
    <table class="table table-hover table-striped">
    	<col width="10%">
    	<col width="10%">
@@ -125,8 +124,6 @@ td{text-align:center;}
         <th>조회수</th>
       </tr>
     </thead>	
-    
-    
     <tbody>
     	<c:forEach var="bd" items="${blist}">
     	<tr ondblclick="goInsert2(${bd.bt_no})"><td>${bd.bt_no}</td><td>${bd.bt_division}</td>

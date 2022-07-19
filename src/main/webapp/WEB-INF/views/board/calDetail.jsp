@@ -49,41 +49,41 @@
 
 	</div>
 	<div class="container">
-		<form id="frm01" action="${path}/noticeInsert.do" class="form"
+		<form id="frm01" action="${path}/calInsert.do" class="form"
 			method="post">
 			<div class="input-group mb-2 ">
 				<div class="input-group-prepend ">
 					<span class="text-center input-group-text ">글번호</span>
 				</div>
-				<input name="bt_no" class="form-control" value="${notice.bt_no}"
+				<input name="no" class="form-control" value="${cal.no}"
 					placeholder="글번호 입력하세요" />
 
 				<div class="input-group-prepend">
-					<span class="text-center input-group-text">구분</span>
+					<span class="text-center input-group-text">일시</span>
 				</div>
-				<input name="bt_division" class="form-control"
-					value="${notice.bt_division}" placeholder="구분 입력하세요" />
+				<input name="ctime" class="form-control"
+					value="${cal.ctime}" placeholder="일시 입력하세요" />
 			</div>
 
 			<div class="input-group mb-2">
 				<div class="input-group-prepend">
-					<span class="text-center input-group-text">제 목</span>
+					<span class="text-center input-group-text">팀</span>
 				</div>
-				<input name="bt_title" class="form-control"
-					value="${notice.bt_title}" placeholder="제목 입력하세요" />
+				<input name="team" class="form-control"
+					value="${cal.team}" placeholder="팀 입력하세요" />
 
 				<div class="input-group-prepend">
-					<span class="text-center input-group-text">등록일</span>
+					<span class="text-center input-group-text">장소</span>
 				</div>
-				<input name="bt_date" class="form-control"
-					value="${notice.bt_date}" placeholder="등록일 입력하세요" />
+				<input name="place" class="form-control"
+					value="${cal.place}" placeholder="장소 입력하세요" />
 			</div>
 			<div class="input-group mb-2">
 				<div class="input-group-prepend">
 					<span class="text-center input-group-text">조회수</span>
 				</div>
-				<input class="form-control" value="${notice.readcnt}"
-					value="${board.readcnt}" placeholder="조회수 입력하세요" />
+				<input class="form-control" value="${cal.readcnt}"
+					 placeholder="조회수 입력하세요" />
 			</div>
 			
 
@@ -106,13 +106,13 @@
 		function updateProc() {
 			if (confirm("수정하시겠습니까?")) {
 				// 유효성 check
-				$("form").attr("action", "${path}/updateNotice.do");
+				$("form").attr("action", "${path}/updateCal.do");
 				$("form").submit();
 			}
 		}
 		function deleteProc() {
 			if (confirm("삭제하시겠습니까?")) {
-				$("form").attr("action", "${path}/deleteNotice.do");
+				$("form").attr("action", "${path}/deleteCal.do");
 				$("form").submit();
 			}
 		}
@@ -120,16 +120,16 @@
 		var proc = "${proc}"
 		if (proc == "upt") {
 			if (confirm("수정성공!\n조회리스트화면으로 이동하시겠습니까?")) {
-				location.href = "${path}/noticeList.do";
+				location.href = "${path}/calList.do";
 			}
 		}
 		if (proc == "del") {
 			alert("삭제성공\n조회 리스트화면으로 이동!")
-			location.href = "${path}/noticeList.do";
+			location.href = "${path}/calList.do";
 		}
 
 		function goMain() {
-			location.href = "${path}/noticeList.do";
+			location.href = "${path}/calList.do";
 		}
 	</script>
 </body>

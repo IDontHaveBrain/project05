@@ -18,14 +18,14 @@ public class CalendarController {
 		private CalendarService service;
 		// http://localhost:7080/project05/calList.do
 		@RequestMapping("calList.do")
-		public String calList(Calendar sch, Model d) {
-			d.addAttribute("blist", service.calList(sch));
-			
+		public String calList(Calendar sch,Model d, HttpSession session) {
+			String curId = (String)session.getAttribute("id");
+	        if(!inputCheck.isEmpty(curId) && service.checkAdmin(curId) == 1){
+	            d.addAttribute("hide", 1);
+	        }
+			d.addAttribute("blist",service.calList(sch));
 			return "WEB-INF\\views\\board\\calendar.jsp";
 		}
-		
-		
-		
 		
 		//http://localhost:7080/project05/calInsertForm.do
 		@RequestMapping("calInsertForm.do")
@@ -54,6 +54,8 @@ public class CalendarController {
 			return "WEB-INF\\views\\board\\calDetail.jsp";
 		}	
 		
+		
+		//http://localhost:7080/project05/updateCal.do
 		@RequestMapping("updateCal.do")
 		public String updateCal(Calendar upt, Model d) {
 			System.out.println("수정:"+upt.getTeam());

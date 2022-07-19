@@ -15,6 +15,6 @@ public interface CloDao {
 	public Closing getCloDetail(int no);
 	public Closing updateClo(Closing upt);
 	public void deleteClo(int no);
-
 	public void readCountup(int no);
+	
 }

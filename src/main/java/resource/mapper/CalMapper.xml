@@ -7,6 +7,10 @@
 		id="calList" resultType="cal" parameterType="cal">
 		 select * 
 		 from calendar
+		 WHERE 1=1
+		 <if test="team!=null">
+		 AND team LIKE '%'||#{team}||'%'
+		 </if>
 		 order by no desc
 		</select>
 		

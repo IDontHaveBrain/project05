@@ -95,6 +95,10 @@ td{text-align:center;}
 	    <input class="form-control mr-sm-2" name="ctitle" placeholder="제목" 
 	    	value="${param.ctitle}"/>
 	    <button class="btn btn-info" type="submit">Search</button>
+	     <c:if test="${hide == 1}">
+	    <button class="btn btn-success" onclick="goInsert()" 
+	    	type="button">등록</button>
+    	</c:if>
  	</nav>
 	</form>
    <table class="table table-hover table-striped">
@@ -115,7 +119,7 @@ td{text-align:center;}
     <tbody>
     	<!-- controller에서 넘겨준 모델데이터 : blist -->
     	<c:forEach var="bd" items="${blist}">
-    	<tr ondblclick="goInsert(${bd.no})"><td>${bd.no}</td><td>${bd.ctype}</td><td>${bd.ctitle}</td>
+    	<tr ondblclick="goDetail(${bd.no})"><td>${bd.no}</td><td>${bd.ctype}</td><td>${bd.ctitle}</td>
     		<td>${bd.cdate }</td><td>${bd.readcnt}</td></tr>
     	</c:forEach>
     </tbody>

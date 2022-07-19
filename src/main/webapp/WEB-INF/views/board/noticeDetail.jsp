@@ -83,7 +83,7 @@
 					<span class="text-center input-group-text">조회수</span>
 				</div>
 				<input class="form-control" value="${notice.readcnt}"
-					value="${board.readcnt}" placeholder="조회수 입력하세요" />
+					 placeholder="조회수 입력하세요" />
 			</div>
 			
 
