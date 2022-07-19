@@ -23,7 +23,7 @@
 form {border: 3px solid #f1f1f1;}
 
 input[type=text], input[type=password] {
-  width: 100%;
+  width: 50%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -38,7 +38,7 @@ button {
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: 50%;
 }
 
 button:hover {
@@ -135,17 +135,23 @@ span.psw {
    <h2 class="home_header">스포츠토토 <span class="light">로그인</span></h2>
     		<p class="tagline">건전하게 즐겨보세요</p>
   <form id="login" action="Login2.do">  
-  아이디<input id="id" name="id" type="text"
+ <br>
+ <br>
+ <br>   
+  아이디<br>
+  <input id="id" name="id" type="text"
   			 value="${param.id}"  placeholder="아이디를 입력하세요"/><span></span><br>
-  비밀번호<input id="pw" name="pw" type="password"  
+  비밀번호<br>
+  <input id="pw" name="pw" type="password"  
   			value="${param.pw}" placeholder="비밀번호를 입력하세요"/><span></span><br>
+  			<button type="button" onclick="canLog();" class="btn btn-info">로그인</button>    
+    <button class="btn btn-success"  onclick="goInsert()" type="button" value="회원가입">회원가입</button>  </div>
 </form>
 </div>
 
-      <div class="text-right">
+   
                
-    <button type="button" onclick="canLog();" class="btn btn-info">로그인</button>    
-    <button class="btn btn-success"  onclick="goInsert()" type="button" value="회원가입">회원가입</button>  </div>  
+   
 <!-- 
 <table border> 
 <c:forEach var="totologin" items="${loginList}"> 
