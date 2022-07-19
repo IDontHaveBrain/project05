@@ -17,6 +17,13 @@
     <script src="${path}/project5/js/jquery-3.6.0.min.js"></script>
     <style>
         body {
+            margin: 0;
+            padding: 0;
+            font-family: "Roboto", serif;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
             background-color: #646987;
         }
     </style>
