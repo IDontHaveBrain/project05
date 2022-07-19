@@ -70,7 +70,7 @@ String ans[]={"없음", "가끔","때때로","거의항상"};
 </textarea>
 
   <form method="post" action="researchAns.jsp">
-  
+
 <table>
 	<%
 		for(String data:arr){
@@ -88,6 +88,7 @@ String ans[]={"없음", "가끔","때때로","거의항상"};
 		
 		<td><input type="radio" name=<%=groupname%> value=<%=selname%>>
 				<label><%=str%></label></td>
+				
 		
 		<%			
 			j+=1;	
@@ -101,13 +102,11 @@ String ans[]={"없음", "가끔","때때로","거의항상"};
 		}
 	%>
 </table>
-	<input type="submit" value="결과보기"/>
+<div align="right">
+	<input type="submit" value="결과보기" />  
+</div>
 	</form>
-	<!-- About Section -->
- 		<section class="about" id="about">
-   		  <h2 class="hidden">About</h2>
-		 
-    </section>
+
 		
 
   

@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.stereotype.Repository;
 
 import toto.vo.Account;
-import toto.vo.Totologin2;
 //toto.dao.LoginDao
 @Repository
 public interface LoginDao {

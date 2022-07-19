@@ -95,7 +95,7 @@ span.psw {
 		location.href="";
 	}
 	 function goInsert(){	
-			location.href="WEB-INF\\views\\Member.jsp"
+			location.href="${path}/Insert.do"
 		}
 	
 	function canLog(){
@@ -130,10 +130,7 @@ span.psw {
 		}
 		document.querySelector("#login").submit();
 	}
-
-
 </script>
-	
 <div class="jumbotron text-center">
    <h2 class="home_header">스포츠토토 <span class="light">로그인</span></h2>
     		<p class="tagline">건전하게 즐겨보세요</p>
@@ -148,38 +145,20 @@ span.psw {
       <div class="text-right">
                
     <button type="button" onclick="canLog();" class="btn btn-info">로그인</button>    
-    <button class="btn btn-success"  onclick="goInsert()"
-      				 type="button">회원가입</button>  </div>  
-
+    <button class="btn btn-success"  onclick="goInsert()" type="button" value="회원가입">회원가입</button>  </div>  
+<!-- 
 <table border> 
 <c:forEach var="totologin" items="${loginList}"> 
 <tr><td>${totologin.id}</td><td>${totologin.pw}</td></tr>
 </c:forEach>
 </table>
+ -->
+
    
   <!-- Copyrights Section -->
   <div class="copyright">&copy;2022 - <strong>BETMAN</strong></div>		
 
 	
-  <%
-	String logPass = request.getParameter("logPass");
-	
-	if(logPass!=null && logPass.equals("0")){
-		out.println("");
-	}else if(logPass!=null && logPass.equals("-1")){
-		out.println("");
-	}
-	
-  %>
-  <%
-String id = request.getParameter("id");
-if(id == null) id="";
 
-String pw = request.getParameter("pw");
-if(pw==null) pw="";
-
-
-
-%>
 </body>
 </html>

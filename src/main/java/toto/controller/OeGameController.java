@@ -95,7 +95,7 @@ public class OeGameController {
                                   @RequestParam(value = "setod", defaultValue = "") String setod){
         String curId = (String)session.getAttribute("id");
         if(inputCheck.isEmpty(curId) || service.getAuth(curId) != 1){
-            return "pageJsonReport";
+            return "redirect:project5\\Main.jsp";
         }
         if(!inputCheck.isEmpty(setOdds) && Double.parseDouble(setOdds) != odds && setod.equals("Y")){
             odds = Double.parseDouble(setOdds);

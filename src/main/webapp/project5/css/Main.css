@@ -1,5 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
+/*
 body {
 	margin: 0;
 	padding: 0;
@@ -11,6 +12,11 @@ body {
 	overflow-x: hidden;
 	background-color: #646987;
 }
+*/
+.slidebanner{position:relative;height:120px;width:auto;overflow:hidden;}
+.slidebanner .bannerbox{position:absolute;margin:0;padding:0;}
+.slidebanner .rollli{float:center;list-style:none;margin-left:10px}
+.slidebanner .rollli:first-child{margin:0}
 img.static {
 position: static;
 }
@@ -25,8 +31,15 @@ h1 {
 	margin-left: auto;
 	margin-right: auto;
 	background-color: #646987;
+	text-align: center;
 }
-
+.container2 {
+	width: 100%;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #f8f9fa;
+}
 header {
 	width: 100%;
 	height: 5%;
@@ -88,7 +101,6 @@ ul li:hover a {
 	background-color: #646987;
 	padding-top: 150px;
 	padding-bottom: 150px;
-	background-image: url(../images/chair.png);
 }
 
 .tagline {
@@ -181,7 +193,6 @@ ul li:hover a {
 	text-align: center;
 	float: left;
 	margin-top: 30px;
-	/*background-image:url(../images/chair1.jpg);*/
 }
 
 .gallery .thumbnail4 h4 {
@@ -277,6 +288,7 @@ ul li:hover a {
 footer {
 	background-color: #FFFFFF;
 	padding-bottom: 35px;
+	
 }
 
 .footer_column {
@@ -358,7 +370,6 @@ footer .footer_column p {
 	padding-top: 60px;
 	padding-bottom: 60PX;
 	margin-bottom: 0px;
-	background-image: url(../images/pattern.png);
 	background-repeat: repeat;
 }
 

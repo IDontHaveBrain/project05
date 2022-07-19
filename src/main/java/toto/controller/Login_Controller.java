@@ -19,6 +19,7 @@ public class Login_Controller {
 	@Autowired(required = false)
 	private LoginService service;
 	 // http://localhost:7080/project05/Login2.do
+	//redirect:project5\\Main.jsp
 	@RequestMapping("Login2.do")
 	public String loginList(Account sch, Model d, HttpSession session) {
 		if(sch != null && sch.getId() != null && sch.getPw() != null )
@@ -32,7 +33,7 @@ public class Login_Controller {
 		}
 		String curId = (String)session.getAttribute("id");
         if(!inputCheck.isEmpty(curId)){
-        	return "redirect:project5\\Main.jsp";
+        	return "redirect:project5\\Main.jsp";  
         }
 		d.addAttribute("loginList",service.getLoginList(sch));   
 		return "WEB-INF\\views\\2222.jsp";
@@ -43,6 +44,10 @@ public class Login_Controller {
 	// http://localhost:7080/project05/Insert.do
 	  @RequestMapping("Insert.do")
 		public String totoInsert(Account ins, Model d){
+		  if(ins!=null && ins.getId() !=null && ins.getPw()!=null) {
+		 service.totoInsert(ins);
+		  }
+		System.out.println(ins.getId());
 			d.addAttribute(new Account());
 			return "WEB-INF\\views\\Member.jsp";
 		}
