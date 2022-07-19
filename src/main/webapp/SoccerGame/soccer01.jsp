@@ -28,9 +28,8 @@
 <body>
 <jsp:include page="/project5/topNav.jsp"></jsp:include>
 <%-- 
- <link rel="stylesheet" type="text/css" href="${path}/SoccerGame/css/layout.css">
- <link rel="stylesheet" href="/css/layout.css" >
-<img src="img\calendar.PNG" class="static" width="800" height="380"/>--%>
+--%>
+
 <div class="docWrap">
 <div class="articleArea">
 <div id="content">
@@ -162,7 +161,7 @@
 
 <div class="tooltipHBox"><button type="button" class="icoG stadium">경기장</button><div class="ttHLayer" tabindex="0"><span>울산문수축구경기장</span></div></div></td><td><div class="vsDIv fwb"><div>울산현대</div><div><span class="center fwn">vs</span> 수원삼성</div></div></td><td><div class="formBox"><span class="btnChkList v6"><input type="checkbox" id="mk_0_3_1" name="mk_0_3_1" onclick="victory.clickMarking(0,3,1)"><label for="mk_0_3_1"><span class="hidden">투표율</span>75.5%<span class="won">(2,054,357)</span></label></span></div></td><td><div class="formBox"><span class="btnChkList v6"><input type="checkbox" id="mk_0_3_2" name="mk_0_3_2" onclick="victory.clickMarking(0,3,2)"><label for="mk_0_3_2"><span class="hidden">투표율</span>17.5%<span class="won">(477,164)</span></label></span></div></td><td><div class="formBox"><span class="btnChkList v6"><input type="checkbox" id="mk_0_3_3" name="mk_0_3_3" onclick="victory.clickMarking(0,3,3)"><label for="mk_0_3_3"><span class="hidden">투표율</span>6.9%<span class="won">(188,549)</span></label></span></div></td><td id="rowSlipSelectCnt_3">-</td><td class="detailAreaTd"><button type="button" class="btnOn" title="4경기  울산현대 : 수원삼성 상세정보 열기"><span class="hidden">4경기  울산현대 : 수원삼성 상세정보 열기</span></button></td></tr><tr><td class="bdl0"><span class="db">5경기</span></td><td><span class="fs11">22.07.16 (토) 18:00</span>
 
-<div class="tooltipHBox"><button type="button" class="icoG stadium">경기장</button><div class="ttHLayer" tabindex="0"><span>김천종합운동장</span></div></div></td><td><div class="vsDIv fwb"><div>김천상무</div><div><span class="center fwn">vs</span> 인천유나</div></div></td><td><div class="formBox"><span class="btnChkList v6"><input type="checkbox" id="mk_0_4_1" name="mk_0_4_1" onclick="victory.clickMarking(0,4,1)"><label for="mk_0_4_1"><span class="hidden">투표율</span>39.8%<span class="won">(1,083,659)</span></label></span></div></td><td><div class="formBox"><span class="btnChkList v6"><input type="checkbox" id="mk_0_4_2" name="mk_0_4_2" onclick="victory.clickMarking(0,4,2)"><label for="mk_0_4_2"><span class="hidden">투표율</span>36.7%<span class="won">(997,876)</span></label></span></div></td><td><div class="formBox"><span class="btnChkList v6"><input type="checkbox" id="mk_0_4_3" name="mk_0_4_3" onclick="victory.clickMarking(0,4,3)"><label for="mk_0_4_3"><span class="hidden">투표율</span>23.5%<span class="won">(638,535)</span></label></span></div></td><td id="rowSlipSelectCnt_4">-</td><td class="detailAreaTd"><button type="button" class="btnOn" title="5경기  김천상무 : 인천유나 상세정보 열기"><span class="hidden">5경기  김천상무 : 인천유나 상세정보 열기</span></button></td></tr><tr><td class="bdl0"><span class="db">6경기</span></td><td><span class="fs11">22.07.16 (토) 19:00</span>
+<div class="tooltipHBox"><button type="button" class="icoG stadium">경기장</button><div class="ttHLayer" tabindex="0"><span>김천종합운동장</span></div></div></td><td><div class="vsDIv fwb"><div>김천상무</div><div><span class="center fwn">vs</span> 인천유나</div></div></td><td><div class="formBox"><span class="btnChkList v6"><input type="checkbox" id="mk_0_4_1" name="mk_0_4_1" onclick="victory.clickMarking(0,4,1)"><label for="mk_0_4_1"><span class="hidden">투표율</span>36.7%<span class="won">(1,083,659)</span></label></span></div></td><td><div class="formBox"><span class="btnChkList v6"><input type="checkbox" id="mk_0_4_2" name="mk_0_4_2" onclick="victory.clickMarking(0,4,2)"><label for="mk_0_4_2"><span class="hidden">투표율</span>39.8%<span class="won">(997,876)</span></label></span></div></td><td><div class="formBox"><span class="btnChkList v6"><input type="checkbox" id="mk_0_4_3" name="mk_0_4_3" onclick="victory.clickMarking(0,4,3)"><label for="mk_0_4_3"><span class="hidden">투표율</span>23.5%<span class="won">(638,535)</span></label></span></div></td><td id="rowSlipSelectCnt_4">-</td><td class="detailAreaTd"><button type="button" class="btnOn" title="5경기  김천상무 : 인천유나 상세정보 열기"><span class="hidden">5경기  김천상무 : 인천유나 상세정보 열기</span></button></td></tr><tr><td class="bdl0"><span class="db">6경기</span></td><td><span class="fs11">22.07.16 (토) 19:00</span>
 
 <div class="tooltipHBox"><button type="button" class="icoG stadium">경기장</button><div class="ttHLayer" tabindex="0"><span>도요타스타디움</span></div></div></td><td><div class="vsDIv fwb"><div>나고야</div><div><span class="center fwn">vs</span> 가와사키</div></div></td><td><div class="formBox"><span class="btnChkList v6"><input type="checkbox" id="mk_0_5_1" name="mk_0_5_1" onclick="victory.clickMarking(0,5,1)"><label for="mk_0_5_1"><span class="hidden">투표율</span>13.2%<span class="won">(358,741)</span></label></span></div></td><td><div class="formBox"><span class="btnChkList v6"><input type="checkbox" id="mk_0_5_2" name="mk_0_5_2" onclick="victory.clickMarking(0,5,2)"><label for="mk_0_5_2"><span class="hidden">투표율</span>22.1%<span class="won">(599,794)</span></label></span></div></td><td><div class="formBox"><span class="btnChkList v6"><input type="checkbox" id="mk_0_5_3" name="mk_0_5_3" onclick="victory.clickMarking(0,5,3)"><label for="mk_0_5_3"><span class="hidden">투표율</span>64.8%<span class="won">(1,761,535)</span></label></span></div></td><td id="rowSlipSelectCnt_5">-</td><td class="detailAreaTd"><button type="button" class="btnOn" title="6경기  나고야 : 가와사키 상세정보 열기"><span class="hidden">6경기  나고야 : 가와사키 상세정보 열기</span></button></td></tr><tr><td class="bdl0">
 
@@ -231,10 +230,10 @@
 	</div>
 
 	<div class="btnArea" id="asideGameTabBtn0">
-		<button class="btn btnBB gray" onclick="rightA.insertToCartCheck();" >카트담기</button> 
-		<button class="btn btnBB red" onclick="rightA.checkCart();" >바로구매</button>
+		<button class="btn btnBB gray" >카트담기</button> 
+		<input type="button" class="btn btnBB red" value="바로구매"  onclick=" location='buysoccer.jsp'"/>
 	</div>
-	
+	  
 </div>
 </div>
 <!--  asideRight 영역 끝 -->
@@ -245,7 +244,6 @@
  <footer>
 </footer>
 </div>
-
 
 
 </body>
