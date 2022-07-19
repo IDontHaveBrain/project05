@@ -1015,9 +1015,7 @@ a.textLink.bold.more:after { background-position: -61px 0  }
 
 
 .btnArea{ margin-top:20px; }
-.btnArea:after{content:'';display:block;clear:both;}
-.btnArea .btn + .btn{ margin-left:1px}
-.btn + .btn{margin-left:1px;}
+
 
 
 /* badge */
@@ -1083,32 +1081,9 @@ a.textLink.bold.more:after { background-position: -61px 0  }
 .sortBox02{display: inline-block;position:relative;padding-right:17px;vertical-align: middle;}
 .sortBox02:after{content: '';position:absolute;right:6px;top:50%;margin-top:-11px;width:1px;height:22px;background:#dddddd;}
 
-/* sortArea */
-.setBar .totalsum{display:inline-block; font-size:13px; font-weight:400; letter-spacing:-1px}
-.setBar .totalsum span{color:#555555}
-.setBar .totalsum strong.fcBlue { color:#2e75b6  }
-.setBar.mt37{margin-top:37px}
-
-/* pagingArea */
-.totaArea { margin-top:10px; }
-.totaArea .totalpage{display:inline-block;font-size:12px;line-height:1;vertical-align:top;}
-.totaArea .totalpage span{color:#555555;}
-.totaArea .totalpage strong{color:#222222;}
-
-.totaArea.lybox {   }
-.totaArea.lybox > div:last-child {  text-align: right; }
 
 
 
-/* inputbox */
-.selDash{position: relative;display:inline-block;padding:0 1px;vertical-align:middle;}
-.selDash:first-child{padding-left:0;}
-.selDash:last-child{padding-right:0;}
-.selDash + .selDash{margin-left:4px;}
-.selDash + .btnS{margin-left:5px;}
-.selDash.left {  margin-left: 12px ;padding-left: 17px}
-.selDash.left:before{content:'';position:absolute;top:50%;left:0;width:1px;height:12px;margin-top:-6px;background:#ddd;}
-.contTitle.lybox .cell .selectDiv + .selDash{margin-left:6px;}
 
 /* 필수 항목  */
 .req_star{margin-right:4px; color:#c4113c; font-weight:700}
@@ -1205,134 +1180,6 @@ select::-ms-expand{display:none}
 .selectMenu_option .ui-menu .ui-menu-item .ui-menu-item-wrapper {/* height: 29px; */}
 
 
-/* datepicker */
-.ui-datepicker {width: 210px;font-size: 12px;padding: 0 8px 0 8px;z-index: 102 !important;border: 1px solid #222 !important;}
-.ui-datepicker .ui-datepicker-header { margin:0 -8px; padding: 6px 0;background: #eee;border-width: 0;border-bottom: 1px solid #dddddd; }
-.ui-datepicker .ui-datepicker-title select{ height: 24px;color:#222;background:#fff url(/images/comm/selbox_ico.png) no-repeat 88% 50%;border:1px #aaa solid;padding-left:5px;  }
-.ui-datepicker .ui-datepicker-title select + select { margin-left:3px;  }
-.ui-datepicker .ui-datepicker-title b { position: relative;    margin-left: -34px;display: inline-block;padding-right: 25px;}
-.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {border:0;  width:20px;height:24px; left:inherit;top:inherit;background-color: transparent;cursor: pointer; }
-.ui-datepicker .ui-datepicker-prev:hover, .ui-diatepicker .ui-datepicker-next:hover {  border:0; left:inherit;top:inherit;background-color: transparent;}
-.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {width:20px;height:24px;left:inherit;top:inherit;margin:0;background:url(/images/comm/calendar_btn.png) no-repeat -12px 0%; }
-.ui-datepicker .ui-datepicker-next span {background-position: -24px 0%}
-.ui-datepicker .ui-datepicker-prev   {margin-left: 12px;}
-.ui-datepicker .ui-datepicker-next {right: 10px;}
-.ui-datepicker table{ margin: 0px 0px 3px 0px; }
-.ui-datepicker th {width:14.3%;line-height: 18px;line-height: 18px;padding: 6px 3px 0px 3px;font-size: 10px;color: #3c3c3c;background: url(/images/comm/calendar_days.png) no-repeat 50% 15px;}
-.ui-datepicker td {padding: 1px;}
-.ui-datepicker td a.ui-state-default{font-size: 12px;color: #555;padding: 1px;text-align: center;border:0;background: transparent;line-height: 15px;}
-.ui-datepicker td a.ui-state-default:hover {  background: transparent; }
-.ui-datepicker td:first-child a {  color:#c4113c; }
-.ui-datepicker td:last-child a {  color:#0f4c81; }
-
-.ui-datepicker th span { font-size: 0; }
-.ui-datepicker th:first-child {  color:#c4113c; }
-.ui-datepicker th:last-child{  color:#067c0f;background-position:50% -105px }
-.ui-datepicker th:nth-child(2) {  background-position:50% -5px  }
-.ui-datepicker th:nth-child(3) {  background-position:50% -25px  }
-.ui-datepicker th:nth-child(4) {  background-position:50% -45px  }
-.ui-datepicker th:nth-child(5) {  background-position:50% -65px  }
-.ui-datepicker th:nth-child(6) {  background-position:50% -85px  }
-
-.ui-datepicker .ui-datepicker-buttonpane {margin:0 -8px;border-top: 1px solid #dddddd;padding: 5px 10px;overflow: hidden;position: relative;}
-.ui-datepicker .ui-datepicker-buttonpane button {position: relative;z-index: 2;padding: 1px 4px;font-size: 10px;line-height: 15px;margin: 0px 0px 0px 0px;border-color: #999999;color: #111111;opacity: 1;}
-.ui-datepicker .ui-datepicker-buttonpane strong {position: absolute;z-index: 1;left: 54px;/* width: 100%; *//* text-align: center; *//* line-height: 16px; */font-weight: normal;padding-left: 4px;font-size: 11px;top: 4px;}
-
-.ui-datepicker-trigger { background: transparent;vertical-align: top;margin-top: 6px;  }
-.ui-widget {  font-family:'NanumGothic',나눔고딕,sans-serif; }
-.ui-tabs-panel:before {content: '';display: block;clear: both;}
-
-/* month datepicker */
-.ui-monthpicker {width: auto;padding: 0 12px;border-color: #222 !important;}
-.ui-monthpicker .ui-datepicker-header {text-align: center;box-sizing: border-box;height: 40px;padding: 0;margin: 0 -12px;border-bottom: 1px solid #ddd;}
-.ui-monthpicker .ui-datepicker-header > * {vertical-align: middle;display: inline-block;margin: 0;}
-.ui-monthpicker .ui-datepicker-header .ui-datepicker-prev,
-.ui-monthpicker .ui-datepicker-header .ui-datepicker-next {position: relative;width: 40px;height: 39px;}
-.ui-monthpicker .ui-datepicker-header .ui-datepicker-prev span,
-.ui-monthpicker .ui-datepicker-header .ui-datepicker-next span {left: 50%;top: 50%;margin: -12px 0 0 -10px;}
-.ui-monthpicker .ui-datepicker-header .ui-datepicker-title {padding: 0 8px;font-size: 14px;font-weight: 700;color: #222;}
-.ui-monthpicker .ui-datepicker-calendar {margin: 12px 0;}
-.ui-monthpicker .ui-datepicker-calendar tr {}
-.ui-monthpicker .ui-datepicker-calendar td {width: 45px;height: 35px;padding: 2px;}
-.ui-monthpicker .ui-datepicker-calendar td a {width: 45px;height: 35px;border: 1px solid #aaa;color: #555 !important;}
-.ui-monthpicker .ui-datepicker-calendar td.ui-datepicker-today {border-color: #2e75b6;background: #f1f9ff;}
-.ui-monthpicker .ui-datepicker-calendar td.ui-datepicker-today a {font-weight: 700;color: #2e75b6 !important;;}
-
-/* bxSlider */
-.sliderArea{  position: relative;width: 770px;padding: 0 11px 0 10px; }
-.sliderArea .bx-prev,
-.sliderArea .bx-next { overflow:hidden;position:absolute;top:50%;z-index:10;width:32px;height:32px;margin-top:-16px;border:none;background-image:url(/images/comm/slider_bg.png);background-repeat:no-repeat;line-height:99em;}
-.sliderArea .bx-controls .bx-controls-direction a {background: url(/images/comm/slider_bg.png) no-repeat;}
-.sliderArea .bx-controls .bx-controls-direction .bx-prev {background-position: left -13px; left: -2px; }
-.sliderArea .bx-controls .bx-controls-direction .bx-next {background-position: -32px -13px;right: -2px;  }
-.sliderArea .bx-controls .bx-controls-direction .bx-prev.disabled {background-position: -64px -13px;}
-.sliderArea .bx-controls .bx-controls-direction .bx-next.disabled {background-position: -96px -13px;}
-.sliderArea .bx-controls .bx-pager {  position: absolute;top: -17px;right: 13px;font-weight: 700;letter-spacing: -0.12em;font-size: 12px;line-height: 1}
-
-
-.sliderArea .bx-wrapper {margin: 0 auto;}
-.sliderArea .bx-viewport .bxSlider > li {  position: relative;border:1px solid #ddd;padding:19px 19px;min-height: 130px}
-.sliderArea .bx-viewport .bxSlider .graTitle { overflow: hidden;white-space: nowrap;line-height: 1; }
-.sliderArea .bx-viewport .bxSlider .graTitle strong {    display: inline-block;vertical-align: middle; line-height: 1;  }
-.sliderArea .bx-viewport .bxSlider .graEndDate { text-align: left;line-height: 1;font-size: 13px;color: #555; }
-.sliderArea .bx-viewport .bxSlider .graEndDate span {display: inline-block;}
-.sliderArea .bx-viewport .bxSlider .graEndDate em {  color:#c4113c; }
-.sliderArea .bx-viewport .bxSlider .btnBox {text-align: right;}
-.sliderArea .bx-viewport .bxSlider .divTitle {  background-color: #e6ebf7;padding:11px 19px 0; font-size: 13px;line-height:1;height: 35px;color:#334466;font-weight: 700 }
-
-
-.gameRecommendedArea { margin-top: 20px;}
-.gameRecommendedArea .bx-viewport .bxSlider > li { min-height: 134px;text-align: center; padding: 6px 7px 7px;border-top-width:0;border-bottom-width:0;border-left: 7px solid #d5e3f0;border-right: 7px solid #81acd3;background-color: #fff;}
-.gameRecommendedArea .bx-viewport .bxSlider > li:before,
-.gameRecommendedArea .bx-viewport .bxSlider > li:after {content: "";position: absolute;left: 0;right: 0;top: 0;display: block;height: 6px;background: url(/images/comm/slider_bg.png) no-repeat center top;}
-.gameRecommendedArea .bx-viewport .bxSlider > li:after {top: auto;bottom: 0;height: 7px;background-position: center -6px;}
-.gameRecommendedArea .bx-viewport .bxSlider .graTitle { text-align: center;width: auto;max-width: 100%;padding-left: 7px;margin-top: 20px;background-repeat: no-repeat;}
-.gameRecommendedArea .bx-viewport .bxSlider .graTitle strong { font-size: 16px;font-weight: 700;color: #222;   }
-.gameRecommendedArea .bx-viewport .bxSlider .graEndDate { padding: 10px 0; }
-.gameRecommendedArea .bx-viewport .bxSlider .btn { margin-top: 5px;}
-
-
-
-/* guideBox */
-.guideBox{position: relative;border-color:#ddd;border-style:solid ;border-width:0;background:#fff;}
-.guideBox.bdno{border-width: 0px !important;}
-.guideBox.page{ margin-top:50px;padding:24px 20px;border-top-width:1px;background:#fafbfc;}
-.guideBox.page .tblArea:not(.tblLp):not(.tblGameInfo):before{display:none}
-
-.guideBox.gray { margin-top:10px;padding:14px 14px 11px 14px;border:1px solid #eee;background:#fefefe;}
-.guideBox.gray .guide_tit + .dashText,
-.guideBox.gray .guide_tit + .numText{padding:8px 0 0 20px;}
-
-.guideBox.gray2{background-color:#f8f8f8;}
-
-.guideBox.bold{ padding:24px 19px 21px;border:1px solid #eee;background:#fafbfc;}
-.guideBox.bold .guide_tit + .dashText,
-.guideBox.bold .guide_tit + .numText{padding:9px 0 0 20px;}
-
-.guideBox.gray2.bdno.pd{padding:14px 14px 11px 14px;}
-.guideBox .pollPop{}
-.guideBox .pollPop>li{position:relative;padding: 0px 0px 0px 94px;}
-.guideBox .pollPop>li .tit{font-weight:bold;color: #222222;position:absolute;left:0px;top:0px;padding-left: 9px;}
-.guideBox .pollPop>li .tit::before{width:4px;height:4px;background-color:#777777; position:absolute; left:0px; top:0px;}
-.guideBox .pollPop>li .txt{color: #2e75b6;display: block;position: relative;padding-left: 12px;}
-.guideBox .pollPop>li .dot{font-weight:bold;color: #222222;display: inline-block;margin-right: 3px;position: absolute;left: 0px;top: 0px;}
-
-
-.guideBox.white {  border-width:1px; padding: 17px 19px 16px;}
-.gameiconArea + .guideBox{margin-top:20px;}
-.gameCont_sub + .guideBox,
-.leagueArea + .guideBox,
-.gridArea + .guideBox{margin-top:10px;}
-
-.tbl + .guideBox.bold,
-.tblArea + .guideBox.bold{margin-top:10px;}
-.btnArea + .guideBox.bold{margin-top:40px}
-
-
-.numText li{padding-left:14px;font-size:12px;line-height:18px;text-indent:-14px;word-break:keep-all}
-.numText li + li{margin-top:5px;}
-
-div.numText, div.numText p{font-size: 12px!important; line-height: 18px !important;}
 
 /* text */
 .guideTit{ position: relative;display:block;padding-left:20px;font-size:12px;font-weight:700;line-height:15px;}

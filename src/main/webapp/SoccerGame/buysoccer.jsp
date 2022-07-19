@@ -10,8 +10,6 @@
 
 <head>
 
-
-<script type="text/javascript" class="init"></script>
 <link rel="stylesheet" type="text/css" href="css/common.css">
 <link rel="stylesheet" type="text/css" href="css/layout.css">
 <link rel="stylesheet" type="text/css" href="css/ui-game.css">
@@ -24,9 +22,6 @@
 <jsp:include page="/project5/topNav.jsp"></jsp:include>
 <div class="docWrap">
 	
-	<!-- header -->
-
-	<!-- //header -->
     <div id="div_popup2"></div>
 
 			<article id="container">
@@ -61,37 +56,6 @@
 					</tr>
 				</thead>
 				<tbody id="gamePurchaseRowData"><tr>	<td class="tal"><span class="icoGame small SC mr10">축구</span>축구토토 승무패 36회차</td>	<td>2022.07.14 11:12</td>	<td class="tar">1,000</td>	<td>		<button type="button" class="btnOff" title="투표지 닫기" onclick="openGamePaper(this, '1482437060' ,'G011', '220036');">닫기</button>	</td></tr><tr class="detailArea active" id="paperTr">	<td colspan="4">		<div class="inBox">			<div id="paperArea">
-
-
-<!-- $('#winrstTabList').tabs("option","disabled",[2]);/* 비활성화처리 */ -->
-<!-- 구매투표지 : view -->	
-<!-- tabList : 탭구조 -->
-<!-- 태그 구조 수정없이 탭삭제하려면 1. tab 동작 id (ex : winrstTabList) 삭제  -->
-<!-- 태그 구조 수정없이 탭삭제하려면 2. viewTableTab 클래스 삭제  -->
-<!-- 태그 구조 수정없이 택삭제하려면 3. <ul></ul> 도 함께 삭제 -->
-<!-- 태그 구조 수정없이 택삭제하려면 4. tabs-1만 남기고 tabs-2,3,4 컨텐츠 불필요한 부분 삭제 -->
-<!-- 복식A+복식B			배구토토 세트스코어		
-복식A+복식B+복식C			야구토토 매치
-						농구토토 매치
-						농구토토 W매치
-						골프토토 승무패
-단식A+단식B+단식C			야구토토 랭킹(스트레이트)
-						야구토토 랭킹(박스)
-						축구토토 매치
-복식+단식A+단식B			야구토토 런앤런
-복식+단식A+단식B+단식C		축구토토 승무패
-						야구토토 승1패
-						농구토토 승5패
-						골프토토 1대11
-단식A+단식B+단식C+단식D		농구토토 스코어단식
-복식+단식A+단식B+단식C+단식D	골프토토 6/45 
-
-골프 6/45 탭버튼 제외 : 2020.07.31-->
-
-
-
-
-<!-- 축구승무패,야구승1패,농구승5패,골프1대11,농구스코어단식 -->
 
 
 <!-- contTitle : view 테이블정보-->
@@ -205,13 +169,10 @@
 
 
 	</div>
-					
-				
-			
+		
 		</div>
-
-
-<!--// tabList : 탭구조 --></div>		</div>	</td></tr></tbody>
+</div>		
+</div>	</td></tr></tbody>
 			</table>
 
 
@@ -256,8 +217,6 @@
 					</div>
 <div id="asideRight">
 						
-
-
 <div class="asideGame box">
 	<div class="asideGameCont">
 		<h2>결제정보</h2>
@@ -290,14 +249,17 @@
 	</div>
 
 	<div class="btnArea">
-		<button class="btn btnBB gray" id="cancelBtn">취소</button>
-		<button class="btn btnBB red" id="countBtn" onclick="goPayProcess();">결제</button>
+		<input type="button" class="btn btnBB gray" value="취소" onclick=" location='soccer01.jsp'"/>
+		<input type="button" class="btn btnBB red" value="결제"  onclick="location.href='../project5/Main.jsp';"/>
+		
+
+
+		
 	</div>
 </div>
 
 </div>
 </div>
-
 	<footer>
 		<div id="footer" class="footer">
 			<!-- footer content --> 
@@ -320,9 +282,7 @@
 		</div>
 	</footer>
 		</div>
-	
-	
-	
-	
- 
-<iframe width="100" title="Kings Online Security Bridge" src="https://127.0.0.1:64032/?1657764731799&amp;proxy=about%3Ablank" style="position: absolute; left: -1000px; top: -1000px;"></iframe><span id="_kos_notify_element_" style="position: fixed; visibility: hidden; right: 0px; bottom: 0px; margin: 20px; padding: 10px; opacity: 0.8; background-color: rgb(51, 51, 51); color: rgb(255, 255, 255);">INITIALIZING</span></body></html>
+
+
+ </body>
+ </html>
