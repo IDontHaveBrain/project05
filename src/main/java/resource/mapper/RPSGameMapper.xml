@@ -13,4 +13,10 @@
 		(RPSgame_seq.nextval, #{id}, #{com}, #{player}, 
 		#{gameresult}, #{prevpoint}, #{resultpoint})
 	</insert>
+	<update id="updatePoint" parameterType="hashMap">
+        update Account set point = #{point} where id = #{id}
+    </update>
+    <select id="getRPSGameResultList" parameterType="string" resultType="rpsgameresult">
+        select * from rpsgameresult where id = #{id}
+    </select>
 </mapper>

@@ -3,18 +3,23 @@ package toto.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import toto.dao.NoticeDao;
 import toto.vo.Notice;
 
 
+@Service
 public class NoticeService {
 	@Autowired(required = false)
 	private NoticeDao dao;
+	
 	public List<Notice> noticeList(Notice sch) {
-		return dao.NoticeList(sch);
+		return dao.noticeList(sch);
 	}
 
+	
+	/*
 	public void insertNotice(Notice ins) {
 		dao.insertNotice(ins);
 	}
@@ -34,6 +39,6 @@ public class NoticeService {
 		dao.deleteNotice(no);
 	}
 
-
+*/
 	
 }

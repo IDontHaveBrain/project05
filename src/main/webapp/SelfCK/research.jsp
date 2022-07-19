@@ -14,7 +14,7 @@ h1, h3, h4{
     font-family: 'Jeju Gothic', sans-serif;
 }  
 
-button{
+submit{
  background-color: #8181F7;
   color: white;
  padding: 14px 20px;
@@ -101,7 +101,7 @@ String ans[]={"없음", "가끔","때때로","거의항상"};
 		}
 	%>
 </table>
-	<button type="submit" onclick="goAns()">결과보기</button>
+	<input type="submit" value="결과보기"/>
 	</form>
 	<!-- About Section -->
  		<section class="about" id="about">
@@ -111,15 +111,9 @@ String ans[]={"없음", "가끔","때때로","거의항상"};
 		
 
   
-  <!-- Footer Section -->
-  <section class="footer_banner" id="contact">
-    <h2 class="hidden">Footer Banner Section </h2>
-    <p class="home_header">Our Info &amp; News</p>
-    <div OnClick="location.href='Contact/Contact.html'" class="button">CONTACT</div>
-  </section>
+  
   <!-- Copyrights Section -->
   <div class="copyright">&copy;2022 - <strong>BETMAN</strong></div>		
-	
 <script type="text/javascript">
 $(function() {
 	$( "#Tabs1" ).tabs(); 

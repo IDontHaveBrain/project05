@@ -1,64 +1,53 @@
 package toto.vo;
 
-import java.util.Date;
 
 public class Notice {
 
-	private int no;
-	private int refno;
-	private String division;
-	private String title;
-	private Date regdte;
+	private int bt_no;
+	private String bt_division;
+	private String bt_title;
+	private String bt_date;
 	public Notice() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Notice(int no, int refno, String division, String title, Date regdte) {
+	public Notice(int bt_no, String bt_division, String bt_title, String bt_date) {
 		super();
-		this.no = no;
-		this.refno = refno;
-		this.division = division;
-		this.title = title;
-		this.regdte = regdte;
+		this.bt_no = bt_no;
+		this.bt_division = bt_division;
+		this.bt_title = bt_title;
+		this.bt_date = bt_date;
+	}
+	public Notice(String bt_title) {
+		super();
+		this.bt_title = bt_title;
 	}
 	
-	public Notice(String division, String title, Date regdte) {
-		super();
-		this.division = division;
-		this.title = title;
-		this.regdte = regdte;
+	public int getBt_no() {
+		return bt_no;
 	}
-	public int getNo() {
-		return no;
+	public void setBt_no(int bt_no) {
+		this.bt_no = bt_no;
 	}
-	public void setNo(int no) {
-		this.no = no;
+	public String getBt_division() {
+		return bt_division;
 	}
-	public int getRefno() {
-		return refno;
+	public void setBt_division(String bt_division) {
+		this.bt_division = bt_division;
 	}
-	public void setRefno(int refno) {
-		this.refno = refno;
+	public String getBt_title() {
+		return bt_title;
 	}
-	public String getDivision() {
-		return division;
+	public void setBt_title(String bt_title) {
+		this.bt_title = bt_title;
 	}
-	public void setDivision(String division) {
-		this.division = division;
+	public String getBt_date() {
+		return bt_date;
 	}
-	public String getTitle() {
-		return title;
+	public void setBt_date(String bt_date) {
+		this.bt_date = bt_date;
 	}
-	public void setTitle(String title) {
-		this.title = title;
-	}
-	public Date getRegdte() {
-		return regdte;
-	}
-	public void setRegdte(Date regdte) {
-		this.regdte = regdte;
-	}
-	
+
 	
 	
 }

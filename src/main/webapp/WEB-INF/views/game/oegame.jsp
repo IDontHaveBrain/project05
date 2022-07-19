@@ -16,6 +16,13 @@
     <script src="${path}/project5/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
     <style>
         body {
+            margin: 0;
+            padding: 0;
+            font-family: "Roboto", serif;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
             background-color: #646987;
         }
     </style>
@@ -37,8 +44,8 @@
     <div class="input-group mb-auto">
         <span class="input-group-text w-50" id="f2" style="background-color: lightgreen;">*배팅할 포인트</span>
         <input type="text" class="form-control w-50" value="0" aria-describedby="f2"
-               name="setPoint" onchange="changePoint(this);" style="background-color: lightgreen;"
-               oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/>
+               name="setPoint" onkeyup="changePoint(this);" onchange="changePoint(this);" style="background-color: lightgreen;"
+               oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');"/>
     </div>
     <div class="input-group mb-auto">
         <span class="input-group-text w-50" id="f3">남은 포인트</span>
@@ -76,7 +83,10 @@
         //alert(document.querySelector('#choice').value);
         if (obj.value < 0 || obj.value > ${curPoint}) {
             alert("배팅포인트는 0이상, 보유포인트(${curPoint}) 이하만 입력 가능합니다.");
-            obj.value = 0;
+            if (obj.value > ${curPoint})
+                obj.value = ${curPoint};
+            else
+                obj.value = 0;
             return;
         }
         document.querySelector("#leftPoint").value = ${curPoint}-obj.value;

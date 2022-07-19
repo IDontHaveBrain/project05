@@ -13,4 +13,6 @@ public interface OeGameDao {
     public void updatePoint(Map<String, Object> upd);
     public void insertOeResult(OeGameResult rst);
     public List<OeGameResult> getOeGameResultList(String id);
+    public List<OeGameResult> schOeGameResult(OeGameResult sch);
+    public int getAuth(String id);
 }

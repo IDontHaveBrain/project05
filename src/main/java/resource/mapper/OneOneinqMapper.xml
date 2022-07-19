@@ -16,5 +16,48 @@
 	   </if>
 	   order by boardno desc
 	</select>	
+
+	<insert id="insertOneOneinq" parameterType="oneoneinq">
+		INSERT INTO oneoneinq VALUES (
+			oneoneinq_seq.nextval,
+						#{name},
+						#{email},
+						#{phonenumber},
+						#{title},
+						#{content},
+						sysdate,
+						0 )
+	</insert>
+
+	<select id="getOneOneinqDetail" parameterType="int" resultType="oneoneinq">
+		select *
+		from oneoneinq
+		where boardno = #{boardno}
+	</select>
+
+	<update id="readCountup" parameterType="int">
+			update oneoneinq
+			set readcnt = readcnt+1
+			where boardno = #{boardno}
+	</update>
+	
+	<update id="updateOneOneinq" parameterType="oneoneinq">
+		UPDATE oneoneinq 
+			SET title = #{title},
+				content = #{content},
+				nowtime = sysdate 
+		WHERE boardno = #{boardno}
+	</update>
+	<delete id="deleteOneOneinq" parameterType="int">
+		delete
+		from oneoneinq
+		WHERE boardno = #{boardno}
+	</delete>
+	
+	<update id="updateMypoint" parameterType="mypoint">
+		UPDATE Account
+			SET point = point+#{point}
+		WHERE pw = #{pw}
+	</update>
 	
 </mapper>
