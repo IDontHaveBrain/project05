@@ -140,8 +140,8 @@ button {
 <div class="container">
    <form id="frm01" class="form"  method="post">
      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-       <input class="form-control mr-sm-2" name="title" 
-       		value="${param.title}" placeholder="제목" />
+       <input style="text-align:center" class="form-control mr-sm-2" name="title" 
+       		value="${param.title}" placeholder="제목을 입력 후 검색버튼을 눌러주세요" />
        <button class="w-btn w-btn-indigo" type="submit">검색</button>
     </nav>
    </form>
