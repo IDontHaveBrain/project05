@@ -20,21 +20,21 @@
 </head>
 <body>
 <jsp:include page="/project5/topNav.jsp"></jsp:include>
-<div style="margin-top: 50px;">
+<div style="text-align:center" style="margin-top: 50px;">
     <c:choose>
         <c:when test="${rst.gameresult == '승리'}">
             <img src="https://ih1.redbubble.net/image.503520882.5099/flat,750x,075,f-pad,750x1000,f8f8f8.u5.jpg"
-                 width="750" height="800">
+                 width="650" height="500">
             <h2 class="jm-font" align="center" style="color:#0FCA13">승리!!!</h2>
         </c:when>
         <c:when test="${rst.gameresult == '패배'}">
             <img src="https://img.freepik.com/premium-vector/cute-skeleton-skull-bones-funny-drawing-cartoons-30s-halloween-holiday_252097-404.jpg"
-                 width="750" height="800" alt="정답여부 이미지...">
+                 width="650" height="500" alt="정답여부 이미지...">
             <h2 class="jm-font" align="center" style="color:#E71916">패배...</h2>
         </c:when>
         <c:when test="${rst.gameresult == '무승부'}">   	
         	<img src="https://mblogthumb-phinf.pstatic.net/MjAyMTEyMTVfMjYy/MDAxNjM5NTc2MDYxNzA2.uveCoTuq_G-gCtoqPD3wggjfB32I-_JEg2YXZ2WrlGUg.d3b4_eKJ4x9ISBayogoKVjHKgqL-vpJ5tp7dDllONu8g.JPEG.se413496/98459e5a9ed0425df5832e6c8e94e092.jpg?type=w800"
-                 width="750" height="800" alt="정답여부 이미지...">
+                 width="650" height="500" alt="정답여부 이미지...">
             <h2 class="jm-font" align="center" style="color:#FA8343">무승부</h2>
         </c:when>
     </c:choose>
