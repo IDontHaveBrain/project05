@@ -137,14 +137,14 @@ button {
 </div>
 <div class="container">
 <table style="border:0">
-   <form id="frm01" action="${path}/mypointDetail.do" 
+   <form id="frm01" action="${path}/MypointList.do" 
          class="form"  method="post">
          <tr><th>
       <div class="input-group mb-3">
          <div class="input-group-prepend">
             <span class="text-center input-group-text">★ 아이디 ★</span>
-         <input name="pw" class="form-control" 
-            value="${param.pw}" placeholder="비밀번호를 입력하세요" />   
+         <input name="id" class="form-control" 
+            value="${param.id}" placeholder="아이디를 입력하세요" />   
       </div>
 	</div></th></tr>
        </div>
@@ -180,12 +180,27 @@ function updateProc(){
 		$("form").attr("action","${path}/updateMypoint.do");
 		$("form").submit();
 	}
+    var idVal = $("[name=id]").val();
+    if( idVal == ""){
+        alert("아이디를 입력하세요")
+        $("[name=id]").focus();
+        return;
+     }
+
+    var pointVal = $("[name=point]").val();
+    if( pointVal == ""){
+        alert("포인트를 입력하세요")
+        $("[name=point]").focus();
+        return;
+     }
+    
 }
 var proc = "${proc}"
 	if(proc=="upt"){
 		alert("충전 완료되었습니다.");
 		location.href="${path}/MypointList.do";
 	}
+
 </script>
 </body>
 </html>
