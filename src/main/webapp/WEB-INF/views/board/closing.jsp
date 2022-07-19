@@ -70,10 +70,10 @@ td{text-align:center;}
 		--%>	
 	});
 	function goInsert(){
-		location.href="${path}/boardInsertForm.do"
+		location.href="${path}/cloInsertForm.do"
 	}
 	function goDetail(no){
-		location.href="${path}/boardDetail.do?no="+no;
+		location.href="${path}/cloDetail.do?no="+no;
 	}	
 </script>
 </head>
@@ -98,22 +98,25 @@ td{text-align:center;}
  	</nav>
 	</form>
    <table class="table table-hover table-striped">
-   	<col width="20%">
-   	<col width="20%">
+     <col width="10%">
+   	<col width="10%">
    	<col width="45%">
-   	
+   	<col width="15%">
+   	<col width="15%">
     <thead>
       <tr class="table14_5">
-        <th>종류</th>
-        <th>게임명</th>
-        <th>회차 마감일시</th>
+        <th>번호</th>
+        <th>구분</th>
+        <th>마감일시</th>
+        <th>조회수</th>
+        <th></th>
       </tr>
     </thead>	
     <tbody>
     	<!-- controller에서 넘겨준 모델데이터 : blist -->
     	<c:forEach var="bd" items="${blist}">
-    	<tr><td>${bd.ctype}</td><td>${bd.ctitle}</td>
-    		<td>${bd.cdate }</td>
+    	<tr ondblclick="goInsert(${bd.no})"><td>${bd.no}</td><td>${bd.ctype}</td><td>${bd.ctitle}</td>
+    		<td>${bd.cdate }</td><td>${bd.readcnt}</td></tr>
     	</c:forEach>
     </tbody>
 	</table>    

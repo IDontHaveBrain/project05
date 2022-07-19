@@ -11,7 +11,42 @@
 		 <if test="ctitle!=null">
 		 AND ctitle LIKE '%'||#{ctitle}||'%'
 		 </if>
+		 order by no desc
 		</select>
         
-        
+        <insert id="insertClo" parameterType="clo">
+			insert into closing values(closing_seq.nextval,#{ctype},#{ctitle},#{cdate},0)
+	</insert>
+	
+	<select id="checkAdmin" parameterType="string" resultType="int">
+		select auth from Account where id = #{id}
+	</select>
+	
+	
+	<select id="getCloDetail" parameterType="int" resultType="clo">
+		select *
+		from closing
+		where no = #{no}
+	</select>
+	
+	<update id="readCountup" parameterType="int">
+		update closing
+		set readcnt = readcnt+1
+		where no = #{no}	
+	</update>	
+	
+	
+	<update id="updateClo" parameterType="clo">
+		UPDATE closing
+		   SET no = #{no},
+			   ctype = #{ctype},
+			   ctitle = #{ctitle},
+			   cdate= #{cdate}
+		WHERE NO = #{no}	
+	</update>
+	<delete id="deleteClo" parameterType="int">
+		delete
+		from closing
+		where no = #{no}	
+	</delete>	
         </mapper>

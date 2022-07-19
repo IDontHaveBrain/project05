@@ -7,5 +7,43 @@
 		id="calList" resultType="cal" parameterType="cal">
 		 select * 
 		 from calendar
+		 order by no desc
 		</select>
+		
+		<insert id="insertCal" parameterType="cal">
+			insert into calendar values(calendar_seq.nextval,#{ctime},#{team},#{place},0)
+	</insert>
+	
+	<select id="checkAdmin" parameterType="string" resultType="int">
+		select auth from Account where id = #{id}
+	</select>
+	
+	
+	<select id="getCalDetail" parameterType="int" resultType="cal">
+		select *
+		from calendar
+		where no = #{no}
+	</select>
+	
+	<update id="readCountup" parameterType="int">
+		update calendar
+		set readcnt = readcnt+1
+		where no = #{no}	
+		
+	</update>	
+	
+	
+	<update id="updateCal" parameterType="cal">
+		UPDATE calendar
+		   SET no = #{no},
+			   ctime = #{ctime},
+			   team = #{team},
+			   place= #{place}
+		WHERE NO = #{no}	
+	</update>
+	<delete id="deleteCal" parameterType="int">
+		delete
+		from calendar
+		where no = #{no}	
+	</delete>	
         </mapper>

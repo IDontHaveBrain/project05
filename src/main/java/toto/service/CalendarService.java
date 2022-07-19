@@ -17,4 +17,30 @@ import toto.vo.Calendar;
 		public List<Calendar> calList(Calendar sch){
 			return dao.calList(sch);
 		}
+		
+		public void insertCal(Calendar ins) {
+			dao.insertCal(ins);
+		}
+		
+		
+		public int checkAdmin(String id) {
+			return dao.checkAdmin(id);
+		}
+
+		public Calendar getCalDetail(int no) {
+			// 조회 카운트업
+			dao.readCountup(no);
+
+			return dao.getCalDetail(no);
+		}
+
+		public Calendar updateCal(Calendar upt) {
+			dao.updateCal(upt);
+			return dao.getCalDetail(upt.getNo());
+		}
+
+		public void deleteCal(int no) {
+			dao.deleteCal(no);
+		}
+
 }
