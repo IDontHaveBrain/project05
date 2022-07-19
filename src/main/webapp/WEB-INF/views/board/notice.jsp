@@ -72,16 +72,16 @@ td{text-align:center;}
 		<%-- 
 		
 		--%>	
-	
+		
+	});
 	function goInsert(){
-		location.href="${path}/boardInsertForm.do"
+		location.href="${path}/noticeInsertForm.do"
 	}
 	function goDetail(no){
 		location.href="${path}/boardDetail.do?no="+no;
 	}	
 
-	
-});
+
 </script>
 </head>
 
@@ -98,9 +98,10 @@ td{text-align:center;}
 	    	value="${param.bt_title}"/>
 	    	<!-- controller  public String boardList(Board sch)-->
 	    <button class="btn btn-info" type="submit">Search</button>
+	    <c:if test="${hide == 1}">
 	    <button class="btn btn-success" onclick="goInsert()" 
 	    	type="button">등록</button>
-	    	
+    	</c:if>
  	</nav>
  	</form>
  	</div>

@@ -18,12 +18,14 @@ public class NoticeService {
 		return dao.noticeList(sch);
 	}
 
-	
-	/*
 	public void insertNotice(Notice ins) {
 		dao.insertNotice(ins);
 	}
-
+	
+	public int checkAdmin(String id) {
+		return dao.checkAdmin(id);
+	}
+/*
 	public Notice getNoticeDetail(int no) {
 		dao.readCountup(no);
 

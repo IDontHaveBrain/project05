@@ -24,21 +24,72 @@ td{text-align:center;}
 <script src="https://developers.google.com/web/ilt/pwa/working-with-the-fetch-api" type="text/javascript"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-timer();
-var current=0;
-var $interval;
-function timer(){
-  var $interval=setInterval(function(){slide()},2000);                        
-}
-function slide(){
-  $(".bannerbox").animate({left:"200px"},4000,function(){
-    $(this).css({"left":1000});
-    $(".bannerbox").append( $("li").children("li").eq(0) );
-  });    
-  current++;
-  if(current==5)current=0;
-} 
+$(".mySlideDiv").not(".active").hide(); //화면 로딩 후 첫번째 div를 제외한 나머지 숨김
+	setInterval(nextSlide, 4000); //4초(4000)마다 다음 슬라이드로 넘어감
+	
 });
+
+function prevSlide() {
+	$(".mySlideDiv").hide(); //모든 div 숨김
+	var allSlide = $(".mySlideDiv"); //모든 div 객체를 변수에 저장
+	var currentIndex = 0; //현재 나타난 슬라이드의 인덱스 변수
+	
+	//반복문으로 현재 active클래스를 가진 div를 찾아 index 저장
+	$(".mySlideDiv").each(function(index,item){ 
+		if($(this).hasClass("active")) {
+			currentIndex = index;
+		}
+        
+	});
+	
+	//새롭게 나타낼 div의 index
+	var newIndex = 0;
+    
+	if(currentIndex <= 0) {
+		//현재 슬라이드의 index가 0인 경우 마지막 슬라이드로 보냄(무한반복)
+		newIndex = allSlide.length-1;
+	} else {
+		//현재 슬라이드의 index에서 한 칸 만큼 뒤로 간 index 지정
+		newIndex = currentIndex-1;
+	}
+
+	//모든 div에서 active 클래스 제거
+	$(".mySlideDiv").removeClass("active");
+    
+	//새롭게 지정한 index번째 슬라이드에 active 클래스 부여 후 show()
+	$(".mySlideDiv").eq(newIndex).addClass("active");
+	$(".mySlideDiv").eq(newIndex).show();
+
+}
+
+//다음 슬라이드
+function nextSlide() {
+	$(".mySlideDiv").hide();
+	var allSlide = $(".mySlideDiv");
+	var currentIndex = 0;
+	
+	$(".mySlideDiv").each(function(index,item){
+		if($(this).hasClass("active")) {
+			currentIndex = index;
+		}
+        
+	});
+	
+	var newIndex = 0;
+	
+	if(currentIndex >= allSlide.length-1) {
+		//현재 슬라이드 index가 마지막 순서면 0번째로 보냄(무한반복)
+		newIndex = 0;
+	} else {
+		//현재 슬라이드의 index에서 한 칸 만큼 앞으로 간 index 지정
+		newIndex = currentIndex+1;
+	}
+
+	$(".mySlideDiv").removeClass("active");
+	$(".mySlideDiv").eq(newIndex).addClass("active");
+	$(".mySlideDiv").eq(newIndex).show();
+	
+}
 </script>
 <body>
 <jsp:include page="topNav.jsp"></jsp:include>
@@ -52,17 +103,25 @@ function slide(){
 				<p class="tagline">한경기구매! 싱글플레이!</p>
 			</section>
 			
-			<div class="slidebanner">
-			 <ul class="bannerbox">    
-			    <li class="rollli"><img src="img\banner1.PNG" alt="dw" class="static" /></li>
-			  </ul>
-			</div>
-			<div class="slidebanner">
-			 <ul class="bannerbox">    
-			    <li class="rollli"><img src="img\banner2.PNG" alt="dw" class="static" /></li>
-			  </ul>
-			</div>
 			
+			<div class="slideshow-container">
+
+     <div class="mySlideDiv fade active">
+        <img src="img\banner1.PNG"> 
+     </div>
+            
+     <div class="mySlideDiv fade">
+         <img src="img\banner2.PNG"> 
+     </div>
+            
+     <div class="mySlideDiv fade">
+         <img src="img\banner3.png"> 
+     </div>
+
+     <a class="prev" onclick="prevSlide()">&#10094;</a>
+     <a class="next" onclick="nextSlide()">&#10095;</a>
+            
+</div>
 			
 			<footer>
 				<article class="footer_column">

@@ -22,9 +22,12 @@ public class RPSGameController {
 	@RequestMapping("rpsgame.do")
 	public String RPSGame(HttpSession session, Model d) {
 		// http://localhost:7080/project05/rpsgame.do
-		session.setAttribute("id", "asdasd123");
-		session.setMaxInactiveInterval(60*10);
+		//session.setAttribute("id", "asdasd123");
 		String curId = (String)session.getAttribute("id");
+		session.setMaxInactiveInterval(60*10);
+		if(inputCheck.isEmpty(curId)){
+            return "redirect:project5\\Main.jsp";
+        }
 		d.addAttribute("curPoint", service.getCurPoint(curId));
 		d.addAttribute("odds", odds);
 		return "WEB-INF\\views\\game\\rpsgame.jsp";
@@ -35,6 +38,10 @@ public class RPSGameController {
             					@RequestParam(value = "setPoint", defaultValue = "0") String setPoint, 
             					Model d, HttpSession session) {
 		String curId = (String)session.getAttribute("id");
+		session.setMaxInactiveInterval(60*10);
+		if(inputCheck.isEmpty(curId)){
+            return "redirect:project5\\Main.jsp";
+        }
 		if(inputCheck.isEmpty(player) || inputCheck.isEmpty(setPoint)){
             return "redirect:rpsgame.do";
         } else if (!(player.equals("가위") || player.equals("바위") || player.equals("보"))) {
@@ -52,6 +59,10 @@ public class RPSGameController {
 	@RequestMapping("rpsgamehistory.do")
 	public String RPSGameHistory(Model d, HttpSession session) {
 		String curId = (String)session.getAttribute("id");
+		session.setMaxInactiveInterval(60*10);
+		if(inputCheck.isEmpty(curId)){
+            return "redirect:project5\\Main.jsp";
+        }
 		d.addAttribute("result",service.getRPSGameHistory(curId));
 		
 		return "WEB-INF\\views\\game\\rpsgameHistory.jsp";

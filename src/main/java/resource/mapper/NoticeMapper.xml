@@ -12,6 +12,13 @@
 			AND bt_title LIKE '%' ||#{bt_title}|| '%'
 		</if>
 	</select>
-
-
+	
+	<insert id="insertNotice" parameterType="notice">
+			insert into BET_NOTICE values(notice_seq3.nextval,#{bt_division},#{bt_title},#{bt_date})
+	</insert>
+	
+	<select id="checkAdmin" parameterType="string" resultType="int">
+		select auth from Account where id = #{id}
+	</select>
+	
 </mapper>

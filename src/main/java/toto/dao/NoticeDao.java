@@ -11,12 +11,12 @@ import toto.vo.Notice;
 public interface NoticeDao {
 
 	public List<Notice> noticeList(Notice sch);
-
+	public void insertNotice(Notice ins);
+	
 	public Notice getDetail(int no);
 	public void readCountup(int no);
-	public void insertNotice(Notice ins);
 	public void updateNotice(Notice upt);
 	public void deleteNotice(int no);
 	public Notice getNoticeDetail(int no);
-	
+	public int checkAdmin(String id);
 }

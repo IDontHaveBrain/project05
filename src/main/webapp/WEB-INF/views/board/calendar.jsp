@@ -96,8 +96,6 @@ td{text-align:center;}
 	    <input class="form-control mr-sm-2" name="ctime" placeholder="제목" 
 	    	value="${param.ctime}"/>
 	    <button class="btn btn-info" type="submit">Search</button>
-	    <button class="btn btn-success" onclick="goInsert()" 
-	    	type="button">등록</button>
  	</nav>
 	</form>
 	
