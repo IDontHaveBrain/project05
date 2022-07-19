@@ -16,7 +16,10 @@ public class SoccerService {
 	public List<Soccer> getSoccerList(Soccer sch){
 		return dao.getSoccerList(sch);		
 	}
-
+	
+	public void updateSoccer(Soccer upt) {
+		dao.updateSoccer(upt); 	
+	}
 	
 	
 	
