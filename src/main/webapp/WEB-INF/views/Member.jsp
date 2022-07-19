@@ -140,10 +140,11 @@ $(document).ready(function(){
 	
 });
 </script>
-<div class="jumbotron text-center">
+<div class="jumbotron justify-content-center align-items-center text-center">
   <h2 class="home_header">스포츠토토 <span class="light">회원가입</span></h2>
     		<p class="tagline">건전하게 즐겨보세요</p>
     		</div>
+<div class="jumbotron justify-content-center align-items-center text-center">
 <form id="Insert" action="Insert.do" method="post">    		
   아이디<br>
   <input name="id"   type="text"
@@ -162,6 +163,7 @@ $(document).ready(function(){
          <button class="btn btn-success"  onclick="golog()" type="button" value="로그인">로그인 하러가기</button> 
    
 </form>
+</div>
 
    <table border> 
 	<c:forEach var="totologin" items="${loginList}"> 
