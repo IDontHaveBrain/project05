@@ -84,7 +84,7 @@ td{text-align:center;}
 <br>
 <br>
 <div class="jumbotron text-center">
-  <h2>마겜게임보기</h2>
+  <h2>마감게임보기</h2>
 </div>
 <div class="table14_5">
 	<!-- 
